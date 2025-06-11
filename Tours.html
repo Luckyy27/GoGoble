@@ -14,6 +14,7 @@
 <script src="https://cdn.tailwindcss.com/3.4.16"></script>
 <script>tailwind.config={theme:{extend:{colors:{primary:'#FF8A00',secondary:'#FFD580'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
 <style>
+  /**/
   #carouselExampleAutoplaying {
     height: 50vh; /* Half the screen height */
     overflow: hidden;
@@ -32,6 +33,41 @@
     color:#FD8C02;
 
   }
+  /*the styling for national and international */
+
+
+  .tab-btn {
+    background-color: transparent;
+    color: white;
+  }
+
+  .tab-btn:hover {
+    background-color: white;
+    color: orange;
+  }
+
+  .active-btn {
+    background-color: white;
+    color: orange;
+  }
+/*the styling for national and international ended*/
+    /*styling  for the destination section */
+    :where([class^="ri-"])::before { content: "\f3c2"; }
+.destination-card:hover .overlay {
+opacity: 1;
+}
+.destination-card .overlay {
+opacity: 0;
+transition: opacity 0.3s ease;
+}
+
+    /*Styling   for the destination section ended */
+.mycol{
+  color: #FD8C02;
+}
+    /*styling  for the Why Travel with us? section */
+    
+        /*styling  for the Why Travel with us? section  ended*/
 </style>
 
 </head>
@@ -48,7 +84,8 @@
         <input
           type="text"
           placeholder="Search..."
-          class="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+          class="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+        />
         <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
           <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2"
                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -70,7 +107,7 @@
 
     <!-- Right Side (Sign Up + Icon or Hamburger) -->
     <div class="flex items-center space-x-4 md:space-x-4">
-      <button class="hidden md:block bg-[#FD8C02] text-white px-4 py-2 rounded">Sign Up</button>
+      <button class="hidden md:block bg-[#FD8C02] text-white px-4 py-2 rounded ">Sign Up</button>
       <div class="hidden md:flex w-8 h-8 items-center justify-center">
         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 512 512">
           <path fill="#FD8C02" fill-rule="evenodd"
@@ -111,10 +148,14 @@
   </div>
 </header>
 
+
+
+ <!-- Header ended-->
+
 <body class="bg-gray-50">
 
   <div class="max-w-6xl mx-auto px-5 py-11">
-    <!-- Header -->
+    <!-- Header for hero-->
     <div class="mb-7">
       <h1 class="text-3xl font-bold text-gray-900">Tours</h1>
       <p class="text-gray-500">Discover our handpicked tours for unforgettable experiences</p>
@@ -204,35 +245,45 @@
 <img src="https://readdy.ai/api/search-image?query=Beautiful%20coastal%20view%20of%20Santorini%2C%20Greece%20with%20white%20buildings%20and%20blue%20domes%20against%20the%20azure%20sea%2C%20sunny%20day%20with%20clear%20blue%20sky%2C%20picturesque%20Mediterranean%20landscape%2C%20no%20people%2C%20high%20quality%20travel%20photography&width=250&height=150&seq=santorini1&orientation=landscape" alt="Santorini" class="w-full h-[150px] object-cover object-top">
 <div class="p-3">
 <h3 class="font-medium">Santorini, Greece</h3>
-<button class="bg-orange-500 text-white px-11 py-2 rounded-button font-low ">view details</button>
+<div class="flex justify-end mt-3">
+  <button class="text-xs border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-2 py-1 rounded-md transition">View details</button>
+</div>
 </div>
 </div>
 <div class="min-w-[250px] rounded-lg overflow-hidden shadow-md transition-transform duration-200 hover:-translate-y-2">
 <img src="https://readdy.ai/api/search-image?query=Majestic%20view%20of%20Machu%20Picchu%2C%20Peru%20with%20ancient%20Incan%20ruins%20nestled%20among%20green%20mountains%2C%20early%20morning%20mist%2C%20dramatic%20clouds%2C%20archeological%20site%2C%20no%20people%2C%20professional%20travel%20photography&width=250&height=150&seq=machupicchu1&orientation=landscape" alt="Machu Picchu" class="w-full h-[150px] object-cover object-top">
 <div class="p-3">
 <h3 class="font-medium">Machu Picchu, Peru</h3>
-<p class="text-orange-500 font-bold">0000</p>
+<div class="flex justify-end mt-3">
+  <button class="text-xs border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-2 py-1 rounded-md transition">View details</button>
+</div>
 </div>
 </div>
 <div class="min-w-[250px] rounded-lg overflow-hidden shadow-md transition-transform duration-200 hover:-translate-y-2">
 <img src="https://readdy.ai/api/search-image?query=Beautiful%20beach%20in%20Bali%2C%20Indonesia%20with%20palm%20trees%2C%20white%20sand%20and%20turquoise%20water%2C%20tropical%20paradise%2C%20sunny%20day%2C%20pristine%20shoreline%2C%20no%20people%2C%20high%20quality%20travel%20photography&width=250&height=150&seq=bali1&orientation=landscape" alt="Bali" class="w-full h-[150px] object-cover object-top">
 <div class="p-3">
 <h3 class="font-medium">Bali, Indonesia</h3>
-<p class="text-orange-500 font-bold">0000</p>
+<div class="flex justify-end mt-3">
+  <button class="text-xs border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-2 py-1 rounded-md transition">View details</button>
+</div>
 </div>
 </div>
 <div class="min-w-[250px] rounded-lg overflow-hidden shadow-md transition-transform duration-200 hover:-translate-y-2">
 <img src="https://readdy.ai/api/search-image?query=Stunning%20view%20of%20Venice%20canals%2C%20Italy%20with%20colorful%20buildings%2C%20gondolas%20on%20water%2C%20historic%20architecture%2C%20bright%20sunny%20day%2C%20European%20charm%2C%20no%20people%2C%20professional%20travel%20photography&width=250&height=150&seq=venice1&orientation=landscape" alt="Venice" class="w-full h-[150px] object-cover object-top">
 <div class="p-3">
 <h3 class="font-medium">Venice, Italy</h3>
-<p class="text-orange-500 font-bold">0000</p>
+<div class="flex justify-end mt-3">
+  <button class="text-xs border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-2 py-1 rounded-md transition">View details</button>
+</div>
 </div>
 </div>
 <div class="min-w-[250px] rounded-lg overflow-hidden shadow-md transition-transform duration-200 hover:-translate-y-2">
 <img src="https://readdy.ai/api/search-image?query=Breathtaking%20view%20of%20the%20Grand%20Canyon%2C%20USA%20with%20layered%20red%20rock%20formations%2C%20vast%20landscape%2C%20dramatic%20shadows%2C%20natural%20wonder%2C%20sunny%20day%20with%20blue%20sky%2C%20no%20people%2C%20high%20quality%20landscape%20photography&width=250&height=150&seq=grandcanyon1&orientation=landscape" alt="Grand Canyon" class="w-full h-[150px] object-cover object-top">
 <div class="p-3">
 <h3 class="font-medium">Grand Canyon, USA</h3>
-<p class="text-orange-500 font-bold">0000</p>
+<div class="flex justify-end mt-3">
+  <button class="text-xs border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-2 py-1 rounded-md transition">View details</button>
+</div>
 </div>
 </div>
 </div>
@@ -241,35 +292,45 @@
 <img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20Kyoto%2C%20Japan%20with%20traditional%20temples%2C%20cherry%20blossoms%2C%20Japanese%20gardens%2C%20serene%20atmosphere%2C%20historic%20architecture%2C%20no%20people%2C%20professional%20travel%20photography&width=250&height=150&seq=kyoto1&orientation=landscape" alt="Kyoto" class="w-full h-[150px] object-cover object-top">
 <div class="p-3">
 <h3 class="font-medium">Kyoto, Japan</h3>
-<p class="text-orange-500 font-bold">0000</p>
+<div class="flex justify-end mt-3">
+  <button class="text-xs border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-2 py-1 rounded-md transition">View details</button>
+</div>
 </div>
 </div>
 <div class="min-w-[250px] rounded-lg overflow-hidden shadow-md transition-transform duration-200 hover:-translate-y-2">
 <img src="https://readdy.ai/api/search-image?query=Stunning%20view%20of%20Barcelona%2C%20Spain%20with%20Gaudi%20architecture%2C%20colorful%20buildings%2C%20Mediterranean%20atmosphere%2C%20sunny%20day%2C%20urban%20landscape%2C%20no%20people%2C%20high%20quality%20travel%20photography&width=250&height=150&seq=barcelona1&orientation=landscape" alt="Barcelona" class="w-full h-[150px] object-cover object-top">
 <div class="p-3">
 <h3 class="font-medium">Barcelona, Spain</h3>
-<p class="text-orange-500 font-bold">000</p>
+<div class="flex justify-end mt-3">
+  <button class="text-xs border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-2 py-1 rounded-md transition">View details</button>
+</div>
 </div>
 </div>
 <div class="min-w-[250px] rounded-lg overflow-hidden shadow-md transition-transform duration-200 hover:-translate-y-2">
 <img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20Cape%20Town%2C%20South%20Africa%20with%20Table%20Mountain%2C%20coastal%20scenery%2C%20urban%20landscape%2C%20clear%20blue%20sky%2C%20natural%20beauty%2C%20no%20people%2C%20professional%20travel%20photography&width=250&height=150&seq=capetown1&orientation=landscape" alt="Cape Town" class="w-full h-[150px] object-cover object-top">
 <div class="p-3">
 <h3 class="font-medium">Cape Town, South Africa</h3>
-<p class="text-orange-500 font-bold">0000</p>
+<div class="flex justify-end mt-3">
+  <button class="text-xs border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-2 py-1 rounded-md transition">View details</button>
+</div>
 </div>
 </div>
 <div class="min-w-[250px] rounded-lg overflow-hidden shadow-md transition-transform duration-200 hover:-translate-y-2">
 <img src="https://readdy.ai/api/search-image?query=Stunning%20view%20of%20Sydney%2C%20Australia%20with%20Opera%20House%2C%20harbor%2C%20blue%20water%2C%20iconic%20cityscape%2C%20sunny%20day%2C%20urban%20landscape%2C%20no%20people%2C%20high%20quality%20travel%20photography&width=250&height=150&seq=sydney1&orientation=landscape" alt="Sydney" class="w-full h-[150px] object-cover object-top">
 <div class="p-3">
 <h3 class="font-medium">Sydney, Australia</h3>
-<p class="text-orange-500 font-bold">000</p>
+<div class="flex justify-end mt-3">
+  <button class="text-xs border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-2 py-1 rounded-md transition">View details</button>
+</div>
 </div>
 </div>
 <div class="min-w-[250px] rounded-lg overflow-hidden shadow-md transition-transform duration-200 hover:-translate-y-2">
 <img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20Marrakech%2C%20Morocco%20with%20colorful%20markets%2C%20traditional%20architecture%2C%20vibrant%20culture%2C%20exotic%20atmosphere%2C%20sunny%20day%2C%20no%20people%2C%20professional%20travel%20photography&width=250&height=150&seq=marrakech1&orientation=landscape" alt="Marrakech" class="w-full h-[150px] object-cover object-top">
 <div class="p-3">
 <h3 class="font-medium">Marrakech, Morocco</h3>
-<p class="text-orange-500 font-bold">000</p>
+<div class="flex justify-end mt-3">
+  <button class="text-xs border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-2 py-1 rounded-md transition">View details</button>
+</div>
 </div>
 </div>
 </div>
