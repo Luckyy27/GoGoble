@@ -14,6 +14,7 @@
 <script src="https://cdn.tailwindcss.com/3.4.16"></script>
 <script>tailwind.config={theme:{extend:{colors:{primary:'#FF8A00',secondary:'#FFD580'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
 <style>
+  /**/
   #carouselExampleAutoplaying {
     height: 50vh; /* Half the screen height */
     overflow: hidden;
@@ -32,6 +33,41 @@
     color:#FD8C02;
 
   }
+  /*the styling for national and international */
+
+
+  .tab-btn {
+    background-color: transparent;
+    color: white;
+  }
+
+  .tab-btn:hover {
+    background-color: white;
+    color: orange;
+  }
+
+  .active-btn {
+    background-color: white;
+    color: orange;
+  }
+/*the styling for national and international ended*/
+    /*styling  for the destination section */
+    :where([class^="ri-"])::before { content: "\f3c2"; }
+.destination-card:hover .overlay {
+opacity: 1;
+}
+.destination-card .overlay {
+opacity: 0;
+transition: opacity 0.3s ease;
+}
+
+    /*Styling   for the destination section ended */
+.mycol{
+  color: #FD8C02;
+}
+    /*styling  for the Why Travel with us? section */
+    
+        /*styling  for the Why Travel with us? section  ended*/
 </style>
 
 </head>
@@ -48,7 +84,7 @@
         <input
           type="text"
           placeholder="Search..."
-          class="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          class="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
         />
         <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
           <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2"
@@ -71,7 +107,7 @@
 
     <!-- Right Side (Sign Up + Icon or Hamburger) -->
     <div class="flex items-center space-x-4 md:space-x-4">
-      <button class="hidden md:block bg-[#FD8C02] text-white px-4 py-2 rounded">Sign Up</button>
+      <button class="hidden md:block bg-[#FD8C02] text-white px-4 py-2 rounded ">Sign Up</button>
       <div class="hidden md:flex w-8 h-8 items-center justify-center">
         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 512 512">
           <path fill="#FD8C02" fill-rule="evenodd"
@@ -140,32 +176,32 @@
 </div>
 
 <!-- Stats Section -->
-<section class="container mx-auto px-4 -mt-10 relative z-10  ">
-<div class="bg-white rounded-lg shadow-lg p-6 flex flex-wrap justify-between drop-shadow-md">
-<div class="w-full sm:w-1/4 text-center mb-4 sm:mb-0">
-<p class="text-2xl font-bold text-gray-800">951+</p>
+<section class="container mx-auto px-4 -mt-10 relative z-10  justify-center ">
+<div class="bg-white rounded-lg shadow-lg p-6 flex flex-wrap justify-between drop-shadow-md ">
+<div class="w-full sm:w-1/4 text-center mb-4 sm:mb-0 mt-3 ">
+<p class="text-2xl font-bold text-gray-800 ">951+</p>
 <p class="text-sm text-gray-600">Active Travelers</p>
 </div>
-<div class="w-full sm:w-1/4 text-center mb-4 sm:mb-0">
+<div class="w-full sm:w-1/4 text-center mb-4 sm:mb-0 mt-3">
 <p class="text-2xl font-bold text-gray-800">1.5M+</p>
 <p class="text-sm text-gray-600">Successfull Tours</p>
 </div>
-<div class="w-full sm:w-1/4 text-center mb-4 sm:mb-0">
+<div class="w-full sm:w-1/4 text-center mb-4 sm:mb-0 mt-3"> 
 <p class="text-2xl font-bold text-gray-800">⭐⭐⭐⭐⭐</p>
 <p class="text-sm text-gray-600">Ratings on Google</p>
 </div>
-<div class="w-full sm:w-1/4 text-center">
+<div class="w-full sm:w-1/4 text-center mt-3">
 <p class="text-2xl font-bold text-gray-800">98%</p>
 <p class="text-sm text-gray-600">Satisfaction Rate</p>
 </div>
 </div>
 </section>
 <!-- Stats Section  ended -->
- <!-- Trending Destinations -->
+ <!-- Trending offers -->
 <section class="container mx-auto px-4 py-12 ">
-<h2 class="text-2xl font-bold text-gray-800 mb-6">Trending Destinations in </h2>
+<h2 class="text-2xl font-bold text-gray-800 mb-6">Trending offers  </h2>
 <div class="relative">
-<div class="flex overflow-x-auto pb-6 gap-4 hide-scrollbar ">
+<div class="flex overflow-x-auto pb-6 gap-5 hide-scrollbar ">
 <div class="min-w-[250px] rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:-translate-y-2">
 <img src="https://readdy.ai/api/search-image?query=Beautiful%20coastal%20view%20of%20Santorini%2C%20Greece%20with%20white%20buildings%20and%20blue%20domes%20against%20the%20azure%20sea%2C%20sunny%20day%20with%20clear%20blue%20sky%2C%20picturesque%20Mediterranean%20landscape%2C%20no%20people%2C%20high%20quality%20travel%20photography&width=250&height=150&seq=santorini1&orientation=landscape" alt="Santorini" class="w-full h-[150px] object-cover object-top">
 <div class="p-3">
@@ -202,7 +238,7 @@
 </div>
 </div>
 </div>
-<div class="flex overflow-x-auto pb-6 gap-4 mt-4 hide-scrollbar">
+<div class="flex overflow-x-auto pb-6 gap-4 mt-4 hide-scrollbar justify-center">
 <div class="min-w-[250px] rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:-translate-y-2">
 <img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20Kyoto%2C%20Japan%20with%20traditional%20temples%2C%20cherry%20blossoms%2C%20Japanese%20gardens%2C%20serene%20atmosphere%2C%20historic%20architecture%2C%20no%20people%2C%20professional%20travel%20photography&width=250&height=150&seq=kyoto1&orientation=landscape" alt="Kyoto" class="w-full h-[150px] object-cover object-top">
 <div class="p-3">
@@ -241,18 +277,270 @@
 </div>
 </div>
 <div class="flex justify-center mt-8">
-<button class="bg-orange-500 text-white px-8 py-3 rounded-button font-medium whitespace-nowrap">View All Destinations</button>
+<button class="bg-orange-500 text-white px-8 py-3 rounded-button font-medium whitespace-nowrap">View All offers</button>
 </div>
 </section>
- <!-- Trending Destinations  ended -->
+ <!-- Trending offers  ended -->
 
 
+<!--  international and national section -->
+<section class="container mx-auto px-4 mt-3 relative z-10 items-center h-auto">
+  <div class="bg-orange-500 rounded-lg shadow-lg p-6 flex flex-col sm:flex-row justify-center gap-4 drop-shadow-md">
+    <button href="intenationalBtn" id="internationalBtn"
+      class="tab-btn text-2xl font-bold px-6 py-2 rounded transition active-btn">
+      International
+    </button>
+    <button id="nationalBtn"
+      class="tab-btn text-2xl font-bold px-6 py-2 rounded transition">
+      National
+    </button>
+  </div>
+</section>
+<!--  international and national section Ended -->
+<!-- Top Destinations  -->
+<section class="container mx-auto px-4 py-12">
+<h2 class="text-2xl font-bold text-gray-800 mb-6">Top Destinations</h2>
+<div class="relative">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="destination-card relative rounded-lg overflow-hidden shadow-md">
+<img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20Rome%2C%20Italy%20with%20Colosseum%2C%20ancient%20ruins%2C%20historic%20architecture%2C%20sunny%20day%20with%20blue%20sky%2C%20European%20charm%2C%20no%20people%2C%20high%20quality%20travel%20photography&width=280&height=200&seq=rome1&orientation=landscape" alt="Rome" class="w-full h-[200px] object-cover object-top">
+<div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
+<h3 class="text-white font-medium">Rome</h3>
+<p class="text-white text-sm">Italy</p>
+</div>
+<div class="overlay absolute inset-0 bg-black/30 flex items-center justify-center">
+<button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">From $799</button>
+</div>
+</div>
+<div class="destination-card relative rounded-lg overflow-hidden shadow-md">
+<img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20Paris%2C%20France%20with%20Eiffel%20Tower%2C%20Seine%20river%2C%20historic%20architecture%2C%20sunny%20day%20with%20blue%20sky%2C%20European%20charm%2C%20no%20people%2C%20high%20quality%20travel%20photography&width=280&height=200&seq=paris1&orientation=landscape" alt="Paris" class="w-full h-[200px] object-cover object-top">
+<div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
+<h3 class="text-white font-medium">Paris</h3>
+<p class="text-white text-sm">France</p>
+</div>
+<div class="overlay absolute inset-0 bg-black/30 flex items-center justify-center">
+<button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">From $849</button>
+</div>
+</div>
+<div class="destination-card relative rounded-lg overflow-hidden shadow-md">
+<img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20Tokyo%2C%20Japan%20with%20modern%20skyscrapers%2C%20traditional%20temples%2C%20urban%20landscape%2C%20vibrant%20city%20life%2C%20clear%20day%2C%20Asian%20architecture%2C%20no%20people%2C%20high%20quality%20travel%20photography&width=280&height=200&seq=tokyo1&orientation=landscape" alt="Tokyo" class="w-full h-[200px] object-cover object-top">
+<div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
+<h3 class="text-white font-medium">Tokyo</h3>
+<p class="text-white text-sm">Japan</p>
+</div>
+<div class="overlay absolute inset-0 bg-black/30 flex items-center justify-center">
+<button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">From $1,099</button>
+</div>
+</div>
+<div class="destination-card relative rounded-lg overflow-hidden shadow-md">
+<img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20New%20York%20City%2C%20USA%20with%20Manhattan%20skyline%2C%20skyscrapers%2C%20urban%20landscape%2C%20Central%20Park%2C%20sunny%20day%2C%20American%20cityscape%2C%20no%20people%2C%20high%20quality%20travel%20photography&width=280&height=200&seq=newyork1&orientation=landscape" alt="New York" class="w-full h-[200px] object-cover object-top">
+<div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
+<h3 class="text-white font-medium">New York</h3>
+<p class="text-white text-sm">USA</p>
+</div>
+<div class="overlay absolute inset-0 bg-black/30 flex items-center justify-center">
+<button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">From $899</button>
+</div>
+</div>
+<div class="destination-card relative rounded-lg overflow-hidden shadow-md">
+<img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20London%2C%20UK%20with%20Big%20Ben%2C%20Thames%20river%2C%20historic%20architecture%2C%20sunny%20day%20with%20blue%20sky%2C%20European%20charm%2C%20no%20people%2C%20high%20quality%20travel%20photography&width=280&height=200&seq=london1&orientation=landscape" alt="London" class="w-full h-[200px] object-cover object-top">
+<div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
+<h3 class="text-white font-medium">London</h3>
+<p class="text-white text-sm">UK</p>
+</div>
+<div class="overlay absolute inset-0 bg-black/30 flex items-center justify-center">
+<button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">From $829</button>
+</div>
+</div>
+<div class="destination-card relative rounded-lg overflow-hidden shadow-md">
+<img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20Dubai%2C%20UAE%20with%20Burj%20Khalifa%2C%20modern%20skyscrapers%2C%20luxury%20architecture%2C%20sunny%20day%20with%20blue%20sky%2C%20desert%20cityscape%2C%20no%20people%2C%20high%20quality%20travel%20photography&width=280&height=200&seq=dubai1&orientation=landscape" alt="Dubai" class="w-full h-[200px] object-cover object-top">
+<div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
+<h3 class="text-white font-medium">Dubai</h3>
+<p class="text-white text-sm">UAE</p>
+</div>
+<div class="overlay absolute inset-0 bg-black/30 flex items-center justify-center">
+<a href="https://readdy.ai/home/3ba5dae8-262f-4c73-9e50-3863e5451e6c/0754dc8b-a141-4100-911f-ebbd7094e0f5" data-readdy="true">
+<button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">From $949</button>
+</a>
+</div>
+</div>
+<div class="destination-card relative rounded-lg overflow-hidden shadow-md">
+<img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20Rio%20de%20Janeiro%2C%20Brazil%20with%20Christ%20the%20Redeemer%20statue%2C%20Sugarloaf%20Mountain%2C%20beaches%2C%20tropical%20landscape%2C%20sunny%20day%2C%20South%20American%20scenery%2C%20no%20people%2C%20high%20quality%20travel%20photography&width=280&height=200&seq=rio1&orientation=landscape" alt="Rio de Janeiro" class="w-full h-[200px] object-cover object-top">
+<div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
+<h3 class="text-white font-medium">Rio de Janeiro</h3>
+<p class="text-white text-sm">Brazil</p>
+</div>
+<div class="overlay absolute inset-0 bg-black/30 flex items-center justify-center">
+<button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">From $999</button>
+</div>
+</div>
+<div class="destination-card relative rounded-lg overflow-hidden shadow-md">
+<img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20Amsterdam%2C%20Netherlands%20with%20canals%2C%20historic%20buildings%2C%20bridges%2C%20bicycles%2C%20sunny%20day%20with%20blue%20sky%2C%20European%20charm%2C%20no%20people%2C%20high%20quality%20travel%20photography&width=280&height=200&seq=amsterdam1&orientation=landscape" alt="Amsterdam" class="w-full h-[200px] object-cover object-top">
+<div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
+<h3 class="text-white font-medium">Amsterdam</h3>
+<p class="text-white text-sm">Netherlands</p>
+</div>
+<div class="overlay absolute inset-0 bg-black/30 flex items-center justify-center">
+<button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">From $799</button>
+</div>
+</div>
+</div>
+<button class="absolute -left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center z-10">
+<i class="ri-arrow-left-s-line text-gray-700 ri-lg"></i>
+</button>
+<button class="absolute -right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center z-10">
+<i class="ri-arrow-right-s-line text-gray-700 ri-lg"></i>
+</button>
+</div>
+</section>
+<!-- Top Destinations  ended -->
 
+<!-- Why Choose Us -->
+<section class="container mx-auto px-4 py-12">
+<h2 class="text-2xl font-bold text-gray-800 mb-10 text-center">Why Travel With Us?</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="text-center">
+<div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+<div class="w-10 h-10 flex items-center justify-center text-primary">
+<i class="ri-shield-check-line ri-2x mycol"></i>
+</div>
+</div>
+<h3 class="text-xl font-bold mb-2">100% Safe Travel</h3>
+<p class="text-gray-600">Your safety is our top priority. We ensure all our tours follow strict safety protocols and guidelines.</p>
+</div>
+<div class="text-center">
+<div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+<div class="w-10 h-10 flex items-center justify-center text-primary">
+<i class="ri-wallet-3-line ri-2x mycol"></i>
+</div>
+</div>
+<h3 class="text-xl font-bold mb-2">Best Price Guarantee</h3>
+<p class="text-gray-600">We offer the best prices in the market. If you find a lower price, we'll match it and give you an additional 5% off.</p>
+</div>
+<div class="text-center">
+<div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+<div class="w-10 h-10 flex items-center justify-center text-primary">
+<i class="ri-customer-service-2-line ri-2x mycol"></i>
+</div>
+</div>
+<h3 class="text-xl font-bold mb-2">24/7 Customer Support</h3>
+<p class="text-gray-600">Our dedicated support team is available round the clock to assist you with any queries or concerns.</p>
+</div>
+</div>
+</section>
 
+<!-- Why Choose Us ended -->
+<!-- Tour Categories -->
+<section class="container mx-auto px-4 py-12">
+<h2 class="text-2xl font-bold text-gray-800 mb-10">Tours</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-white rounded-lg shadow-lg overflow-hidden">
+<div class="relative h-[300px]">
+<div class="absolute inset-0 grid grid-cols-2">
+<img src="https://readdy.ai/api/search-image?query=Beautiful%20daytime%20view%20of%20Eiffel%20Tower%20in%20Paris%2C%20France%20with%20blue%20sky%2C%20sunny%20day%2C%20iconic%20landmark%2C%20European%20architecture%2C%20no%20people%2C%20high%20quality%20travel%20photography&width=300&height=300&seq=paris_day&orientation=portrait" alt="Paris Day" class="w-full h-full object-cover object-top">
+<img src="https://readdy.ai/api/search-image?query=Beautiful%20daytime%20view%20of%20Colosseum%20in%20Rome%2C%20Italy%20with%20blue%20sky%2C%20sunny%20day%2C%20ancient%20architecture%2C%20historic%20landmark%2C%20no%20people%2C%20high%20quality%20travel%20photography&width=300&height=300&seq=rome_day&orientation=portrait" alt="Rome Day" class="w-full h-full object-cover object-top">
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2">European Heritage Tour</h3>
+<p class="text-gray-600 mb-4">Explore the rich history and culture of Europe's most iconic cities. Visit historic landmarks, museums, and experience authentic local cuisine.</p>
+<div class="flex justify-between items-center">
+<p class="text-orange-500 font-bold text-xl">From $1,499</p>
+<button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">View Details</button>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-lg overflow-hidden">
+<div class="relative h-[300px]">
+<div class="absolute inset-0 grid grid-cols-2">
+<img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20Tokyo%20skyline%2C%20Japan%20with%20modern%20skyscrapers%2C%20urban%20landscape%2C%20clear%20day%2C%20Asian%20architecture%2C%20no%20people%2C%20high%20quality%20travel%20photography&width=300&height=300&seq=tokyo_day&orientation=portrait" alt="Tokyo Day" class="w-full h-full object-cover object-top">
+<img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20Kyoto%20temples%2C%20Japan%20with%20traditional%20architecture%2C%20cherry%20blossoms%2C%20Japanese%20gardens%2C%20serene%20atmosphere%2C%20no%20people%2C%20high%20quality%20travel%20photography&width=300&height=300&seq=kyoto_day&orientation=portrait" alt="Kyoto Day" class="w-full h-full object-cover object-top">
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2">Japan Discovery Tour</h3>
+<p class="text-gray-600 mb-4">Experience the perfect blend of ancient traditions and modern innovations in Japan. Visit historic temples, futuristic cities, and enjoy authentic Japanese cuisine.</p>
+<div class="flex justify-between items-center">
+<p class="text-orange-500 font-bold text-xl">From $1,899</p>
+<button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">View Details</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Tour Categories ended-->
+<!-- Testimonials section -->
+<section class="container mx-auto px-4 py-12">
+<h2 class="text-2xl font-bold text-gray-800 mb-10 text-center">What Our Travelers Say</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 ">
+<div class="bg-white rounded-lg shadow-md p-6 hover:-translate-y-2 ">
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4 ">
+<div class="w-12 h-12 flex items-center justify-center">
+<i class="ri-user-3-fill text-gray-500 ri-lg"></i>
+</div>
+</div>
+<div>
+<h4 class="font-medium text-gray-800">Emily Richardson</h4>
+<p class="text-gray-600 text-sm">Santorini Island Explorer</p>
+</div>
+</div>
+<div class="flex mb-3">
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+</div>
+<p class="text-gray-700">"The Santorini tour exceeded all my expectations! Our guide Maria was knowledgeable and passionate. The sunset views were breathtaking, and the wine tasting experience was unforgettable. Highly recommend!"</p>
+</div>
+<div class="bg-white rounded-lg shadow-md p-6 hover:-translate-y-2 ">
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4">
+<div class="w-12 h-12 flex items-center justify-center">
+<i class="ri-user-3-fill text-gray-500 ri-lg"></i>
+</div>
+</div>
+<div>
+<h4 class="font-medium text-gray-800">Michael Thompson</h4>
+<p class="text-gray-600 text-sm">Japan Cultural Immersion</p>
+</div>
+</div>
+<div class="flex mb-3">
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+</div>
+<p class="text-gray-700">"This tour was the perfect introduction to Japan. We experienced everything from ancient temples to modern Tokyo. Our guide Kenji made the cultural differences easy to navigate. A life-changing experience!"</p>
+</div>
+<div class="bg-white rounded-lg shadow-md p-6 hover:-translate-y-2 ">
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4">
+<div class="w-12 h-12 flex items-center justify-center">
+<i class="ri-user-3-fill text-gray-500 ri-lg"></i>
+</div>
+</div>
+<div>
+<h4 class="font-medium text-gray-800">Sophia Martinez</h4>
+<p class="text-gray-600 text-sm">Inca Trail to Machu Picchu</p>
+</div>
+</div>
+<div class="flex mb-3">
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+</div>
+<p class="text-gray-700">"Hiking the Inca Trail was challenging but absolutely worth it! The moment we reached Machu Picchu at sunrise was magical. Our guide Carlos was supportive and shared fascinating historical insights throughout."</p>
+</div>
+</div>
+</section>
+<!-- Testimonials section  Ended -->
 
-
-
-  <!-- footer -->
+<!-- footer -->
 <footer class="bg-gray-900 text-white pt-16 pb-8">
 <div class="container mx-auto px-4">
 <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
@@ -338,6 +626,76 @@
   btn.addEventListener('click', () => {
     menu.classList.toggle('hidden');
   });
+
+  /* the script for nation and international section*/
+
+
+  const internationalBtn = document.getElementById("internationalBtn");
+  const nationalBtn = document.getElementById("nationalBtn");
+
+  function setActive(button) {
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.classList.remove('active-btn');
+    });
+    button.classList.add('active-btn');
+  }
+
+  // Default active
+  setActive(internationalBtn);
+
+  // Event listeners
+  internationalBtn.addEventListener("click", () => setActive(internationalBtn));
+  nationalBtn.addEventListener("click", () => setActive(nationalBtn));
+
+
+
+    /* the script for nation and international section ended*/
+    /*Script for the destination section */
+
+  id="destination-carousel"
+document.addEventListener('DOMContentLoaded', function() {
+const leftArrow = document.querySelector('.ri-arrow-left-s-line').parentElement;
+const rightArrow = document.querySelector('.ri-arrow-right-s-line').parentElement;
+const destinationCards = document.querySelectorAll('.destination-card');
+let currentIndex = 0;
+const cardsPerPage = window.innerWidth >= 768 ? 4 : 2;
+const maxIndex = Math.ceil(destinationCards.length / cardsPerPage) - 1;
+function updateVisibility() {
+destinationCards.forEach((card, index) => {
+const startIdx = currentIndex * cardsPerPage;
+const endIdx = startIdx + cardsPerPage - 1;
+if (index >= startIdx && index <= endIdx) {
+card.style.display = 'block';
+} else {
+card.style.display = 'none';
+}
+});
+}
+leftArrow.addEventListener('click', function() {
+if (currentIndex > 0) {
+currentIndex--;
+updateVisibility();
+}
+});
+rightArrow.addEventListener('click', function() {
+if (currentIndex < maxIndex) {
+currentIndex++;
+updateVisibility();
+}
+});
+// Initialize
+updateVisibility();
+// Handle window resize
+window.addEventListener('resize', function() {
+const newCardsPerPage = window.innerWidth >= 768 ? 4 : 2;
+if (newCardsPerPage !== cardsPerPage) {
+currentIndex = 0;
+updateVisibility();
+}
+});
+});
+
+    /*Script for the destination section ended */
 </script>
 
 
