@@ -7,6 +7,7 @@
     <link rel="icon" href="icon.png" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
@@ -131,6 +132,17 @@
             }
         }
         /*styling for the Why Travel with us? section ended*/
+        @keyframes appear {
+from{
+opacity: 0;
+transform:translateX(-100px);}
+to {
+opacity: 1;
+transform: translateX(0px);}}
+.block{
+animation :appear linear;
+animation-timeline:view();
+animation-range:entry 0% cover 40% }
     </style>
 </head>
 <body>
@@ -263,7 +275,7 @@
     <!-- Stats Section ended -->
     
     <!-- Trending offers -->
-    <section class="container mx-auto px-4 py-12">
+    <section class="container mx-auto px-4 py-12 block">
         <h2 class="text-2xl font-bold text-gray-800 mb-6">Trending offers</h2>
         <div class="relative">
             <div class="flex overflow-x-auto pb-6 gap-5 hide-scrollbar">
@@ -348,7 +360,7 @@
     <!-- Trending offers ended -->
 
     <!-- international and national section -->
-    <section class="container mx-auto px-4 mt-3 relative z-10 items-center h-auto">
+    <section class="container mx-auto px-4 mt-3 relative z-10 items-center h-auto block">
         <div class="bg-orange-500 rounded-lg shadow-lg p-6 flex flex-col sm:flex-row justify-center gap-4 drop-shadow-md">
             <button href="intenationalBtn" id="internationalBtn"
                 class="tab-btn text-2xl font-bold px-6 py-2 rounded transition active-btn">
@@ -363,7 +375,7 @@
     <!-- international and national section Ended -->
     
     <!-- Top Destinations -->
-    <section class="container mx-auto px-4 py-12">
+    <section class="container mx-auto px-4 py-12 block">
         <h2 class="text-2xl font-bold text-gray-800 mb-6">Top Destinations</h2>
         <div class="relative">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -461,7 +473,7 @@
     <!-- Top Destinations ended -->
 
     <!-- Why Choose Us -->
-    <section class="container mx-auto px-4 py-12">
+    <section class="container mx-auto px-4 py-12 block" >
         <h2 class="text-2xl font-bold text-gray-800 mb-10 text-center">Why Travel With Us?</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="text-center">
@@ -496,7 +508,7 @@
     <!-- Why Choose Us ended -->
     
     <!-- Tour Categories -->
-    <section class="container mx-auto px-4 py-12">
+    <section class="container mx-auto px-4 py-12 block">
         <h2 class="text-2xl font-bold text-gray-800 mb-10">Tours</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div class="bg-white rounded-lg shadow-lg overflow-hidden">
@@ -536,7 +548,7 @@
     <!-- Tour Categories ended-->
     
     <!-- Testimonials section -->
-    <section class="container mx-auto px-4 py-12">
+    <section class="container mx-auto px-4 py-12 block">
         <h2 class="text-2xl font-bold text-gray-800 mb-10 text-center">What Our Travelers Say</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="bg-white rounded-lg shadow-md p-6 hover:-translate-y-2">
@@ -607,7 +619,7 @@
     <!-- Testimonials section Ended -->
 
     <!-- footer -->
-    <footer class="bg-gray-900 text-white pt-16 pb-8">
+    <footer class="bg-gray-900 text-white pt-16 pb-8  block">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
                 <div>
@@ -763,5 +775,6 @@
         });
         /*Script for the destination section ended */
     </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 </html>
