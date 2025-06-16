@@ -1,0 +1,34 @@
+[
+  {
+    "id": "Greece",
+    "title": "Santorini, Greece",
+    "image": "https://i.pinimg.com/736x/b3/93/81/b3938122aaad4a58428d6fb1b6b6647d.jpg",
+    "price": "$899",
+    "description": "Happy to travel greece",
+    "sp":"₹1,3345",
+    "pp":"₹123345",
+    "lp":"987665"
+  },
+  {
+    "id": "Peru",
+    "title": "Machu Picchu, Peru",
+    "image": "https://i.pinimg.com/736x/d8/fb/81/d8fb8161bba7cddcf4d1f02e9e12bcc2.jpg",
+    "price": "$1,299",
+    "description": "explore peru"
+  },
+  {
+    "id": "Balli",
+    "title": "Bali, Indonesia",
+    "image": "https://i.pinimg.com/736x/8e/81/7d/8e817dffc3f7543e1af6c4cff4cdc664.jpg",
+    "price": "$799",
+    "description": "Discover Balli."
+
+  },
+  {
+    "id": "Venice",
+    "title": "Venice, Italy",
+    "image": "https://i.pinimg.com/736x/f7/b8/1a/f7b81aaa3376d7f6251106618722ad11.jpg",
+    "price": "$849",
+    "description": "fall love in venice."
+  }
+]

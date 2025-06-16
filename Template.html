@@ -112,20 +112,18 @@
 
 
 <!--Body section-->
-  <body class="bg-gray-50 text-gray-800">
-    <!-- Hero Section -->
-    <section class="relative bg-cover bg-center h-[500px]" style="background-image: url(https://www.visitdubai.com/-/media/gathercontent/poi/b/burj-khalifa/fallback-image/poi-burj-khalifa-3-dtcm-jun-2023.jpg)">
+    <section  id="image" class="relative bg-cover bg-center h-[500px]" style="background-image: url(https://www.visitdubai.com/-/media/gathercontent/poi/b/burj-khalifa/fallback-image/poi-burj-khalifa-3-dtcm-jun-2023.jpg)">
       <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-start px-10">
         <button class="bg-white text-black rounded px-4 py-1 mb-4">&larr; Back to Destinations</button>
-        <h1 class="text-white text-5xl font-bold mb-2">Dubai, UAE</h1>
-        <p class="text-white text-lg">Experience luxury and adventure in the city of the future</p>
+        <h1 class="text-white text-5xl font-bold mb-2" id="title"></h1>
+        <p class="text-white text-lg" id="description"></p>
       </div>
     </section>
 
     <!-- Pricing & Book Now -->
     <div class="flex justify-between items-center px-10 py-6 bg-white shadow">
       <div>
-        <p class="text-xl font-semibold">From <span class="text-orange-500 font-bold text-2xl">₹98949</span> per person</p>
+        <p class="text-xl font-semibold">From <span class="text-orange-500 font-bold text-2xl" id="price"></span> per person</p>
         <div class="flex items-center space-x-2 text-sm text-gray-600">
           <span>⭐ 4.8 (328 reviews)</span>
           <span>• 3-7 days</span>
@@ -146,7 +144,7 @@
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="border rounded p-4 shadow">
               <h3 class="font-bold text-lg">Standard Package</h3>
-              <p class="text-orange-600 font-semibold">₹99949</p>
+              <p class="text-orange-600 font-semibold" id="sp"></p>
               <ul class="text-sm mt-2">
                 <li>✓ 3 nights accommodation</li>
                 <li>✓ City tour</li>
@@ -157,7 +155,7 @@
             </div>
             <div class="border rounded p-4 shadow">
               <h3 class="font-bold text-lg">Premium Package</h3>
-              <p class="text-orange-600 font-semibold">₹19,999,99</p>
+              <p class="text-orange-600 font-semibold" id="pp"></p>
               <ul class="text-sm mt-2">
                 <li>✓ 5 nights 4-star accommodation</li>
                 <li>✓ City tour + Desert safari</li>
@@ -168,7 +166,7 @@
             </div>
             <div class="border rounded p-4 shadow">
               <h3 class="font-bold text-lg">Luxury Package</h3>
-              <p class="text-orange-600 font-semibold">₹19,5499</p>
+              <p class="text-orange-600 font-semibold" id="lp"></p>
               <ul class="text-sm mt-2">
                 <li>✓ 7 nights 5-star accommodation</li>
                 <li>✓ All tours & activities included</li>
@@ -400,7 +398,42 @@
     menu.classList.toggle('hidden');
   });
 </script>
+//script writting for template 
 
+<script>
+ 
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id");
+
+  // Fetch the JSON and update content
+  fetch("destinations.json")
+    .then(response => response.json())
+    .then(data => {
+      const destination = data.find(d => d.id === id);
+      if (destination) {
+        // Set title and description
+        document.getElementById("title").textContent = destination.title;
+        document.getElementById("description").textContent = destination.description;
+        document.getElementById("price").textContent = destination.price;
+        document.getElementById("sp").textContent = destination.sp;
+        document.getElementById("pp").textContent = destination.pp;
+        document.getElementById("lp").textContent = destination.lp;
+
+
+        // Set background image of the hero section
+        document.getElementById("image").style.backgroundImage = `url(${destination.image})`;
+      } else {
+        document.getElementById("title").textContent = "Destination not found";
+        document.getElementById("description").textContent = "";
+        document.getElementById("image").style.backgroundImage = "none";
+      }
+    })
+    .catch(error => {
+      console.error("Error loading destination:", error);
+      document.getElementById("title").textContent = "Error loading destination";
+      document.getElementById("description").textContent = "";
+    });
+</script>
 
 
 </body>
