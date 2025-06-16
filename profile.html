@@ -18,81 +18,81 @@
 </style>
 </head>
 <body>
-<!-- Header -->
-<header class="sticky top-0 z-50 bg-white shadow-sm border-b-2 border-b-[#FD8C02]">
-  <div class="relative container mx-auto px-4 py-3 flex items-center justify-between">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm border-b-2 border-b-[#FD8C02]">
+        <div class="relative container mx-auto px-4 py-3 flex items-center justify-between">
+            <!-- Logo + Search -->
+            <div class="flex items-center space-x-4">
+                <img class="w-14 h-10" src="logo.png" alt="logo" />
+                <div class="relative hidden md:block w-64">
+                    <input
+                        type="text"
+                        placeholder="Search..."
+                        class="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    />
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                        <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
 
-    <!-- Logo + Search -->
-    <div class="flex items-center space-x-4">
-      <img class="w-14 h-10" src="logo.png" alt="logo" />
-      <div class="relative hidden md:block w-64">
-        <input
-          type="text"
-          placeholder="Search..."
-          class="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-        />
-        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-          <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2"
-               viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z"/>
-          </svg>
+            <!-- Centered Nav -->
+            <nav class="hidden md:flex absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 space-x-5">
+                <a href="index.html" class="text-gray-700 hover:text-[#FD8C02]">Home</a>
+                <a href="Destinations.html" class="text-gray-700 hover:text-[#FD8C02]">Destinations</a>
+                <a href="Tours.html" class="text-gray-700 hover:text-[#FD8C02]">Tours</a>
+                <a href="booking.html" class="text-gray-700 hover:text-[#FD8C02]">Booking</a>
+                <a href="aboutus.html" class="text-gray-700 hover:text-[#FD8C02]">About us</a>
+            </nav>
+
+            <!-- Right Side (Sign Up + Icon or Hamburger) -->
+            <div class="flex items-center space-x-4 md:space-x-4">
+                <button  class="hidden md:block bg-[#FD8C02] text-white px-4 py-2 rounded "><a href="signup.html">Sign Up</a></button>
+                <div class="hidden md:flex w-8 h-8 items-center justify-center">
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 512 512">
+                        <path fill="#FD8C02" fill-rule="evenodd"
+                            d="M256 42.667A213.333 213.333 0 0 1 469.334 256c0 117.821-95.513 213.334-213.334 213.334c-117.82 0-213.333-95.513-213.333-213.334C42.667 138.18 138.18 42.667 256 42.667m21.334 234.667h-42.667c-52.815 0-98.158 31.987-117.715 77.648c30.944 43.391 81.692 71.685 139.048 71.685s108.104-28.294 139.049-71.688c-19.557-45.658-64.9-77.645-117.715-77.645M256 106.667c-35.346 0-64 28.654-64 64s28.654 64 64 64s64-28.654 64-64s-28.653-64-64-64"/>
+                    </svg></a>
+                </div>
+
+                <!-- Hamburger Icon -->
+                <button id="menu-btn" class="md:hidden text-orange-500 focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
         </div>
-      </div>
-    </div>
 
-    <!-- Centered Nav -->
-    <nav class="hidden md:flex absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 space-x-5">
-      <a href="#" class="text-gray-700 hover:text-[#FD8C02]">Home</a>
-      <a href="#" class="text-gray-700 hover:text-[#FD8C02]">Destinations</a>
-      <a href="#" class="text-gray-700 hover:text-[#FD8C02]">Tours</a>
-      <a href="#" class="text-gray-700 hover:text-[#FD8C02]">Packages</a>
-      <a href="#" class="text-gray-700 hover:text-[#FD8C02]">About us</a>
-    </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 space-y-2 bg-white shadow-md border-t border-gray-100">
+            <input
+                type="text"
+                placeholder="Search..."
+                class="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <a href="index.html" class="block text-gray-700 hover:text-[#FD8C02]">Home</a>
+            <a href="#" class="block text-gray-700 hover:text-[#FD8C02]">Destinations</a>
+            <a href="Tours.html" class="block text-gray-700 hover:text-[#FD8C02]">Tours</a>
+            <a href="booking.html" class="block text-gray-700 hover:text-[#FD8C02]">Booking</a>
+            <a href="aboutus.html" class="block text-gray-700 hover:text-[#FD8C02]">About us</a>
+            <button class="w-full bg-[#FD8C02] text-white py-2 rounded"><a href="signup.html">Sign Up</a></button>
+            <div class="flex justify-center">
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 512 512">
+                    <path fill="#FD8C02" fill-rule="evenodd"
+                        d="M256 42.667A213.333 213.333 0 0 1 469.334 256c0 117.821-95.513 213.334-213.334 213.334c-117.82 0-213.333-95.513-213.333-213.334C42.667 138.18 138.18 42.667 256 42.667m21.334 234.667h-42.667c-52.815 0-98.158 31.987-117.715 77.648c30.944 43.391 81.692 71.685 139.048 71.685s108.104-28.294 139.049-71.688c-19.557-45.658-64.9-77.645-117.715-77.645M256 106.667c-35.346 0-64 28.654-64 64s28.654 64 64 64s64-28.654 64-64s-28.653-64-64-64"/>
+                </svg></a>
+            </div>
+        </div>
+    </header>
 
-    <!-- Right Side (Sign Up + Icon or Hamburger) -->
-    <div class="flex items-center space-x-4 md:space-x-4">
-  
-      <div class="hidden md:flex w-8 h-8 items-center justify-center">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 512 512">
-          <path fill="#FD8C02" fill-rule="evenodd"
-                d="M256 42.667A213.333 213.333 0 0 1 469.334 256c0 117.821-95.513 213.334-213.334 213.334c-117.82 0-213.333-95.513-213.333-213.334C42.667 138.18 138.18 42.667 256 42.667m21.334 234.667h-42.667c-52.815 0-98.158 31.987-117.715 77.648c30.944 43.391 81.692 71.685 139.048 71.685s108.104-28.294 139.049-71.688c-19.557-45.658-64.9-77.645-117.715-77.645M256 106.667c-35.346 0-64 28.654-64 64s28.654 64 64 64s64-28.654 64-64s-28.653-64-64-64"/>
-        </svg>
-      </div>
-
-      <!-- Hamburger Icon -->
-      <button id="menu-btn" class="md:hidden text-orange-500 focus:outline-none">
-        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2"
-             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round"
-                d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
-    </div>
-  </div>
-
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 space-y-2 bg-white shadow-md border-t border-gray-100">
-    <input
-      type="text"
-      placeholder="Search..."
-      class="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-    />
-    <a href="#" class="block text-gray-700 hover:text-[#FD8C02]">Home</a>
-    <a href="#" class="block text-gray-700 hover:text-[#FD8C02]">Destinations</a>
-    <a href="#" class="block text-gray-700 hover:text-[#FD8C02]">Tours</a>
-    <a href="#" class="block text-gray-700 hover:text-[#FD8C02]">Packages</a>
-    <a href="#" class="block text-gray-700 hover:text-[#FD8C02]">About us</a>
-    <button class="w-full bg-[#FD8C02] text-white py-2 rounded">Sign Up</button>
-    <div class="flex justify-center">
-      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 512 512">
-        <path fill="#FD8C02" fill-rule="evenodd"
-              d="M256 42.667A213.333 213.333 0 0 1 469.334 256c0 117.821-95.513 213.334-213.334 213.334c-117.82 0-213.333-95.513-213.333-213.334C42.667 138.18 138.18 42.667 256 42.667m21.334 234.667h-42.667c-52.815 0-98.158 31.987-117.715 77.648c30.944 43.391 81.692 71.685 139.048 71.685s108.104-28.294 139.049-71.688c-19.557-45.658-64.9-77.645-117.715-77.645M256 106.667c-35.346 0-64 28.654-64 64s28.654 64 64 64s64-28.654 64-64s-28.653-64-64-64"/>
-      </svg>
-    </div>
-  </div>
-</header>
-  <script>
+    <!-- Header ended-->  <script>
   const btn = document.getElementById('menu-btn');
   const menu = document.getElementById('mobile-menu');
 
