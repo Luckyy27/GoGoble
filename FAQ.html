@@ -23,80 +23,81 @@
 </style>
 </head>
 <body>
-<!-- Header -->
-<header class="sticky top-0 z-50 bg-white shadow-sm border-b-2 border-b-[#FD8C02]">
-  <div class="relative container mx-auto px-4 py-3 flex items-center justify-between">
+    <!-- Header -->
+    <header class=" top-0 z-50 bg-white shadow-sm border-b-2 border-b-[#FD8C02]">
+        <div class="relative container mx-auto px-4 py-3 flex items-center justify-between">
+            <!-- Logo + Search -->
+            <div class="flex items-center space-x-4">
+                <a href="index.html"><img class="w-14 h-10" src="logo.png" alt="logo" /></a>
+                <div class="relative hidden md:block w-64">
+                    <input
+                        type="text"
+                        placeholder="Search..."
+                        class="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    />
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                        <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
 
-    <!-- Logo + Search -->
-    <div class="flex items-center space-x-4">
-      <img class="w-14 h-10" src="logo.png" alt="logo" />
-      <div class="relative hidden md:block w-64">
-        <input
-          type="text"
-          placeholder="Search..."
-          class="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-        />
-        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-          <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2"
-               viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z"/>
-          </svg>
+            <!-- Centered Nav -->
+            <nav class="hidden md:flex absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 space-x-5">
+                <a href="index.html" class="text-gray-700 hover:text-[#FD8C02]">Home</a>
+                <a href="Destinations.html" class="text-gray-700 hover:text-[#FD8C02]">Destinations</a>
+                <a href="Tours.html" class="text-gray-700 hover:text-[#FD8C02]">Tours</a>
+                <a href="booking.html" class="text-gray-700 hover:text-[#FD8C02]">Booking</a>
+                <a href="aboutus.html" class="text-gray-700 hover:text-[#FD8C02]">About us</a>
+            </nav>
+
+            <!-- Right Side (Sign Up + Icon or Hamburger) -->
+            <div class="flex items-center space-x-4 md:space-x-4">
+                <button  class="hidden md:block bg-[#FD8C02] text-white px-4 py-2 rounded "><a href="signup.html">Sign Up</a></button>
+                <div class="hidden md:flex w-8 h-8 items-center justify-center">
+                    <a href="profile.html"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 512 512">
+                        <path fill="#FD8C02" fill-rule="evenodd"
+                            d="M256 42.667A213.333 213.333 0 0 1 469.334 256c0 117.821-95.513 213.334-213.334 213.334c-117.82 0-213.333-95.513-213.333-213.334C42.667 138.18 138.18 42.667 256 42.667m21.334 234.667h-42.667c-52.815 0-98.158 31.987-117.715 77.648c30.944 43.391 81.692 71.685 139.048 71.685s108.104-28.294 139.049-71.688c-19.557-45.658-64.9-77.645-117.715-77.645M256 106.667c-35.346 0-64 28.654-64 64s28.654 64 64 64s64-28.654 64-64s-28.653-64-64-64"/>
+                    </svg></a>
+                </div>
+
+                <!-- Hamburger Icon -->
+                <button id="menu-btn" class="md:hidden text-orange-500 focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
         </div>
-      </div>
-    </div>
 
-    <!-- Centered Nav -->
-    <nav class="hidden md:flex absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 space-x-5">
-      <a href="#" class="text-gray-700 hover:text-[#FD8C02]">Home</a>
-      <a href="#" class="text-gray-700 hover:text-[#FD8C02]">Destinations</a>
-      <a href="#" class="text-gray-700 hover:text-[#FD8C02]">Tours</a>
-      <a href="#" class="text-gray-700 hover:text-[#FD8C02]">Packages</a>
-      <a href="#" class="text-gray-700 hover:text-[#FD8C02]">About us</a>
-    </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 space-y-2 bg-white shadow-md border-t border-gray-100">
+            <input
+                type="text"
+                placeholder="Search..."
+                class="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <a href="index.html" class="block text-gray-700 hover:text-[#FD8C02]">Home</a>
+            <a href="Destinations.html" class="block text-gray-700 hover:text-[#FD8C02]">Destinations</a>
+            <a href="Tours.html" class="block text-gray-700 hover:text-[#FD8C02]">Tours</a>
+            <a href="booking.html" class="block text-gray-700 hover:text-[#FD8C02]">Booking</a>
+            <a href="aboutus.html" class="block text-gray-700 hover:text-[#FD8C02]">About us</a>
+            <button class="w-full bg-[#FD8C02] text-white py-2 rounded"><a href="signup.html">Sign Up</a></button>
+            <div class="flex justify-center">
+                <a href="profile.html"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 512 512">
+                    <path fill="#FD8C02" fill-rule="evenodd"
+                        d="M256 42.667A213.333 213.333 0 0 1 469.334 256c0 117.821-95.513 213.334-213.334 213.334c-117.82 0-213.333-95.513-213.333-213.334C42.667 138.18 138.18 42.667 256 42.667m21.334 234.667h-42.667c-52.815 0-98.158 31.987-117.715 77.648c30.944 43.391 81.692 71.685 139.048 71.685s108.104-28.294 139.049-71.688c-19.557-45.658-64.9-77.645-117.715-77.645M256 106.667c-35.346 0-64 28.654-64 64s28.654 64 64 64s64-28.654 64-64s-28.653-64-64-64"/>
+                </svg></a>
+            </div>
+        </div>
+    </header>
 
-    <!-- Right Side (Sign Up + Icon or Hamburger) -->
-    <div class="flex items-center space-x-4 md:space-x-4">
-      <button class="hidden md:block bg-[#FD8C02] text-white px-4 py-2 rounded">Sign Up</button>
-      <div class="hidden md:flex w-8 h-8 items-center justify-center">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 512 512">
-          <path fill="#FD8C02" fill-rule="evenodd"
-                d="M256 42.667A213.333 213.333 0 0 1 469.334 256c0 117.821-95.513 213.334-213.334 213.334c-117.82 0-213.333-95.513-213.333-213.334C42.667 138.18 138.18 42.667 256 42.667m21.334 234.667h-42.667c-52.815 0-98.158 31.987-117.715 77.648c30.944 43.391 81.692 71.685 139.048 71.685s108.104-28.294 139.049-71.688c-19.557-45.658-64.9-77.645-117.715-77.645M256 106.667c-35.346 0-64 28.654-64 64s28.654 64 64 64s64-28.654 64-64s-28.653-64-64-64"/>
-        </svg>
-      </div>
-
-      <!-- Hamburger Icon -->
-      <button id="menu-btn" class="md:hidden text-orange-500 focus:outline-none">
-        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2"
-             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round"
-                d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
-    </div>
-  </div>
-
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 space-y-2 bg-white shadow-md border-t border-gray-100">
-    <input
-      type="text"
-      placeholder="Search..."
-      class="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-    />
-    <a href="#" class="block text-gray-700 hover:text-[#FD8C02]">Home</a>
-    <a href="#" class="block text-gray-700 hover:text-[#FD8C02]">Destinations</a>
-    <a href="#" class="block text-gray-700 hover:text-[#FD8C02]">Tours</a>
-    <a href="#" class="block text-gray-700 hover:text-[#FD8C02]">Packages</a>
-    <a href="#" class="block text-gray-700 hover:text-[#FD8C02]">About us</a>
-    <button class="w-full bg-[#FD8C02] text-white py-2 rounded">Sign Up</button>
-    <div class="flex justify-center">
-      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 512 512">
-        <path fill="#FD8C02" fill-rule="evenodd"
-              d="M256 42.667A213.333 213.333 0 0 1 469.334 256c0 117.821-95.513 213.334-213.334 213.334c-117.82 0-213.333-95.513-213.333-213.334C42.667 138.18 138.18 42.667 256 42.667m21.334 234.667h-42.667c-52.815 0-98.158 31.987-117.715 77.648c30.944 43.391 81.692 71.685 139.048 71.685s108.104-28.294 139.049-71.688c-19.557-45.658-64.9-77.645-117.715-77.645M256 106.667c-35.346 0-64 28.654-64 64s28.654 64 64 64s64-28.654 64-64s-28.653-64-64-64"/>
-      </svg>
-    </div>
-  </div>
-</header>
+    <!-- Header ended-->
   <script>
   const btn = document.getElementById('menu-btn');
   const menu = document.getElementById('mobile-menu');
@@ -114,7 +115,7 @@
 
   <!-- FAQ Section -->
   <section class="py-12 px-4 bg-white">
-    <div class="max-w-2xl mx-auto border-4 border-orange-400 rounded-xl bg-white shadow-lg px-6 py-8">
+  <div class="max-w-7xl mx-auto border-2 border-orange-400 rounded-xl bg-white shadow-lg px-6 py-8">
       <h2 class="text-2xl font-bold text-primary mb-6 text-center">FAQ</h2>
       <div class="space-y-4" id="faq-container">
         
@@ -213,83 +214,81 @@
 
 
 
- <!-- footer -->
-<footer class="bg-gray-900 text-white pt-16 pb-8">
-<div class="container mx-auto px-4">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-<div>
-<img  class="ml-3"src="logo-White.png" alt="logo">
-<p class="text-gray-400 mb-4">Your trusted partner for unforgettable travel experiences since 2025.</p>
-<div class="flex space-x-4">
-<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
-<i class="ri-facebook-fill"></i>
-</a>
-<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
-<i class="ri-twitter-fill"></i>
-</a>
-<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
-<i class="ri-instagram-line"></i>
-</a>
-<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
-<i class="ri-youtube-fill"></i>
-</a>
-</div>
-</div>
-<div>
-<h4 class="text-lg font-bold mb-4">Quick Links</h4>
-<ul class="space-y-2">
-<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
-<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Destinations</a></li>
-<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Tours</a></li>
-<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Bookings</a></li>
-<li><a href="#" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
-</ul>
-</div>
-<div>
-<h4 class="text-lg font-bold mb-4">Support</h4>
-<ul class="space-y-2">
-<li><a href="#" class="text-gray-400 hover:text-white transition-colors">FAQs</a></li>
-<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
-<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Terms & Conditions</a></li>
-<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Booking Policy</a></li>
-<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Customer Support</a></li>
-</ul>
-</div>
-<div>
-<h4 class="text-lg font-bold mb-4">Contact Us</h4>
-<ul class="space-y-2">
-<li class="flex items-start">
-<div class="w-5 h-5 flex items-center justify-center mt-1 mr-2">
-<i class="ri-map-pin-line"></i>
-</div>
-<span class="text-gray-400">123 Travel Street, vizg , 530001,India </span>
-</li>
-<li class="flex items-center">
-<div class="w-5 h-5 flex items-center justify-center mr-2">
-<i class="ri-phone-line"></i>
-</div>
-<span class="text-gray-400">+91 987654321</span>
-</li>
-<li class="flex items-center">
-<div class="w-5 h-5 flex items-center justify-center mr-2">
-<i class="ri-mail-line"></i>
-</div>
-<span class="text-gray-400">info@goglobe.com</span>
-</li>
-</ul>
-</div>
-</div>
-<div class="border-t border-gray-800 pt-8">
-<div class="flex flex-col md:flex-row justify-between items-center">
-<p class="text-gray-400 mb-4 md:mb-0">© 2025 Travel Agency. All rights reserved.</p>
-<div class="flex items-center hover:text-orange-500 space-x-4 mr-10">
-<a href="#"><h4 class="text-lg font-bold mb-4 ">Website Developers</h4></a>
-
-</div>
-</div>
-</div>
-</div>
-</footer>
- <!-- footer ended -->
-</body>
+    <!-- footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8  block">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <img class="ml-3" src="logo-White.png" alt="logo">
+                    <p class="text-gray-400 mb-4">Your trusted partner for unforgettable travel experiences since 2025.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+                            <i class="ri-youtube-fill"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="Destinations.html" class="text-gray-400 hover:text-white transition-colors">Destinations</a></li>
+                        <li><a href="Tours.html" class="text-gray-400 hover:text-white transition-colors">Tours</a></li>
+                        <li><a href="booking.html" class="text-gray-400 hover:text-white transition-colors">Booking</a></li>
+                        <li><a href="aboutus.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">FAQs</a></li>
+                        <li><a href="PrivacyPolicy.html" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="termsandconditions.html" class="text-gray-400 hover:text-white transition-colors">Terms & Conditions</a></li>
+                        <li><a href="bookingpolicy.html" class="text-gray-400 hover:text-white transition-colors">Booking Policy</a></li>
+                        <li><a href="coustmersupport.html" class="text-gray-400 hover:text-white transition-colors">Customer Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact Us</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center mt-1 mr-2">
+                                <i class="ri-map-pin-line"></i>
+                            </div>
+                            <span class="text-gray-400">123 Travel Street, vizg , 530001,India </span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-5 h-5 flex items-center justify-center mr-2">
+                                <i class="ri-phone-line"></i>
+                            </div>
+                            <span class="text-gray-400">+91 987654321</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-5 h-5 flex items-center justify-center mr-2">
+                                <i class="ri-mail-line"></i>
+                            </div>
+                            <span class="text-gray-400">info@goglobe.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 mb-4 md:mb-0">© 2025 Travel Agency. All rights reserved.</p>
+                    <div class="flex items-center hover:text-orange-500 space-x-4 mr-10">
+                        <a href="#"><h4 class="text-lg font-bold mb-4">Website Developers</h4></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer ended --></body>
 </html>

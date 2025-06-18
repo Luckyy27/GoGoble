@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations</title>
+    <link rel="icon" href="icon.png" type="image/x-icon" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#FF8A00',secondary:'#FFD580'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<style>
+  #carouselExampleAutoplaying {
+    height: 50vh; /* Half the screen height */
+    overflow: hidden;
+  }
+
+  .carousel-item {
+    height: 100%;
+  }
+
+  .carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+</style>
+
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="top-0 z-50 bg-white shadow-sm border-b-2 border-b-[#FD8C02]">
+        <div class="relative container mx-auto px-4 py-3 flex items-center justify-between">
+            <!-- Logo + Search -->
+            <div class="flex items-center space-x-4">
+                <a href="index.html"><img class="w-14 h-10" src="logo.png" alt="logo" /></a>
+                <div class="relative hidden md:block w-64">
+                    <input
+                        type="text"
+                        placeholder="Search..."
+                        class="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    />
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                        <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Centered Nav -->
+            <nav class="hidden md:flex absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 space-x-5">
+                <a href="index.html" class="text-gray-700 hover:text-[#FD8C02]">Home</a>
+                <a href="#" class="text-gray-700 hover:text-[#FD8C02]">Destinations</a>
+                <a href="Tours.html" class="text-gray-700 hover:text-[#FD8C02]">Tours</a>
+                <a href="booking.html" class="text-gray-700 hover:text-[#FD8C02]">Booking</a>
+                <a href="aboutus.html" class="text-gray-700 hover:text-[#FD8C02]">About us</a>
+            </nav>
+
+            <!-- Right Side (Sign Up + Icon or Hamburger) -->
+            <div class="flex items-center space-x-4 md:space-x-4">
+                <button  class="hidden md:block bg-[#FD8C02] text-white px-4 py-2 rounded "><a href="signup.html">Sign Up</a></button>
+                <div class="hidden md:flex w-8 h-8 items-center justify-center">
+                    <a href="profile.html"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 512 512">
+                        <path fill="#FD8C02" fill-rule="evenodd"
+                            d="M256 42.667A213.333 213.333 0 0 1 469.334 256c0 117.821-95.513 213.334-213.334 213.334c-117.82 0-213.333-95.513-213.333-213.334C42.667 138.18 138.18 42.667 256 42.667m21.334 234.667h-42.667c-52.815 0-98.158 31.987-117.715 77.648c30.944 43.391 81.692 71.685 139.048 71.685s108.104-28.294 139.049-71.688c-19.557-45.658-64.9-77.645-117.715-77.645M256 106.667c-35.346 0-64 28.654-64 64s28.654 64 64 64s64-28.654 64-64s-28.653-64-64-64"/>
+                    </svg></a>
+                </div>
+
+                <!-- Hamburger Icon -->
+                <button id="menu-btn" class="md:hidden text-orange-500 focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 space-y-2 bg-white shadow-md border-t border-gray-100">
+            <input
+                type="text"
+                placeholder="Search..."
+                class="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <a href="index.html" class="block text-gray-700 hover:text-[#FD8C02]">Home</a>
+            <a href="#" class="block text-gray-700 hover:text-[#FD8C02]">Destinations</a>
+            <a href="Tours.html" class="block text-gray-700 hover:text-[#FD8C02]">Tours</a>
+            <a href="booking.html" class="block text-gray-700 hover:text-[#FD8C02]">Booking</a>
+            <a href="aboutus.html" class="block text-gray-700 hover:text-[#FD8C02]">About us</a>
+            <button class="w-full bg-[#FD8C02] text-white py-2 rounded"><a href="signup.html">Sign Up</a></button>
+            <div class="flex justify-center">
+                <a href="profile.html"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 512 512">
+                    <path fill="#FD8C02" fill-rule="evenodd"
+                        d="M256 42.667A213.333 213.333 0 0 1 469.334 256c0 117.821-95.513 213.334-213.334 213.334c-117.82 0-213.333-95.513-213.333-213.334C42.667 138.18 138.18 42.667 256 42.667m21.334 234.667h-42.667c-52.815 0-98.158 31.987-117.715 77.648c30.944 43.391 81.692 71.685 139.048 71.685s108.104-28.294 139.049-71.688c-19.557-45.658-64.9-77.645-117.715-77.645M256 106.667c-35.346 0-64 28.654-64 64s28.654 64 64 64s64-28.654 64-64s-28.653-64-64-64"/>
+                </svg></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Header ended-->
+
+
+
+<!--Body section-->
+    <section  id="image" class="relative bg-cover bg-center h-[500px]" style="background-image: url(https://www.visitdubai.com/-/media/gathercontent/poi/b/burj-khalifa/fallback-image/poi-burj-khalifa-3-dtcm-jun-2023.jpg)">
+      <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-start px-10">
+        <button class="bg-white text-black rounded px-4 py-1 mb-4">&larr; Back to Destinations</button>
+        <h1 class="text-white text-5xl font-bold mb-2" id="title"></h1>
+        <p class="text-white text-lg" id="description"></p>
+      </div>
+    </section>
+
+    <!-- Pricing & Book Now -->
+    <div class="flex justify-between items-center px-10 py-6 bg-white shadow">
+      <div>
+        <p class="text-xl font-semibold">From <span class="text-orange-500 font-bold text-2xl" id="price"></span> per person</p>
+        <div class="flex items-center space-x-2 text-sm text-gray-600">
+          <span>⭐ 4.8 (328 reviews)</span>
+          <span>• 3-7 days</span>
+          <span>• 2-10 people</span>
+          <span>• Flight included</span>
+        </div>
+      </div>
+      <button class="bg-orange-500 text-white px-6 py-2 rounded">Book Now</button>
+    </div>
+
+    <!-- Main Content Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 px-10 py-6">
+      <!-- Left Content -->
+      <div class="lg:col-span-2">
+        <!-- Packages Section -->
+        <section class="mb-8">
+          <h2 class="text-2xl font-bold mb-4">Available Packages</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="border rounded p-4 shadow">
+              <h3 class="font-bold text-lg">Standard Package</h3>
+              <p class="text-orange-600 font-semibold" id="sp"></p>
+              <ul class="text-sm mt-2">
+                <li>✓ 3 nights accommodation</li>
+                <li>✓ City tour</li>
+                <li>✓ Airport transfers</li>
+                <li>✓ Daily breakfast</li>
+              </ul>
+              <button class="mt-4 bg-orange-500 text-white w-full py-2 rounded">Select Package</button>
+            </div>
+            <div class="border rounded p-4 shadow">
+              <h3 class="font-bold text-lg">Premium Package</h3>
+              <p class="text-orange-600 font-semibold" id="pp"></p>
+              <ul class="text-sm mt-2">
+                <li>✓ 5 nights 4-star accommodation</li>
+                <li>✓ City tour + Desert safari</li>
+                <li>✓ Airport transfers</li>
+                <li>✓ Half-board meals</li>
+              </ul>
+              <button class="mt-4 bg-orange-500 text-white w-full py-2 rounded">Select Package</button>
+            </div>
+            <div class="border rounded p-4 shadow">
+              <h3 class="font-bold text-lg">Luxury Package</h3>
+              <p class="text-orange-600 font-semibold" id="lp"></p>
+              <ul class="text-sm mt-2">
+                <li>✓ 7 nights 5-star accommodation</li>
+                <li>✓ All tours & activities included</li>
+                <li>✓ Private transfers</li>
+                <li>✓ All-inclusive meals</li>
+              </ul>
+              <button class="mt-4 bg-orange-500 text-white w-full py-2 rounded">Select Package</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Accommodation Options -->
+        <section class="mb-8">
+          <h2 class="text-2xl font-bold mb-4">Accommodation Options</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="border rounded p-4 shadow">
+              <h3 class="font-bold">Burj Al Arab Jumeirah</h3>
+              <p class="text-sm text-gray-600">Jumeirah Beach</p>
+              <p class="mt-2">From <span class="font-semibold">₹5550/night</span></p>
+              <button class="mt-2 text-orange-500">View Hotel</button>
+            </div>
+            <div class="border rounded p-4 shadow">
+              <h3 class="font-bold">Address Downtown</h3>
+              <p class="text-sm text-gray-600">Downtown Dubai</p>
+              <p class="mt-2">From <span class="font-semibold">₹3320/night</span></p>
+              <button class="mt-2 text-orange-500">View Hotel</button>
+            </div>
+            <div class="border rounded p-4 shadow">
+              <h3 class="font-bold">Atlantis The Palm</h3>
+              <p class="text-sm text-gray-600">Palm Jumeirah</p>
+              <p class="mt-2">From <span class="font-semibold">₹2280/night</span></p>
+              <button class="mt-2 text-orange-500">View Hotel</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Attractions -->
+        <section>
+          <h2 class="text-2xl font-bold mb-4">Attractions & Activities</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="border p-4 rounded shadow">
+              <h3 class="font-bold">Burj Khalifa</h3>
+              <p class="text-sm text-gray-600">1.5 hours • ₹440</p>
+              <p class="text-sm">Visit the world’s tallest building...</p>
+              <button class="mt-2 text-orange-500">Add to Itinerary</button>
+            </div>
+            <div class="border p-4 rounded shadow">
+              <h3 class="font-bold">Palm Jumeirah</h3>
+              <p class="text-sm text-gray-600">3 hours • ₹665</p>
+              <p class="text-sm">Explore the iconic palm-shaped island...</p>
+              <button class="mt-2 text-orange-500">Add to Itinerary</button>
+            </div>
+            <div class="border p-4 rounded shadow">
+              <h3 class="font-bold">Dubai Mall</h3>
+              <p class="text-sm text-gray-600">4 hours • Free entry</p>
+              <p class="text-sm">Shop at one of the world’s largest malls...</p>
+              <button class="mt-2 text-orange-500">Add to Itinerary</button>
+            </div>
+            <div class="border p-4 rounded shadow">
+              <h3 class="font-bold">Desert Safari</h3>
+              <p class="text-sm text-gray-600">6 hours • ₹585</p>
+              <p class="text-sm">Experience dune bashing, camel rides...</p>
+              <button class="mt-2 text-orange-500">Add to Itinerary</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Travel Info -->
+        <section class="mt-10">
+          <h2 class="text-2xl font-bold mb-4">Travel Information</h2>
+          <div class="bg-white p-4 rounded shadow">
+            <h3 class="text-lg font-semibold">Best Time to Visit</h3>
+            <p class="mt-2 text-sm">Best time to visit Dubai is November to March...</p>
+            <div class="grid grid-cols-2 gap-4 mt-4">
+              <div>
+                <ul class="text-sm list-disc list-inside">
+                  <li>November to April</li>
+                  <li>December and January are busy</li>
+                  <li>Book accommodations early</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-semibold">Monthly Weather</h4>
+                <ul class="text-sm">
+                  <li>January: 24°C / 75°F</li>
+                  <li>April: 33°C / 91°F</li>
+                  <li>July: 41°C / 106°F</li>
+                  <li>October: 35°C / 95°F</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Booking Sidebar -->
+      <div class="bg-white p-6 rounded shadow h-fit">
+        <h2 class="text-xl font-bold mb-4">Book Your Dubai Package</h2>
+        <label class="block mb-2 text-sm font-semibold">Travel Dates</label>
+        <input type="date" class="w-full border px-3 py-2 rounded mb-2" />
+        <input type="date" class="w-full border px-3 py-2 rounded mb-4" />
+
+        <label class="block mb-2 text-sm font-semibold">Travelers</label>
+        <div class="flex space-x-4 mb-4">
+          <div><label class="block text-sm">Adults</label><input type="number" class="w-full border px-2 py-1 rounded" value="2" /></div>
+          <div><label class="block text-sm">Children</label><input type="number" class="w-full border px-2 py-1 rounded" value="0" /></div>
+        </div>
+
+        <label class="block mb-2 text-sm font-semibold">Select Package</label>
+        <select class="w-full border px-3 py-2 rounded mb-4">
+          <option>Standard Package - ₹949</option>
+          <option>Premium Package - ₹1,249</option>
+          <option>Luxury Package - ₹1,549</option>
+        </select>
+
+        <label class="block mb-2 text-sm font-semibold">Add-ons</label>
+        <div class="space-y-1 text-sm mb-4">
+          <label><input type="checkbox" class="mr-2" />Airport Fast Track (₹30)</label><br />
+          <label><input type="checkbox" class="mr-2" />Travel Insurance (₹45)</label><br />
+          <label><input type="checkbox" class="mr-2" />Private Guide (+₹120/day)</label>
+        </div>
+
+        <label class="block mb-2 text-sm font-semibold">Promo Code</label>
+        <div class="flex space-x-2 mb-4">
+          <input type="text" class="w-full border px-3 py-2 rounded" placeholder="Enter code" />
+          <button class="bg-gray-200 px-4 rounded">Apply</button>
+        </div>
+
+        <div class="text-sm text-gray-700 mb-1">Package Price (2 Adults): <span class="font-semibold">$1,898</span></div>
+        <div class="text-sm text-gray-700 mb-1">Taxes & Fees: <span class="font-semibold">$189</span></div>
+        <div class="text-lg font-bold mb-4">Total: ₹2,087</div>
+
+        <label class="block mb-2 text-sm font-semibold">Pay in installments</label>
+        <input type="checkbox" class="mr-2" />
+
+        <button class="mt-4 w-full bg-orange-500 text-white py-2 rounded">Proceed to Payment</button>
+      </div>
+    </div>
+  </body>
+
+
+<!--body  section complete-->
+
+
+
+     <!-- footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8  block">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <img class="ml-3" src="logo-White.png" alt="logo">
+                    <p class="text-gray-400 mb-4">Your trusted partner for unforgettable travel experiences since 2025.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+                            <i class="ri-youtube-fill"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Destinations</a></li>
+                        <li><a href="Tours.html" class="text-gray-400 hover:text-white transition-colors">Tours</a></li>
+                        <li><a href="booking.html" class="text-gray-400 hover:text-white transition-colors">Booking</a></li>
+                        <li><a href="aboutus.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="FAQ.html" class="text-gray-400 hover:text-white transition-colors">FAQs</a></li>
+                        <li><a href="PrivacyPolicy.html" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="termsandconditions.html" class="text-gray-400 hover:text-white transition-colors">Terms & Conditions</a></li>
+                        <li><a href="bookingpolicy.html" class="text-gray-400 hover:text-white transition-colors">Booking Policy</a></li>
+                        <li><a href="coustmersupport.html" class="text-gray-400 hover:text-white transition-colors">Customer Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact Us</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center mt-1 mr-2">
+                                <i class="ri-map-pin-line"></i>
+                            </div>
+                            <span class="text-gray-400">123 Travel Street, vizg , 530001,India </span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-5 h-5 flex items-center justify-center mr-2">
+                                <i class="ri-phone-line"></i>
+                            </div>
+                            <span class="text-gray-400">+91 987654321</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-5 h-5 flex items-center justify-center mr-2">
+                                <i class="ri-mail-line"></i>
+                            </div>
+                            <span class="text-gray-400">info@goglobe.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 mb-4 md:mb-0">© 2025 Travel Agency. All rights reserved.</p>
+                    <div class="flex items-center hover:text-orange-500 space-x-4 mr-10">
+                        <a href="#"><h4 class="text-lg font-bold mb-4">Website Developers</h4></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer ended -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+  <script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
+
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
+//script writting for template 
+
+<script>
+ 
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id");
+
+  // Fetch the JSON and update content
+  fetch("destinations.json")
+    .then(response => response.json())
+    .then(data => {
+      const destination = data.find(d => d.id === id);
+      if (destination) {
+        // Set title and description
+        document.getElementById("title").textContent = destination.title;
+        document.getElementById("description").textContent = destination.description;
+        document.getElementById("price").textContent = destination.price;
+        document.getElementById("sp").textContent = destination.sp;
+        document.getElementById("pp").textContent = destination.pp;
+        document.getElementById("lp").textContent = destination.lp;
+
+
+        // Set background image of the hero section
+        document.getElementById("image").style.backgroundImage = `url(${destination.image})`;
+      } else {
+        document.getElementById("title").textContent = "Destination not found";
+        document.getElementById("description").textContent = "";
+        document.getElementById("image").style.backgroundImage = "none";
+      }
+    })
+    .catch(error => {
+      console.error("Error loading destination:", error);
+      document.getElementById("title").textContent = "Error loading destination";
+      document.getElementById("description").textContent = "";
+    });
+</script>
+
+
+</body>
+</html>
