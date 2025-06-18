@@ -105,31 +105,81 @@
   });
 </script>
 
+<section class="min-h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center"
+      style="background-image: url('https://cdn.pixabay.com/photo/2024/12/28/03/39/field-9295186_1280.jpg');">
+  <div class="w-full max-w-7xl px-4 py-10">
+    <!-- Flex container for welcome + form -->
+    <div class="flex flex-col md:flex-row md:items-start md:justify-end md:space-x-10">
 
+      <!-- Welcome Text (LEFT SIDE) -->
+      <div class="mb-10 md:mb-0 md:w-1/2 md:text-left text-center md:mr-auto md:pl-10">
+        <h2 class="text-3xl md:text-4xl font-black text-black drop-shadow-lg mb-2">Hello, Traveler</h2>
+        <h3 class="text-xl md:text-3xl font-black text-black drop-shadow-lg">Welcome to Go Globe</h3>
+      </div>
 
-<!-- Welcome text -->
-  <div class="px-6 md:px-10 py-10 md:py-20 text-center md:text-left">
-    <h2 class="text-2xl md:text-4xl font-black text-black drop-shadow-lg mb-2 px-0 md:px-40 -mt-11">Hello , Traveler</h2>
-    <h3 class="text-xl md:text-3xl font-black text-black drop-shadow-lg px-0 md:px-40 -mt-1">Welcome to Go Globe</h3>
-  </div>
+      <!-- Form Box (RIGHT SIDE) -->
+      <div class="bg-white rounded-xl shadow-lg p-6 md:p-10 w-full max-w-md">
+        <!-- Signup Form (default view) -->
+        <div id="signupForm">
+          <label class="block mb-2 font-semibold text-gray-700">Email Address</label>
+          <input type="email" placeholder="Enter your Email"
+            class="w-full mb-4 px-4 py-2 rounded-md border focus:outline-none bg-orange-100 placeholder-orange-700 text-gray-900" />
 
-  <!-- Login Box -->
-<div class="flex justify-center md:justify-end px-0 md:px-40 -mt-10">
+          <label class="block mb-2 font-semibold text-gray-700">Password</label>
+          <input type="password" placeholder="Enter your Password"
+            class="w-full mb-4 px-4 py-2 rounded-md border focus:outline-none bg-orange-100 placeholder-orange-700 text-gray-900" />
 
-    <div class="bg-white rounded-xl shadow-lg p-6 md:p-10 w-full max-w-md">
-      <label class="block mb-2 font-semibold text-gray-700">Email Address</label>
-      <input type="email" placeholder="Enter your Email" class="w-full mb-4 px-4 py-2 rounded-md border focus:outline-none bg-orange-100 placeholder-orange-700 text-gray-900">
+          <label class="block mb-2 font-semibold text-gray-700">Re-enter Password</label>
+          <input type="password" placeholder="Re-enter your Password"
+            class="w-full mb-6 px-4 py-2 rounded-md border focus:outline-none bg-orange-100 placeholder-orange-700 text-gray-900" />
 
-      <label class="block mb-2 font-semibold text-gray-700">Password</label>
-      <input type="password" placeholder="Enter your Password" class="w-full mb-6 px-4 py-2 rounded-md border focus:outline-none bg-orange-100 placeholder-orange-700 text-gray-900">
-      
-       <label class="block mb-2 font-semibold text-gray-700">Re enter Password</label>
-       <input type="password" placeholder="Enter your Password" class="w-full mb-6 px-4 py-2 rounded-md border focus:outline-none bg-orange-100 placeholder-orange-700 text-gray-900">
+          <button
+            class="w-full bg-white text-orange-500 border border-orange-400 py-2 rounded-md font-semibold hover:bg-orange-50">Signup</button>
+          <p class="text-sm mt-4 text-gray-700">Already have an account?
+            <a href="#" onclick="toggleForm('login')" class="text-orange-500 font-semibold hover:underline">Login</a>
+          </p>
+        </div>
 
-      <button class="w-full bg-white text-orange-500 border border-orange-400 py-2 rounded-md font-semibold hover:bg-orange-50">Signup</button>
-      <p class="text-sm mt-4 text-gray-700">Already have an account.?<a href="#" class="text-orange-500 font-semibold hover:underline"> Login </a></p>
+        <!-- Login Form -->
+        <div id="loginForm" class="hidden">
+          <label class="block mb-2 font-semibold text-gray-700">Email</label>
+          <input type="email" placeholder="Enter your Email"
+            class="w-full mb-4 px-4 py-2 rounded-md border focus:outline-none bg-orange-100 placeholder-orange-700 text-gray-900" />
+
+          <label class="block mb-2 font-semibold text-gray-700">Password</label>
+          <input type="password" placeholder="Enter your Password"
+            class="w-full mb-6 px-4 py-2 rounded-md border focus:outline-none bg-orange-100 placeholder-orange-700 text-gray-900" />
+
+          <button
+            class="w-full bg-white text-orange-500 border border-orange-400 py-2 rounded-md font-semibold hover:bg-orange-50">Login</button>
+          <p class="text-sm mt-4 text-gray-700">Are you new Traveler?
+            <a href="#" onclick="toggleForm('signup')" class="text-orange-500 font-semibold hover:underline">Create an Account</a>
+          </p>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+</section>
+
+  <!-- Toggle Logic -->
+  <script>
+    function toggleForm(type) {
+      const login = document.getElementById("loginForm");
+      const signup = document.getElementById("signupForm");
+
+      if (type === "login") {
+        login.classList.remove("hidden");
+        signup.classList.add("hidden");
+      } else {
+        login.classList.add("hidden");
+        signup.classList.remove("hidden");
+      }
+    }
+
+    // Show signup by default
+    window.onload = () => {
+      toggleForm("signup");
+    };
+  </script>
 </body>
 </html>
