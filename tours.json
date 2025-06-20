@@ -1,0 +1,71 @@
+[
+  {
+    "id": "European",
+    "name": "European Heritage Tour",
+    "image": "https://i.pinimg.com/736x/b3/93/81/b3938122aaad4a58428d6fb1b6b6647d.jpg",
+    "price": "$899",
+    "place1":"Paris ",
+    "description1": "The Paris Tour offers a romantic journey through iconic landmarks like the Eiffel Tower, Louvre Museum, and charming street cafés. Experience the rich art, history, and cuisine of France’s capital in unforgettable style.",
+    "place2":"Rome",
+    "description2": "The Rome trip immerses you in the heart of ancient history, from the Colosseum to the Roman Forum. Explore timeless architecture, vibrant piazzas, and savor authentic Italian cuisine in the Eternal City.",
+    "sp":"₹1,3345",
+    "pp":"₹123345",
+    "lp":"₹987665",
+    "sp1":"₹1,3345",
+    "pp1":"₹123345",
+    "lp1":"₹987665",
+    "review":"⭐ 4.8 (328 reviews)",
+    "days":"4-5 Days",
+    "nights":"5",
+    "ao1":"Colosseum, Rome (Italy)",
+    "ao2":"Eiffel Tower & Seine River Cruise, Paris (France)",
+    "ao3":"Neuschwanstein Castle, Bavaria (Germany)",
+    "ao4":"Old Town Walking Tour, Prague (Czech Republic)"
+    
+  },
+  {
+    "id": "Japan",
+    "name": "Japan Discovery Tour",
+    "image": "https://i.pinimg.com/736x/b3/93/81/b3938122aaad4a58428d6fb1b6b6647d.jpg",
+    "price": "$988",
+    "place1":"futuristic cities ",
+    "description1": "Japan's futuristic cities like Tokyo and Osaka blend cutting-edge technology with tradition, offering smart infrastructure, high-speed transport, and innovative architecture. From glowing skyscrapers to robotic services, they showcase the future of urban living.",
+    "place2":"historic temples",
+    "description2": "Japan's historic temples like Kiyomizu-dera, Senso-ji, and Todai-ji showcase ancient architecture and deep spiritual heritage. They are cultural landmarks attracting millions of visitors each year.",
+    "sp":"₹1,33",
+    "pp":"₹125",
+    "lp":"9865",
+    "sp1":"₹1,33",
+    "pp1":"₹125",
+    "lp1":"₹9865",
+    "review":"⭐ 4.0 (328 reviews)",
+     "days":"14-15 Days",
+     "nights":"4",
+    "ao1":"Tokyo Skytree & Shibuya Crossing",
+    "ao2":"Fushimi Inari Shrine, Kyoto",
+    "ao3":"Mount Fuji Day Trip & Lake Ashi Cruise",
+    "ao4":"Hiroshima Peace Memorial Park & Museum"
+  },
+  {
+    "id": "Balli",
+    "title": "Bali, Indonesia",
+    "image": "https://i.pinimg.com/736x/8e/81/7d/8e817dffc3f7543e1af6c4cff4cdc664.jpg",
+    "price": "$799",
+    "description": "Discover Balli."
+
+  },
+  {
+    "id": "Venice",
+    "title": "Venice, Italy",
+    "image": "https://i.pinimg.com/736x/f7/b8/1a/f7b81aaa3376d7f6251106618722ad11.jpg",
+    "price": "$849",
+    "description": "fall love in venice."
+  },
+  {
+    "id": "india",
+    "title": "eluru, andra pradesh",
+    "image": "https://i.pinimg.com/736x/f7/b8/1a/f7b81aaa3376d7f6251106618722ad11.jpg",
+    "price": "$849",
+    "description": "fall love in venice."
+  }
+]

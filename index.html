@@ -143,6 +143,21 @@ transform: translateX(0px);}}
 animation :appear linear;
 animation-timeline:view();
 animation-range:entry 0% cover 40% }
+
+/*another scorrling animation*/
+.autoShow{
+animation:text-appear both;
+animation-timeline: view();
+animation-range: entry 20% cover 100vh;}
+@keyframes text—appear {
+from{
+opacity: 0;
+transform: translateY(100px) ;}
+to {
+opacity: 1;
+transform: translateY(0);}}
+
+
     </style>
 </head>
 <body>
@@ -275,10 +290,10 @@ animation-range:entry 0% cover 40% }
     <!-- Stats Section ended -->
     
     <!-- Trending offers -->
-    <section class="container mx-auto px-4 py-12 block">
-        <h2 class="text-2xl font-bold text-gray-800 mb-6">Trending offers</h2>
+    <section class="container mx-auto px-4 py-12 ">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6 block">Trending offers</h2>
         <div class="relative">
-            <div class="flex overflow-x-auto pb-6 gap-5 hide-scrollbar">
+            <div class="flex overflow-x-auto pb-6 gap-5 hide-scrollbar block">
                 <div class="min-w-[250px] rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:-translate-y-2 object-cover object-top rounded-t-lg">
                     <img src="https://readdy.ai/api/search-image?query=Beautiful%20coastal%20view%20of%20Santorini%2C%20Greece%20with%20white%20buildings%20and%20blue%20domes%20against%20the%20azure%20sea%2C%20sunny%20day%20with%20clear%20blue%20sky%2C%20picturesque%20Mediterranean%20landscape%2C%20no%20people%2C%20high%20quality%20travel%20photography&width=250&height=150&seq=santorini1&orientation=landscape" alt="Santorini" class="w-full h-[150px] object-cover object-top">
                     <div class="p-3">
@@ -330,7 +345,7 @@ animation-range:entry 0% cover 40% }
                     </div>
                 </div>
             </div>
-            <div class="flex overflow-x-auto pb-6 gap-5 mt-4 hide-scrollbar">
+            <div class="flex overflow-x-auto pb-6 gap-5 mt-4 hide-scrollbar block">
                 <div class="min-w-[250px] rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:-translate-y-2">
                     <img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20Kyoto%2C%20Japan%20with%20traditional%20temples%2C%20cherry%20blossoms%2C%20Japanese%20gardens%2C%20serene%20atmosphere%2C%20historic%20architecture%2C%20no%20people%2C%20professional%20travel%20photography&width=250&height=150&seq=kyoto1&orientation=landscape" alt="Kyoto" class="w-full h-[150px] object-cover object-top">
                     <div class="p-3">
@@ -383,7 +398,7 @@ animation-range:entry 0% cover 40% }
                 </div>
             </div>
         </div>
-        <div class="flex justify-center mt-8">
+        <div class="flex justify-center mt-8 block">
             <a href="offers.html"><button class="bg-orange-500 text-white px-8 py-3 rounded-button font-medium whitespace-nowrap">View All offers</button></a>
         </div>
     </section>
@@ -408,7 +423,7 @@ animation-range:entry 0% cover 40% }
     <section class="container mx-auto px-4 py-12 block">
         <h2 class="text-2xl font-bold text-gray-800 mb-6">Top Destinations</h2>
         <div class="relative">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 block">
                 <div class="destination-card relative rounded-lg overflow-hidden shadow-md">
                     <img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20Rome%2C%20Italy%20with%20Colosseum%2C%20ancient%20ruins%2C%20historic%20architecture%2C%20sunny%20day%20with%20blue%20sky%2C%20European%20charm%2C%20no%20people%2C%20high%20quality%20travel%20photography&width=280&height=200&seq=rome1&orientation=landscape" alt="Rome" class="w-full h-[200px] object-cover object-top">
                     <div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
@@ -556,7 +571,7 @@ animation-range:entry 0% cover 40% }
                     <p class="text-gray-600 mb-4">Explore the rich history and culture of Europe's most iconic cities. Visit historic landmarks, museums, and experience authentic local cuisine.</p>
                     <div class="flex justify-between items-center">
                         <p class="text-orange-500 font-bold text-xl">From $1,499</p>
-                        <button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">View Details</button>
+                        <a href="Tours Template.html?id=European"><button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">View Details</button></a>
                     </div>
                 </div>
             </div>
@@ -572,7 +587,7 @@ animation-range:entry 0% cover 40% }
                     <p class="text-gray-600 mb-4">Experience the perfect blend of ancient traditions and modern innovations in Japan. Visit historic temples, futuristic cities, and enjoy authentic Japanese cuisine.</p>
                     <div class="flex justify-between items-center">
                         <p class="text-orange-500 font-bold text-xl">From $1,899</p>
-                        <button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">View Details</button>
+                        <a href="Tours Template.html?id=Japan"><button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">View Details</button></a>
                     </div>
                 </div>
             </div>
