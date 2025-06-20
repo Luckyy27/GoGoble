@@ -59,20 +59,41 @@
         }
         
         /*the styling for national and international */
-        .tab-btn {
-            background-color: transparent;
-            color: white;
-        }
 
-        .tab-btn:hover {
-            background-color: white;
-            color: orange;
-        }
 
-        .active-btn {
-            background-color: white;
-            color: orange;
-        }
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.active-btn {
+    background-color: white;
+    color: #FF5A1F;
+}
+.tab-btn {
+    background-color: transparent;
+    color: white;
+}
+.tab-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.destination-card {
+    transition: transform 0.3s ease;
+}
+.destination-card:hover {
+    transform: translateY(-5px);
+}
+.overlay {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.destination-card:hover .overlay {
+    opacity: 1;
+}
+
+        
         /*the styling for national and international ended*/
         
         /*styling for the destination section */
@@ -404,121 +425,185 @@ transform: translateY(0);}}
     </section>
     <!-- Trending offers ended -->
 
-    <!-- international and national section -->
-    <section class="container mx-auto px-4 mt-3 relative z-10 items-center h-auto block">
-        <div class="bg-orange-500 rounded-lg shadow-lg p-6 flex flex-col sm:flex-row justify-center gap-4 drop-shadow-md">
-            <button href="intenationalBtn" id="internationalBtn"
-                class="tab-btn text-2xl font-bold px-6 py-2 rounded transition active-btn">
-                International
-            </button>
-            <button id="nationalBtn"
-                class="tab-btn text-2xl font-bold px-6 py-2 rounded transition">
-                National
-            </button>
-        </div>
-    </section>
-    <!-- international and national section Ended -->
+<!-- International and National Section -->
+<section class="container mx-auto px-4 mt-3 relative z-10 items-center h-auto block">
+    <div class="bg-orange-500 rounded-lg shadow-lg p-6 flex flex-col sm:flex-row justify-center gap-4 drop-shadow-md">
+        <button id="internationalBtn" class="tab-btn text-2xl font-bold px-6 py-2 rounded transition active-btn">
+            International
+        </button>
+        <button id="nationalBtn" class="tab-btn text-2xl font-bold px-6 py-2 rounded transition">
+            National
+        </button>
+    </div>
+</section>
+
+<!-- Top Destinations -->
+<section class="container mx-auto px-4 py-12 block">
+    <h2 class="text-2xl font-bold text-gray-800 mb-6">Top Destinations</h2>
     
-    <!-- Top Destinations -->
-    <section class="container mx-auto px-4 py-12 block">
-        <h2 class="text-2xl font-bold text-gray-800 mb-6">Top Destinations</h2>
-        <div class="relative">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 block">
-                <div class="destination-card relative rounded-lg overflow-hidden shadow-md">
-                    <img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20Rome%2C%20Italy%20with%20Colosseum%2C%20ancient%20ruins%2C%20historic%20architecture%2C%20sunny%20day%20with%20blue%20sky%2C%20European%20charm%2C%20no%20people%2C%20high%20quality%20travel%20photography&width=280&height=200&seq=rome1&orientation=landscape" alt="Rome" class="w-full h-[200px] object-cover object-top">
-                    <div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
-                        <h3 class="text-white font-medium">Rome</h3>
-                        <p class="text-white text-sm">Italy</p>
-                    </div>
-                    <div class="overlay absolute inset-0 bg-black/30 flex items-center justify-center">
-                        <button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">From $799</button>
-                    </div>
+    <!-- International Destinations (shown by default) -->
+    <div id="internationalContent" class="relative">
+        <div class="flex overflow-x-auto pb-6 gap-4 hide-scrollbar">
+            <!-- International destination cards here -->
+            <div class="min-w-[250px] destination-card relative rounded-lg overflow-hidden shadow-md">
+                <img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20Rome%2C%20Italy" alt="Rome" class="w-full h-[200px] object-cover object-top">
+                <div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
+                    <h3 class="text-white font-medium">Rome</h3>
+                    <p class="text-white text-sm">Italy</p>
                 </div>
-                <div class="destination-card relative rounded-lg overflow-hidden shadow-md">
-                    <img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20Paris%2C%20France%20with%20Eiffel%20Tower%2C%20Seine%20river%2C%20historic%20architecture%2C%20sunny%20day%20with%20blue%20sky%2C%20European%20charm%2C%20no%20people%2C%20high%20quality%20travel%20photography&width=280&height=200&seq=paris1&orientation=landscape" alt="Paris" class="w-full h-[200px] object-cover object-top">
-                    <div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
-                        <h3 class="text-white font-medium">Paris</h3>
-                        <p class="text-white text-sm">France</p>
-                    </div>
-                    <div class="overlay absolute inset-0 bg-black/30 flex items-center justify-center">
-                        <button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">From $849</button>
-                    </div>
-                </div>
-                <div class="destination-card relative rounded-lg overflow-hidden shadow-md">
-                    <img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20Tokyo%2C%20Japan%20with%20modern%20skyscrapers%2C%20traditional%20temples%2C%20urban%20landscape%2C%20vibrant%20city%20life%2C%20clear%20day%2C%20Asian%20architecture%2C%20no%20people%2C%20high%20quality%20travel%20photography&width=280&height=200&seq=tokyo1&orientation=landscape" alt="Tokyo" class="w-full h-[200px] object-cover object-top">
-                    <div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
-                        <h3 class="text-white font-medium">Tokyo</h3>
-                        <p class="text-white text-sm">Japan</p>
-                    </div>
-                    <div class="overlay absolute inset-0 bg-black/30 flex items-center justify-center">
-                        <button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">From $1,099</button>
-                    </div>
-                </div>
-                <div class="destination-card relative rounded-lg overflow-hidden shadow-md">
-                    <img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20New%20York%20City%2C%20USA%20with%20Manhattan%20skyline%2C%20skyscrapers%2C%20urban%20landscape%2C%20Central%20Park%2C%20sunny%20day%2C%20American%20cityscape%2C%20no%20people%2C%20high%20quality%20travel%20photography&width=280&height=200&seq=newyork1&orientation=landscape" alt="New York" class="w-full h-[200px] object-cover object-top">
-                    <div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
-                        <h3 class="text-white font-medium">New York</h3>
-                        <p class="text-white text-sm">USA</p>
-                    </div>
-                    <div class="overlay absolute inset-0 bg-black/30 flex items-center justify-center">
-                        <button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">From $899</button>
-                    </div>
-                </div>
-                <div class="destination-card relative rounded-lg overflow-hidden shadow-md">
-                    <img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20London%2C%20UK%20with%20Big%20Ben%2C%20Thames%20river%2C%20historic%20architecture%2C%20sunny%20day%20with%20blue%20sky%2C%20European%20charm%2C%20no%20people%2C%20high%20quality%20travel%20photography&width=280&height=200&seq=london1&orientation=landscape" alt="London" class="w-full h-[200px] object-cover object-top">
-                    <div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
-                        <h3 class="text-white font-medium">London</h3>
-                        <p class="text-white text-sm">UK</p>
-                    </div>
-                    <div class="overlay absolute inset-0 bg-black/30 flex items-center justify-center">
-                        <button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">From $829</button>
-                    </div>
-                </div>
-                <div class="destination-card relative rounded-lg overflow-hidden shadow-md">
-                    <img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20Dubai%2C%20UAE%20with%20Burj%20Khalifa%2C%20modern%20skyscrapers%2C%20luxury%20architecture%2C%20sunny%20day%20with%20blue%20sky%2C%20desert%20cityscape%2C%20no%20people%2C%20high%20quality%20travel%20photography&width=280&height=200&seq=dubai1&orientation=landscape" alt="Dubai" class="w-full h-[200px] object-cover object-top">
-                    <div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
-                        <h3 class="text-white font-medium">Dubai</h3>
-                        <p class="text-white text-sm">UAE</p>
-                    </div>
-                    <div class="overlay absolute inset-0 bg-black/30 flex items-center justify-center">
-                        <a href="https://readdy.ai/home/3ba5dae8-262f-4c73-9e50-3863e5451e6c/0754dc8b-a141-4100-911f-ebbd7094e0f5" data-readdy="true">
-                            <button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">From $949</button>
-                        </a>
-                    </div>
-                </div>
-                <div class="destination-card relative rounded-lg overflow-hidden shadow-md">
-                    <img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20Rio%20de%20Janeiro%2C%20Brazil%20with%20Christ%20the%20Redeemer%20statue%2C%20Sugarloaf%20Mountain%2C%20beaches%2C%20tropical%20landscape%2C%20sunny%20day%2C%20South%20American%20scenery%2C%20no%20people%2C%20high%20quality%20travel%20photography&width=280&height=200&seq=rio1&orientation=landscape" alt="Rio de Janeiro" class="w-full h-[200px] object-cover object-top">
-                    <div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
-                        <h3 class="text-white font-medium">Rio de Janeiro</h3>
-                        <p class="text-white text-sm">Brazil</p>
-                    </div>
-                    <div class="overlay absolute inset-0 bg-black/30 flex items-center justify-center">
-                        <button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">From $999</button>
-                    </div>
-                </div>
-                <div class="destination-card relative rounded-lg overflow-hidden shadow-md">
-                    <img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20Amsterdam%2C%20Netherlands%20with%20canals%2C%20historic%20buildings%2C%20bridges%2C%20bicycles%2C%20sunny%20day%20with%20blue%20sky%2C%20European%20charm%2C%20no%20people%2C%20high%20quality%20travel%20photography&width=280&height=200&seq=amsterdam1&orientation=landscape" alt="Amsterdam" class="w-full h-[200px] object-cover object-top">
-                    <div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
-                        <h3 class="text-white font-medium">Amsterdam</h3>
-                        <p class="text-white text-sm">Netherlands</p>
-                    </div>
-                    <div class="overlay absolute inset-0 bg-black/30 flex items-center justify-center">
-                        <button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">From $799</button>
-                    </div>
+                <div class="overlay absolute inset-0 bg-black/30 flex items-center justify-center">
+                    <button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">From $799</button>
                 </div>
             </div>
-            <button class="absolute -left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center z-10">
-                <i class="ri-arrow-left-s-line text-gray-700 ri-lg"></i>
-            </button>
-            <button class="absolute -right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center z-10">
-                <i class="ri-arrow-right-s-line text-gray-700 ri-lg"></i>
-            </button>
+            <!-- More international cards... -->
+            <div class="min-w-[250px] destination-card relative rounded-lg overflow-hidden shadow-md">
+                <img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20Paris%2C%20France" alt="Paris" class="w-full h-[200px] object-cover object-top">
+                <div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
+                    <h3 class="text-white font-medium">Paris</h3>
+                    <p class="text-white text-sm">France</p>
+                </div>
+                <div class="overlay absolute inset-0 bg-black/30 flex items-center justify-center">
+                    <button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">From $849</button>
+                </div>
+            </div>
+            <div class="min-w-[250px] destination-card relative rounded-lg overflow-hidden shadow-md">
+                <img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20Tokyo%2C%20Japan" alt="Tokyo" class="w-full h-[200px] object-cover object-top">
+                <div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
+                    <h3 class="text-white font-medium">Tokyo</h3>
+                    <p class="text-white text-sm">Japan</p>
+                </div>
+                <div class="overlay absolute inset-0 bg-black/30 flex items-center justify-center">
+                    <button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">From $1,099</button>
+                </div>
+            </div>
+            <div class="min-w-[250px] destination-card relative rounded-lg overflow-hidden shadow-md">
+                <img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20New%20York%20City%2C%20USA" alt="New York" class="w-full h-[200px] object-cover object-top">
+                <div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
+                    <h3 class="text-white font-medium">New York</h3>
+                    <p class="text-white text-sm">USA</p>
+                </div>
+                <div class="overlay absolute inset-0 bg-black/30 flex items-center justify-center">
+                    <button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">From $899</button>
+                </div>
+            </div>
+            <div class="min-w-[250px] destination-card relative rounded-lg overflow-hidden shadow-md">
+                <img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20London%2C%20UK" alt="London" class="w-full h-[200px] object-cover object-top">
+                <div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
+                    <h3 class="text-white font-medium">London</h3>
+                    <p class="text-white text-sm">UK</p>
+                </div>
+                <div class="overlay absolute inset-0 bg-black/30 flex items-center justify-center">
+                    <button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">From $829</button>
+                </div>
+            </div>
+            <div class="min-w-[250px] destination-card relative rounded-lg overflow-hidden shadow-md">
+                <img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20Dubai%2C%20UAE" alt="Dubai" class="w-full h-[200px] object-cover object-top">
+                <div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
+                    <h3 class="text-white font-medium">Dubai</h3>
+                    <p class="text-white text-sm">UAE</p>
+                </div>
+                <div class="overlay absolute inset-0 bg-black/30 flex items-center justify-center">
+                    <button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">From $949</button>
+                </div>
+            </div>
+             <div class="min-w-[250px] destination-card relative rounded-lg overflow-hidden shadow-md">
+                <img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20Paris%2C%20France" alt="Paris" class="w-full h-[200px] object-cover object-top">
+                <div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
+                    <h3 class="text-white font-medium">Paris</h3>
+                    <p class="text-white text-sm">France</p>
+                </div>
+                <div class="overlay absolute inset-0 bg-black/30 flex items-center justify-center">
+                    <button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">From $849</button>
+                </div>
+            </div>
         </div>
-         <div class="flex justify-center mt-8">
-            <a href="Destinations.html"><button class="bg-orange-500 text-white px-8 py-3 rounded-button font-medium whitespace-nowrap">View All Destinations</button></a>
+        
+        <button class="absolute -left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center z-10">
+            <i class="ri-arrow-left-s-line text-gray-700 ri-lg"></i>
+        </button>
+        <button class="absolute -right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center z-10">
+            <i class="ri-arrow-right-s-line text-gray-700 ri-lg"></i>
+        </button>
+    </div>
+    
+    <!-- National Destinations (hidden by default) -->
+    <div id="nationalContent" class="relative hidden">
+        <div class="flex overflow-x-auto pb-6 gap-4 hide-scrollbar">
+            <!-- National destination cards here -->
+            <div class="min-w-[250px] destination-card relative rounded-lg overflow-hidden shadow-md">
+                <img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20Taj%20Mahal" alt="Taj Mahal" class="w-full h-[200px] object-cover object-top">
+                <div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
+                    <h3 class="text-white font-medium">Agra</h3>
+                    <p class="text-white text-sm">India</p>
+                </div>
+                <div class="overlay absolute inset-0 bg-black/30 flex items-center justify-center">
+                    <button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">From $299</button>
+                </div>
+            </div>
+            <!-- More national cards... -->
+            <div class="min-w-[250px] destination-card relative rounded-lg overflow-hidden shadow-md">
+                <img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20Goa%20beach" alt="Goa" class="w-full h-[200px] object-cover object-top">
+                <div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
+                    <h3 class="text-white font-medium">Goa</h3>
+                    <p class="text-white text-sm">India</p>
+                </div>
+                <div class="overlay absolute inset-0 bg-black/30 flex items-center justify-center">
+                    <button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">From $199</button>
+                </div>
+            </div>
+            <div class="min-w-[250px] destination-card relative rounded-lg overflow-hidden shadow-md">
+                <img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20Kerala%20backwaters" alt="Kerala" class="w-full h-[200px] object-cover object-top">
+                <div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
+                    <h3 class="text-white font-medium">Kerala</h3>
+                    <p class="text-white text-sm">India</p>
+                </div>
+                <div class="overlay absolute inset-0 bg-black/30 flex items-center justify-center">
+                    <button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">From $249</button>
+                </div>
+            </div>
+            <div class="min-w-[250px] destination-card relative rounded-lg overflow-hidden shadow-md">
+                <img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20Rajasthan%20palace" alt="Rajasthan" class="w-full h-[200px] object-cover object-top">
+                <div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
+                    <h3 class="text-white font-medium">Rajasthan</h3>
+                    <p class="text-white text-sm">India</p>
+                </div>
+                <div class="overlay absolute inset-0 bg-black/30 flex items-center justify-center">
+                    <button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">From $349</button>
+                </div>
+            </div>
+            <div class="min-w-[250px] destination-card relative rounded-lg overflow-hidden shadow-md">
+                <img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20Himalayas" alt="Himalayas" class="w-full h-[200px] object-cover object-top">
+                <div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
+                    <h3 class="text-white font-medium">Himalayas</h3>
+                    <p class="text-white text-sm">India</p>
+                </div>
+                <div class="overlay absolute inset-0 bg-black/30 flex items-center justify-center">
+                    <button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">From $399</button>
+                </div>
+            </div>
+            <div class="min-w-[250px] destination-card relative rounded-lg overflow-hidden shadow-md">
+                <img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20Varanasi%20ghats" alt="Varanasi" class="w-full h-[200px] object-cover object-top">
+                <div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
+                    <h3 class="text-white font-medium">Varanasi</h3>
+                    <p class="text-white text-sm">India</p>
+                </div>
+                <div class="overlay absolute inset-0 bg-black/30 flex items-center justify-center">
+                    <button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">From $179</button>
+                </div>
+            </div>
         </div>
-    </section>
-    <!-- Top Destinations ended -->
+        <button class="absolute -left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center z-10">
+            <i class="ri-arrow-left-s-line text-gray-700 ri-lg"></i>
+        </button>
+        <button class="absolute -right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center z-10">
+            <i class="ri-arrow-right-s-line text-gray-700 ri-lg"></i>
+        </button>
+    </div>
+    
+    <div class="flex justify-center mt-8">
+        <a href="Destinations.html"><button class="bg-orange-500 text-white px-8 py-3 rounded-button font-medium whitespace-nowrap">View All Destinations</button></a>
+    </div>
+</section>
 
     <!-- Why Choose Us -->
     <section class="container mx-auto px-4 py-12 block" >
@@ -592,7 +677,7 @@ transform: translateY(0);}}
                 </div>
             </div>
         </div>
-         <div class="flex justify-center mt-8">
+         <div class="flex justify-center mt-8 block">
             <a href="Tours.html"><button class="bg-orange-500 text-white px-8 py-3 rounded-button font-medium whitespace-nowrap">View All Tours</button></a>
         </div>
     </section>
@@ -759,22 +844,57 @@ transform: translateY(0);}}
         });
 
         /* the script for nation and international section*/
-        const internationalBtn = document.getElementById("internationalBtn");
-        const nationalBtn = document.getElementById("nationalBtn");
-
-        function setActive(button) {
-            document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.classList.remove('active-btn');
-            });
-            button.classList.add('active-btn');
+document.addEventListener('DOMContentLoaded', function() {
+    // Get elements
+    const internationalBtn = document.getElementById('internationalBtn');
+    const nationalBtn = document.getElementById('nationalBtn');
+    const internationalContent = document.getElementById('internationalContent');
+    const nationalContent = document.getElementById('nationalContent');
+    
+    // Set international as default active
+    internationalBtn.classList.add('active-btn');
+    
+    // Toggle function
+    function toggleContent(showInternational) {
+        if (showInternational) {
+            internationalContent.classList.remove('hidden');
+            nationalContent.classList.add('hidden');
+            internationalBtn.classList.add('active-btn');
+            nationalBtn.classList.remove('active-btn');
+        } else {
+            internationalContent.classList.add('hidden');
+            nationalContent.classList.remove('hidden');
+            internationalBtn.classList.remove('active-btn');
+            nationalBtn.classList.add('active-btn');
         }
+    }
+    
+    // Event listeners
+    internationalBtn.addEventListener('click', function() {
+        toggleContent(true);
+    });
+    
+    nationalBtn.addEventListener('click', function() {
+        toggleContent(false);
+    });
 
-        // Default active
-        setActive(internationalBtn);
+    // Navigation arrows functionality
+    const leftArrows = document.querySelectorAll('.relative button:first-child');
+    const rightArrows = document.querySelectorAll('.relative button:last-child');
+    const scrollContainers = document.querySelectorAll('.hide-scrollbar');
 
-        // Event listeners
-        internationalBtn.addEventListener("click", () => setActive(internationalBtn));
-        nationalBtn.addEventListener("click", () => setActive(nationalBtn));
+    leftArrows.forEach((arrow, index) => {
+        arrow.addEventListener('click', () => {
+            scrollContainers[index].scrollBy({ left: -300, behavior: 'smooth' });
+        });
+    });
+
+    rightArrows.forEach((arrow, index) => {
+        arrow.addEventListener('click', () => {
+            scrollContainers[index].scrollBy({ left: 300, behavior: 'smooth' });
+        });
+    });
+});
 
         /* the script for nation and international section ended*/
         
