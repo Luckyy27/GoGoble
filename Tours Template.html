@@ -116,8 +116,8 @@
             <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                 <div class="relative h-[300px]">
                     <div class="absolute inset-0 ">
-                        <img src="https://readdy.ai/api/search-image?query=Beautiful%20daytime%20view%20of%20Eiffel%20Tower%20in%20Paris%2C%20France%20with%20blue%20sky%2C%20sunny%20day%2C%20iconic%20landmark%2C%20European%20architecture%2C%20no%20people%2C%20high%20quality%20travel%20photography&width=300&height=300&seq=paris_day&orientation=portrait" alt="Paris Day" class="w-full h-full ">
-                    </div>
+                        <div id="image1" class="relative bg-cover bg-center h-[500px]" style="background-image: url(https://www.visitdubai.com/-/media/gathercontent/poi/b/burj-khalifa/fallback-image/poi-burj-khalifa-3-dtcm-jun-2023.jpg)">
+          </div> </div>
                 </div>
             </div>
             <div class="p-6">
@@ -143,12 +143,12 @@
     <div class="bg-white rounded-lg shadow-lg overflow-hidden">
       <div class="relative h-[300px]">
         <div class="absolute inset-0">
-          <img src="https://readdy.ai/api/search-image?query=Beautiful%20daytime%20view%20of%20Colosseum%20in%20Rome%2C%20Italy%20with%20blue%20sky%2C%20sunny%20day%2C%20ancient%20architecture%2C%20historic%20landmark%2C%20no%20people%2C%20high%20quality%20travel%20photography&width=300&height=300&seq=rome_day&orientation=portrait" alt="Rome Day" class="w-full h-full">
-               alt="Paris Day" class="w-full h-full object-cover">
+          <div id="image2" class="relative bg-cover bg-center h-[500px]" style="background-image: url(https://www.visitdubai.com/-/media/gathercontent/poi/b/burj-khalifa/fallback-image/poi-burj-khalifa-3-dtcm-jun-2023.jpg)">
+          </div>    
         </div>
       </div>
     </div>
-
+    
   </div>
 </section>
     <div class="flex justify-between items-center px-10 py-6 bg-white shadow">
@@ -437,7 +437,8 @@
 
 
         // Set background image of the hero section
-        document.getElementById("image").style.backgroundImage = `url(${tours.image})`;
+        document.getElementById("image1").style.backgroundImage = `url(${tours.image1})`;
+        document.getElementById("image2").style.backgroundImage = `url(${tours.image2})`;
       } else {
         document.getElementById("title").textContent = "Tour not found";
         document.getElementById("description").textContent = "";
