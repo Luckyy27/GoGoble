@@ -109,48 +109,44 @@
 
  <!-- Header ended-->
   
- <!-- 1st-->
-      <h1 class=" text-orange-500 text-5xl font-bold mb-2 text-orange-500 text-center mt-3 pb-1" id="name"> </h1>
-    <section class="container mx-auto px-4 py-12 block border-b-2">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <div class="relative h-[300px]">
-                    <div class="absolute inset-0 ">
-                        <div id="image1" class="relative bg-cover bg-center h-[500px]" style="background-image: url(https://www.visitdubai.com/-/media/gathercontent/poi/b/burj-khalifa/fallback-image/poi-burj-khalifa-3-dtcm-jun-2023.jpg)">
-          </div> </div>
-                </div>
-            </div>
-            <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2" id="place1"></h3>
-                    <p class="text-gray-600 mb-4" id="description1"></p>
-            </div>
-          </div>
-  </section>
+<h1 id="name" class="text-5xl font-bold text-orange-500 text-center mt-3 pb-1"></h1>
+
+<section class="container mx-auto px-4 py-12 border-b-2">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+      <div id="image1" class="relative bg-cover bg-center h-[300px] w-full rounded-lg shadow-lg"></div>
+
+    </div>
+
+    <div class="p-6">
+      <h3 id="place1" class="text-xl font-bold mb-2"></h3>
+      <p id="description1" class="text-gray-600 mb-4"></p>
+    </div>
+
+  </div>
+</section>
+
+
 
  <!-- 1st place ended-->
  <!-- 2nd place-->
 
-<section class="container mx-auto px-4 py-12 block">
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-    
-    <!-- CONTENT First -->
+<section class="container mx-auto px-4 py-12 border-b-2">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
     <div class="p-6">
-      <h3 class="text-xl font-bold mb-2" id="place2"></h3>
-      <p class="text-gray-600 mb-4" id="description2"></p>
+      <h3 id="place2" class="text-xl font-bold mb-2"></h3>
+      <p id="description2" class="text-gray-600 mb-4"></p>
+    </div>
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+      <div id="image2" class="relative bg-cover bg-center h-[300px]"></div>
     </div>
 
-    <!-- IMAGE Second -->
-    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-      <div class="relative h-[300px]">
-        <div class="absolute inset-0">
-          <div id="image2" class="relative bg-cover bg-center h-[500px]" style="background-image: url(https://www.visitdubai.com/-/media/gathercontent/poi/b/burj-khalifa/fallback-image/poi-burj-khalifa-3-dtcm-jun-2023.jpg)">
-          </div>    
-        </div>
-      </div>
-    </div>
-    
+
+
   </div>
 </section>
+
     <div class="flex justify-between items-center px-10 py-6 bg-white shadow">
       <div>
         <p class="text-xl font-semibold">From <span class="text-orange-500 font-bold text-2xl" id="price"></span> per person</p>
@@ -437,8 +433,8 @@
 
 
         // Set background image of the hero section
-        document.getElementById("image1").style.backgroundImage = `url(${tours.image1})`;
-        document.getElementById("image2").style.backgroundImage = `url(${tours.image2})`;
+          document.getElementById('image1').style.backgroundImage = `url('${tours.image1}')`;
+        document.getElementById("image2").style.backgroundImage = `url('${tours.image2}')`;
       } else {
         document.getElementById("title").textContent = "Tour not found";
         document.getElementById("description").textContent = "";
