@@ -37,5 +37,15 @@
     "image": "https://i.pinimg.com/736x/f7/b8/1a/f7b81aaa3376d7f6251106618722ad11.jpg",
     "price": "$849",
     "description": "fall love in venice."
+  },
+    {
+    "id": "France",
+    "title": "Paris, France",
+    "image": "https://i.pinimg.com/736x/6a/99/ee/6a99ee843798375c5f7049316e8d31ed.jpg",
+    "price": "$1299",
+    "description": "Happy to travel greece",
+    "sp":"₹1,3345",
+    "pp":"₹123345",
+    "lp":"₹987665"
   }
 ]
