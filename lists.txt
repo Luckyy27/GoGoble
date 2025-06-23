@@ -1,0 +1,61 @@
+Here are direct image URLs for each destination, optimized for high-quality display:  
+
+### **🌍 Top 20 Global Destinations – Image URLs**  
+
+| Destination    | Country      | Image URL |
+|--------------|------------|----------|
+| **Paris** | France | `https://images.unsplash.com/photo-1431274172761-fca41d930114?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80` |
+| **Tokyo** | Japan | `https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80` |
+| **New York** | USA | `https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80` |
+| **Dubai** | UAE | `https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80` |
+| **London** | UK | `https://images.unsplash.com/photo-1529655683826-aba9b3e77383?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80` |
+| **Rome** | Italy | `https://images.unsplash.com/photo-1552832230-c0197dd311b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80` |
+| **Sydney** | Australia | `https://images.unsplash.com/photo-1528072164453-f4e8ef0d475a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80` |
+| **Istanbul** | Turkey | `https://images.unsplash.com/photo-1527838832700-5059252407fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80` |
+| **Bangkok** | Thailand | `https://images.unsplash.com/photo-1563492065599-3520f775eeed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80` |
+| **Singapore** | Singapore | `https://images.unsplash.com/photo-1530333711693-5095a3bcfd91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80` |
+| **Cape Town** | South Africa | `https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80` |
+| **Barcelona** | Spain | `https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80` |
+| **Amsterdam** | Netherlands | `https://images.unsplash.com/photo-1512470876302-972faa2aa9a4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80` |
+| **Cairo** | Egypt | `https://images.unsplash.com/photo-1572252009286-268acec5ca0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80` |
+| **Rio de Janeiro** | Brazil | `https://images.unsplash.com/photo-1483729558449-99ef09a8c325?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80` |
+| **Bali** | Indonesia | `https://images.unsplash.com/photo-1539361812093-206c8e01d8cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80` |
+| **Santorini** | Greece | `https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80` |
+| **Toronto** | Canada | `https://images.unsplash.com/photo-1534235826751-87d0d30852b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80` |
+| **Zurich** | Switzerland | `https://images.unsplash.com/photo-1582719471387-9c060c4d0a5a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80` |
+| **Reykjavik** | Iceland | `https://images.unsplash.com/photo-1501055370770-9ff99549e708?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80` |
+
+### **Features:**
+✅ **High-resolution** (1000px width)  
+✅ **Optimized for web** (compressed without quality loss)  
+✅ **Free to use** (Unsplash license)  
+✅ **Fast loading** (CDN-hosted)  
+
+You can directly use these URLs in `<img>` tags for your cards. Let me know if you need any adjustments! 🚀
+### 🌍 **Top 20 Global 2-Place Tours**
+Here are complete details for all 20 tours, including tour name, places covered, price in ₹, and a short description for each:
+
+| **Tour Name**           | **Places Covered**         | **Price (₹)** | **Description**                                                                                     |
+| ----------------------- | -------------------------- | ------------- | --------------------------------------------------------------------------------------------------- |
+| Italy Romance Tour      | Rome & Venice              | ₹1,75,000     | Discover romantic canals and ancient ruins while soaking in Italy’s artistic and culinary heritage. |
+| European Charmer        | Paris & Amsterdam          | ₹1,82,000     | Glide through the Seine, then cruise canals in Amsterdam – a tour filled with art and charm.        |
+| American Capital Trail  | New York & Washington D.C. | ₹1,90,000     | Explore bustling NYC and the historic monuments of the US capital.                                  |
+| Japanese Essence        | Tokyo & Kyoto              | ₹1,98,000     | Blend modern vibrance with serene traditions in this iconic Japanese duo.                           |
+| Thai Delight            | Bangkok & Phuket           | ₹88,000       | From city lights to tropical beaches, experience Thailand’s best flavors and sights.                |
+| Emirates Explorer       | Dubai & Abu Dhabi          | ₹84,000       | Discover luxury, innovation, and tradition in the Emirates’ most captivating cities.                |
+| Pharaoh’s Footsteps     | Cairo & Luxor              | ₹1,12,000     | Step into history as you explore pyramids, temples, and ancient Egyptian legends.                   |
+| South African Wonders   | Cape Town & Johannesburg   | ₹1,49,000     | A vibrant mix of nature, culture, and history awaits in South Africa’s twin jewels.                 |
+| Royal UK Expedition     | London & Edinburgh         | ₹1,65,000     | Experience royal heritage, historic castles, and vibrant streets in Britain’s iconic capitals.      |
+| Brazil Carnival Combo   | Rio de Janeiro & São Paulo | ₹1,79,000     | Feel the rhythm of Brazil with beaches, carnivals, and colorful culture.                            |
+| Aussie Adventure        | Sydney & Melbourne         | ₹1,92,000     | From the Opera House to chic alleys – Australia’s cities will leave you mesmerized.                 |
+| Turkish Tale            | Istanbul & Cappadocia      | ₹1,15,000     | Cross continents in one trip, with bazaars, hot air balloons, and surreal landscapes.               |
+| Spanish Fiesta          | Barcelona & Madrid         | ₹1,49,000     | Flamenco, football, and Gaudí – soak up Spain’s spirit and style.                                   |
+| Canada City Lights      | Toronto & Montreal         | ₹1,65,000     | Experience Canada’s cultural contrast – modern buzz meets French elegance.                          |
+| Iceland Aurora Trip     | Reykjavik & Vik            | ₹2,15,000     | Chase the Northern Lights and soak in geothermal wonders in a surreal landscape.                    |
+| Golden Triangle Express | Delhi & Agra               | ₹35,000       | A short yet rich journey through India’s most iconic historical wonders.                            |
+| Greece Island Gateway   | Athens & Santorini         | ₹1,35,000     | Dive into mythology and whitewashed island views in this classic Greek escape.                      |
+| Vietnam Nature Escape   | Hanoi & Ha Long Bay        | ₹89,000       | Cruise limestone cliffs and discover Vietnam’s charming cultural heart.                             |
+| Swiss Scenic Duo        | Zurich & Interlaken        | ₹1,98,000     | Snow-capped mountains and serene lakes await in this Alpine adventure.                              |
+| Jordan Heritage Tour    | Petra & Wadi Rum           | ₹1,45,000     | Marvel at lost cities and stargaze in red desert valleys in this Middle Eastern gem.                |
+
+Let me know if you want this in table code (HTML/Markdown/CSV) or paired with matching image URLs for each tour.

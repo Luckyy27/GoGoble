@@ -38,433 +38,55 @@
         }
     </script>
     <style>
-        /**/
-        #carouselExampleAutoplaying {
-            height: 50vh; /* Half the screen height */
-            overflow: hidden;
-        }
-
-        .carousel-item {
-            height: 100%;
-        }
-
-        .carousel-item img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-        }
-        
-        a:activate {
-            color: #FD8C02;
-        }
-        
-        /*the styling for national and international */
-        .tab-btn {
-            background-color: transparent;
-            color: white;
-        }
-
-        .tab-btn:hover {
-            background-color: white;
-            color: orange;
-        }
-
-        .active-btn {
-            background-color: white;
-            color: orange;
-        }
-        /*the styling for national and international ended*/
-        
-        /*styling for the destination section */
-        :where([class^="ri-"])::before { content: "\f3c2"; }
-        
-        .destination-card:hover .overlay {
-            opacity: 1;
-        }
-        
-        .destination-card .overlay {
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        /*Styling for the destination section ended */
-        
-        .mycol {
-            color: #FD8C02;
-        }
-        
-      
-        /* styling for card*/
-.card {
-  overflow: visible;
-  width: 300px;
-  height: 400px;
-}
-
-.content {
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  transition: transform 300ms;
-  box-shadow: 0px 0px 10px 1px #000000ee;
-  border-radius: 5px;
-}
-
-.front, .back {
-  background-color: #151515;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  border-radius: 5px;
+      .custom-card {
+  border-radius: 1.5rem;
   overflow: hidden;
 }
 
-.back {
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-}
-
-.back::before {
-  position: absolute;
-  content: ' ';
-  display: block;
-  width: 300px;
-  height: 160%;
-  background: linear-gradient(90deg, transparent, #ff9966, #ff9966, #ff9966, #ff9966, transparent);
-  animation: rotation_481 5000ms infinite linear;
-}
-
-.back-content {
-  position: absolute;
-  width: 99%;
-  height: 99%;
-  background-color: #151515;
-  border-radius: 5px;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-}
-
-.card:hover .content {
-  transform: rotateY(180deg);
-}
-
-@keyframes rotation_481 {
-  0% {
-    transform: rotateZ(0deg);
-  }
-
-  0% {
-    transform: rotateZ(360deg);
-  }
-}
-
-.front {
-  transform: rotateY(180deg);
-  color: white;
-}
-
-.front .front-content {
+.before-anim-border {
+  content: '';
   position: absolute;
   width: 100%;
   height: 100%;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+  animation: spin-border 3s linear infinite;
+  z-index: 0;
 }
 
-.front-content .badge {
-  background-color: #00000055;
-  padding: 2px 10px;
-  border-radius: 10px;
-  backdrop-filter: blur(2px);
-  width: fit-content;
-}
-
-.description {
-  box-shadow: 0px 0px 10px 5px #00000088;
-  width: 100%;
-  padding: 10px;
-  background-color: #00000099;
-  backdrop-filter: blur(5px);
-  border-radius: 5px;
-}
-
-.title {
-  font-size: 11px;
-  max-width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.title p {
-  width: 50%;
-}
-
-.card-footer {
-  color: #ffffff88;
-  margin-top: 5px;
-  font-size: 8px;
-}
-
-.front .img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.circle {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  background-color: #ffbb66;
-  position: relative;
-  filter: blur(15px);
-  animation: floating 2600ms infinite linear;
-}
-
-#bottom {
-  background-color: #ff8866;
-  left: 50px;
-  top: 0px;
-  width: 150px;
-  height: 150px;
-  animation-delay: -800ms;
-}
-
-#right {
-  background-color: #ff2233;
-  left: 160px;
-  top: -80px;
-  width: 30px;
-  height: 30px;
-  animation-delay: -1800ms;
-}
-
-@keyframes floating {
+@keyframes spin-border {
   0% {
-    transform: translateY(0px);
+    transform: rotate(0deg);
+    transform-origin: center;
   }
-
-  50% {
-    transform: translateY(10px);
-  }
-
   100% {
-    transform: translateY(0px);
+    transform: rotate(360deg);
+    transform-origin: center;
   }
 }
 
-    </style>
-</head>
-<body>
- <!-- Header -->
-<header class="top-0 z-50 bg-white shadow-sm border-b-2 border-b-[#FD8C02]">
-  <div class="relative container mx-auto px-4 py-3 flex items-center justify-between">
+</style>
+    <!-- card section -->
 
-    <!-- Logo + Search -->
-    <div class="flex items-center space-x-4">
-      <a href="index.html"><img class="w-14 h-10" src="logo.png" alt="logo" /></a>
-
-      <!-- Full Search (above 1257px) -->
-      <div class="relative hidden xl:block w-64">
-        <input type="text" placeholder="Search..."
-          class="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" />
-        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-          <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2"
-            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z" />
-          </svg>
-        </div>
-      </div>
-
-      <!-- Circle Search (between 819px–1257px) -->
-      <div class="relative hidden md:block xl:hidden">
-        <button class="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100">
-          <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2"
-            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z" />
-          </svg>
-        </button>
-      </div>
-    </div>
-
-    <!-- Centered Nav -->
-    <nav class="hidden md:flex absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 space-x-5">
-      <a href="index.html" class="text-gray-700 hover:text-[#FD8C02]">Home</a>
-      <a href="Destinations.html" class="text-gray-700 hover:text-[#FD8C02]">Destinations</a>
-      <a href="Tours.html" class="text-gray-700 hover:text-[#FD8C02]">Tours</a>
-      <a href="booking.html" class="text-gray-700 hover:text-[#FD8C02]">Booking</a>
-      <a href="aboutus.html" class="text-gray-700 hover:text-[#FD8C02]">About us</a>
-    </nav>
-
-    <!-- Right Side -->
-    <div class="flex items-center space-x-4 md:space-x-4">
-      <button class="hidden md:block bg-[#FD8C02] text-white px-4 py-2 rounded">
-        <a href="signup.html">Sign Up</a>
-      </button>
-      <div class="hidden md:flex w-8 h-8 items-center justify-center">
-        <a href="profile.html">
-          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 512 512">
-            <path fill="#FD8C02" fill-rule="evenodd"
-              d="M256 42.667A213.333 213.333 0 0 1 469.334 256c0 117.821-95.513 213.334-213.334 213.334c-117.82 0-213.333-95.513-213.333-213.334C42.667 138.18 138.18 42.667 256 42.667m21.334 234.667h-42.667c-52.815 0-98.158 31.987-117.715 77.648c30.944 43.391 81.692 71.685 139.048 71.685s108.104-28.294 139.049-71.688c-19.557-45.658-64.9-77.645-117.715-77.645M256 106.667c-35.346 0-64 28.654-64 64s28.654 64 64 64s64-28.654 64-64s-28.653-64-64-64" />
-          </svg>
-        </a>
-      </div>
-
-      <!-- Hamburger -->
-      <button id="menu-btn" class="md:hidden text-orange-500 focus:outline-none">
-        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2"
-          viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-    </div>
-  </div>
-
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 space-y-2 bg-white shadow-md border-t border-gray-100">
-    <input type="text" placeholder="Search..."
-      class="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
-    <a href="index.html" class="block text-gray-700 hover:text-[#FD8C02]">Home</a>
-    <a href="Destinations.html" class="block text-gray-700 hover:text-[#FD8C02]">Destinations</a>
-    <a href="Tours.html" class="block text-gray-700 hover:text-[#FD8C02]">Tours</a>
-    <a href="booking.html" class="block text-gray-700 hover:text-[#FD8C02]">Booking</a>
-    <a href="aboutus.html" class="block text-gray-700 hover:text-[#FD8C02]">About us</a>
-    <button class="w-full bg-[#FD8C02] text-white py-2 rounded"><a href="signup.html">Sign Up</a></button>
-    <div class="flex justify-center">
-      <a href="profile.html">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 512 512">
-          <path fill="#FD8C02" fill-rule="evenodd"
-            d="M256 42.667A213.333 213.333 0 0 1 469.334 256c0 117.821-95.513 213.334-213.334 213.334c-117.82 0-213.333-95.513-213.333-213.334C42.667 138.18 138.18 42.667 256 42.667m21.334 234.667h-42.667c-52.815 0-98.158 31.987-117.715 77.648c30.944 43.391 81.692 71.685 139.048 71.685s108.104-28.294 139.049-71.688c-19.557-45.658-64.9-77.645-117.715-77.645M256 106.667c-35.346 0-64 28.654-64 64s28.654 64 64 64s64-28.654 64-64s-28.653-64-64-64" />
-        </svg>
-      </a>
-    </div>
-  </div>
-</header>
-
-
-    <!-- Header ended-->
-    <!-- card section-->
-    <section class="container mx-auto px-4 py-12 block">
-        <div class="relative">
-            <div class="flex overflow-x-auto pb-3 gap-8 hide-scrollbar">
-               <div class="card">
-  <div class="content ">
-    <div class="back">
-      <div class="back-content">
-        <svg stroke="#ffffff" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" height="50px" width="50px" fill="#ffffff">
-
-        <g stroke-width="0" id="SVGRepo_bgCarrier"></g>
-
-        <g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g>
-
-        <g id="SVGRepo_iconCarrier">
-
-        <path d="M20.84375 0.03125C20.191406 0.0703125 19.652344 0.425781 19.21875 1.53125C18.988281 2.117188 18.5 3.558594 18.03125 4.9375C17.792969 5.636719 17.570313 6.273438 17.40625 6.75C17.390625 6.796875 17.414063 6.855469 17.40625 6.90625C17.398438 6.925781 17.351563 6.949219 17.34375 6.96875L17.25 7.25C18.566406 7.65625 19.539063 8.058594 19.625 8.09375C22.597656 9.21875 28.351563 11.847656 33.28125 16.78125C38.5 22 41.183594 28.265625 42.09375 30.71875C42.113281 30.761719 42.375 31.535156 42.75 32.84375C42.757813 32.839844 42.777344 32.847656 42.78125 32.84375C43.34375 32.664063 44.953125 32.09375 46.3125 31.625C47.109375 31.351563 47.808594 31.117188 48.15625 31C49.003906 30.714844 49.542969 30.292969 49.8125 29.6875C50.074219 29.109375 50.066406 28.429688 49.75 27.6875C49.605469 27.347656 49.441406 26.917969 49.25 26.4375C47.878906 23.007813 45.007813 15.882813 39.59375 10.46875C33.613281 4.484375 25.792969 1.210938 22.125 0.21875C21.648438 0.0898438 21.234375 0.0078125 20.84375 0.03125 Z M 16.46875 9.09375L0.0625 48.625C-0.09375 48.996094 -0.00390625 49.433594 0.28125 49.71875C0.472656 49.910156 0.738281 50 1 50C1.128906 50 1.253906 49.988281 1.375 49.9375L40.90625 33.59375C40.523438 32.242188 40.222656 31.449219 40.21875 31.4375C39.351563 29.089844 36.816406 23.128906 31.875 18.1875C27.035156 13.34375 21.167969 10.804688 18.875 9.9375C18.84375 9.925781 17.8125 9.5 16.46875 9.09375 Z M 17 16C19.761719 16 22 18.238281 22 21C22 23.761719 19.761719 26 17 26C15.140625 26 13.550781 24.972656 12.6875 23.46875L15.6875 16.1875C16.101563 16.074219 16.550781 16 17 16 Z M 31 22C32.65625 22 34 23.34375 34 25C34 25.917969 33.585938 26.730469 32.9375 27.28125L32.90625 27.28125C33.570313 27.996094 34 28.949219 34 30C34 32.210938 32.210938 34 30 34C27.789063 34 26 32.210938 26 30C26 28.359375 26.996094 26.960938 28.40625 26.34375L28.3125 26.3125C28.117188 25.917969 28 25.472656 28 25C28 23.34375 29.34375 22 31 22 Z M 21 32C23.210938 32 25 33.789063 25 36C25 36.855469 24.710938 37.660156 24.25 38.3125L20.3125 39.9375C18.429688 39.609375 17 37.976563 17 36C17 33.789063 18.789063 32 21 32 Z M 9 34C10.65625 34 12 35.34375 12 37C12 38.65625 10.65625 40 9 40C7.902344 40 6.960938 39.414063 6.4375 38.53125L8.25 34.09375C8.488281 34.03125 8.742188 34 9 34Z"></path>
-
-        </g>
-
-        </svg>
-        <strong></strong>
-      </div>
-    </div>
-    <div class="front">
+<div class="custom-card relative w-60 h-80 text-neutral-300 flex flex-col items-start justify-center gap-3 p-4">
+  <!-- Animated Border -->
+  <div class="absolute inset-0 before-anim-border z-0"></div>
+  <div class="absolute inset-1 bg-neutral-800 rounded-3xl z-10 p-4 flex flex-col items-start justify-between">
     
-      <div class="img">
-        <div class="circle">
-        </div>
-        <div class="circle" id="right">
-        </div>
-        <div class="circle" id="bottom">
-        </div>
-      </div>
-
-      <div class="front-content">
-        <small class="badge">Pasta</small>
-        <div class="description">
-          <div class="title">
-            <p class="title">
-              <strong>Spaguetti Bolognese</strong>
-            </p>
-            <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997"><g transform="scale(8,8)"><path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path></g></g></svg>
-          </div>
-          <p class="card-footer">
-            30 Mins &nbsp; | &nbsp; 1 Serving
-          </p>
-        </div>
-      </div>
+    <!-- Image -->
+    <div class="w-full h-36 bg-sky-300 rounded-2xl mb-3"></div>
+    
+    <!-- Content -->
+    <div>
+      <p class="font-extrabold text-white">Card Title</p>
+      <p class="text-sm mt-1 text-gray-300">4 popular types of cards in UI design.</p>
     </div>
+
+    <!-- Button -->
+    <button class="bg-sky-700 font-extrabold py-2 px-4 rounded-xl mt-4 text-white hover:bg-sky-500 transition-colors">
+      See more
+    </button>
   </div>
 </div>
-  <div class="card">
-  <div class="content">
-    <div class="back">
-      <div class="back-content">
-        <svg stroke="#ffffff" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" height="50px" width="50px" fill="#ffffff">
-
-        <g stroke-width="0" id="SVGRepo_bgCarrier"></g>
-
-        <g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g>
-
-        <g id="SVGRepo_iconCarrier">
-
-        <path d="M20.84375 0.03125C20.191406 0.0703125 19.652344 0.425781 19.21875 1.53125C18.988281 2.117188 18.5 3.558594 18.03125 4.9375C17.792969 5.636719 17.570313 6.273438 17.40625 6.75C17.390625 6.796875 17.414063 6.855469 17.40625 6.90625C17.398438 6.925781 17.351563 6.949219 17.34375 6.96875L17.25 7.25C18.566406 7.65625 19.539063 8.058594 19.625 8.09375C22.597656 9.21875 28.351563 11.847656 33.28125 16.78125C38.5 22 41.183594 28.265625 42.09375 30.71875C42.113281 30.761719 42.375 31.535156 42.75 32.84375C42.757813 32.839844 42.777344 32.847656 42.78125 32.84375C43.34375 32.664063 44.953125 32.09375 46.3125 31.625C47.109375 31.351563 47.808594 31.117188 48.15625 31C49.003906 30.714844 49.542969 30.292969 49.8125 29.6875C50.074219 29.109375 50.066406 28.429688 49.75 27.6875C49.605469 27.347656 49.441406 26.917969 49.25 26.4375C47.878906 23.007813 45.007813 15.882813 39.59375 10.46875C33.613281 4.484375 25.792969 1.210938 22.125 0.21875C21.648438 0.0898438 21.234375 0.0078125 20.84375 0.03125 Z M 16.46875 9.09375L0.0625 48.625C-0.09375 48.996094 -0.00390625 49.433594 0.28125 49.71875C0.472656 49.910156 0.738281 50 1 50C1.128906 50 1.253906 49.988281 1.375 49.9375L40.90625 33.59375C40.523438 32.242188 40.222656 31.449219 40.21875 31.4375C39.351563 29.089844 36.816406 23.128906 31.875 18.1875C27.035156 13.34375 21.167969 10.804688 18.875 9.9375C18.84375 9.925781 17.8125 9.5 16.46875 9.09375 Z M 17 16C19.761719 16 22 18.238281 22 21C22 23.761719 19.761719 26 17 26C15.140625 26 13.550781 24.972656 12.6875 23.46875L15.6875 16.1875C16.101563 16.074219 16.550781 16 17 16 Z M 31 22C32.65625 22 34 23.34375 34 25C34 25.917969 33.585938 26.730469 32.9375 27.28125L32.90625 27.28125C33.570313 27.996094 34 28.949219 34 30C34 32.210938 32.210938 34 30 34C27.789063 34 26 32.210938 26 30C26 28.359375 26.996094 26.960938 28.40625 26.34375L28.3125 26.3125C28.117188 25.917969 28 25.472656 28 25C28 23.34375 29.34375 22 31 22 Z M 21 32C23.210938 32 25 33.789063 25 36C25 36.855469 24.710938 37.660156 24.25 38.3125L20.3125 39.9375C18.429688 39.609375 17 37.976563 17 36C17 33.789063 18.789063 32 21 32 Z M 9 34C10.65625 34 12 35.34375 12 37C12 38.65625 10.65625 40 9 40C7.902344 40 6.960938 39.414063 6.4375 38.53125L8.25 34.09375C8.488281 34.03125 8.742188 34 9 34Z"></path>
-
-        </g>
-
-        </svg>
-        <strong></strong>
-      </div>
-    </div>
-    <div class="front">
-      
-      <div class="img">
-        <div class="circle">
-        </div>
-        <div class="circle" id="right">
-        </div>
-        <div class="circle" id="bottom">
-        </div>
-      </div>
-
-      <div class="front-content">
-        <small class="badge">Pasta</small>
-        <div class="description">
-          <div class="title">
-            <p class="title">
-              <strong>Spaguetti Bolognese</strong>
-            </p>
-            <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997"><g transform="scale(8,8)"><path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path></g></g></svg>
-          </div>
-          <p class="card-footer">
-            30 Mins &nbsp; | &nbsp; 1 Serving
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>           
-
-</div>
-</div>
-</section>
-
-
 
 
 
