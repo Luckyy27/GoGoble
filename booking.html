@@ -12,6 +12,13 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
 <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .clip-slant {
+      clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+    }
+  </style>
+<script src="https://unpkg.com/lucide@latest"></script>
 <script>tailwind.config={theme:{extend:{colors:{primary:'#FF8A00',secondary:'#FFD580'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
 <style>
 
@@ -26,55 +33,28 @@
     <div class="flex items-center space-x-4">
       <a href="index.html"><img class="w-14 h-10" src="logo.png" alt="logo" /></a>
 
-      <!-- Full Search (above 1257px) -->
-      <div class="relative hidden xl:block w-64">
-        <input type="text" placeholder="Search..."
-          class="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" />
-        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-          <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2"
-            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z" />
-          </svg>
-        </div>
-      </div>
+      
 
-      <!-- Circle Search (between 819px–1257px) -->
-      <div class="relative hidden md:block xl:hidden">
-        <button class="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100">
-          <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2"
-            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z" />
-          </svg>
-        </button>
-      </div>
+      
     </div>
 
-    <!-- Centered Nav -->
-    <nav class="hidden md:flex absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 space-x-5">
-      <a href="index.html" class="text-gray-700 hover:text-[#FD8C02]">Home</a>
-      <a href="Destinations.html" class="text-gray-700 hover:text-[#FD8C02]">Destinations</a>
-      <a href="Tours.html" class="text-gray-700 hover:text-[#FD8C02]">Tours</a>
-      <a href="#booking" class="text-gray-700 hover:text-[#FD8C02]">Booking</a>
-      <a href="aboutus.html" class="text-gray-700 hover:text-[#FD8C02]">About us</a>
+    <!-- HEADER -->
+  <div class="max-5xl mx-auto px-4 py-3 align-items-center justify-center">
+
+    <!-- Navigation Menu -->
+    <nav class="hidden md:flex gap-10 text-sm font-medium text-gray-700">
+      <a href="#" class="hover:text-orange-500  flex items-center gap-1">
+      ✈️ Flights
+      </a>
+      <a href="#" class="hover:text-orange-500">🏨 Hotels</a>
+      <a href="#" class="hover:text-orange-500">🚆 Trains</a>
+      <a href="#" class="hover:text-orange-500">🚌 Buses</a>
+      <a href="#" class="hover:text-orange-500">🏖 Holidays</a>
+      <a href="#" class="hover:text-orange-500">💱 Forex</a>
+      <a href="#" class="hover:text-orange-500">🛡 Insurance</a>
     </nav>
 
-    <!-- Right Side -->
-    <div class="flex items-center space-x-4 md:space-x-4">
-      <button class="hidden md:block bg-[#FD8C02] text-white px-4 py-2 rounded">
-        <a href="signup.html">Sign Up</a>
-      </button>
-      <div class="hidden md:flex w-8 h-8 items-center justify-center">
-        <a href="profile.html">
-          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 512 512">
-            <path fill="#FD8C02" fill-rule="evenodd"
-              d="M256 42.667A213.333 213.333 0 0 1 469.334 256c0 117.821-95.513 213.334-213.334 213.334c-117.82 0-213.333-95.513-213.333-213.334C42.667 138.18 138.18 42.667 256 42.667m21.334 234.667h-42.667c-52.815 0-98.158 31.987-117.715 77.648c30.944 43.391 81.692 71.685 139.048 71.685s108.104-28.294 139.049-71.688c-19.557-45.658-64.9-77.645-117.715-77.645M256 106.667c-35.346 0-64 28.654-64 64s28.654 64 64 64s64-28.654 64-64s-28.653-64-64-64" />
-          </svg>
-        </a>
-      </div>
-
-      <!-- Hamburger -->
+       <!--- Hamburger -->
       <button id="menu-btn" class="md:hidden text-orange-500 focus:outline-none">
         <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2"
           viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -89,12 +69,17 @@
   <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 space-y-2 bg-white shadow-md border-t border-gray-100">
     <input type="text" placeholder="Search..."
       class="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
-    <a href="index.html" class="block text-gray-700 hover:text-[#FD8C02]">Home</a>
-    <a href="Destinations.html" class="block text-gray-700 hover:text-[#FD8C02]">Destinations</a>
-    <a href="Tours.html" class="block text-gray-700 hover:text-[#FD8C02]">Tours</a>
-    <a href="#booking" class="block text-gray-700 hover:text-[#FD8C02]">Booking</a>
-    <a href="aboutus.html" class="block text-gray-700 hover:text-[#FD8C02]">About us</a>
-    <button class="w-full bg-[#FD8C02] text-white py-2 rounded"><a href="signup.html">Sign Up</a></button>
+   <nav class="hidden md:flex gap-10 text-sm font-medium text-gray-700">
+      <a href="#" class="hover:text-orange-500  flex items-center gap-1">
+      ✈️ Flights
+      </a>
+      <a href="#" class="hover:text-orange-500">🏨 Hotels</a>
+      <a href="#" class="hover:text-orange-500">🚆 Trains</a>
+      <a href="#" class="hover:text-orange-500">🚌 Buses</a>
+      <a href="#" class="hover:text-orange-500">🏖 Holidays</a>
+      <a href="#" class="hover:text-orange-500">💱 Forex</a>
+      <a href="#" class="hover:text-orange-500">🛡 Insurance</a>
+    </nav>
     <div class="flex justify-center">
       <a href="profile.html">
         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 512 512">
@@ -116,10 +101,229 @@
   btn.addEventListener('click', () => {
     menu.classList.toggle('hidden');
   });
+  
+  lucide.createIcons(); // Auto-initializes all icons
+
+
 </script>
 
 
  <!-- Header ended-->
+<body class="bg-[#f2f2f2]">
+
+  <!-- ORANGE BACKGROUND WITH WHITE CARD -->
+  <section class="relative bg-[#ff5e00] h-[290px] w-full">
+    <!-- Orange Slant -->
+    <div class="absolute inset-0 bg-[#ff5e00] clip-slant z-0 w-full h-full"></div>
+
+    <!-- WHITE SEARCH BOX -->
+    <div class="relative z-10 max-w-6xl mx-auto mt-16 p-6 sm:p-8 bg-white rounded-2xl shadow-lg">
+
+      <!-- Title -->
+      <h2 class="text-center text-lg sm:text-xl font-semibold text-[#ff5e00] mb-6">
+        Book Domestic and International Flight Tickets
+      </h2>
+
+ <div class="flex gap-6 text-sm font-medium">
+  <!-- One-way -->
+  <label class="flex items-center gap-2 cursor-pointer">
+    <input type="radio" name="trip" value="oneway" class="peer hidden" checked />
+    <span
+      class="w-4 h-4 rounded-full border-2 peer-checked:bg-blue-600 peer-checked:border-blue-600 border-gray-400 transition-all duration-150">
+    </span>
+    One-way
+  </label>
+
+  <!-- Round-trip -->
+  <label class="flex items-center gap-2 cursor-pointer">
+    <input type="radio" name="trip" value="roundtrip" class="peer hidden" />
+    <span
+      class="w-4 h-4 rounded-full border-2 peer-checked:bg-blue-600 peer-checked:border-blue-600 border-gray-400 transition-all duration-150">
+    </span>
+    Round-trip
+  </label>
+
+  <!-- Multi-city -->
+  <label class="flex items-center gap-2 cursor-pointer">
+    <input type="radio" name="trip" value="multicity" class="peer hidden" />
+    <span
+      class="w-4 h-4 rounded-full border-2 peer-checked:bg-blue-600 peer-checked:border-blue-600 border-gray-400 transition-all duration-150">
+    </span>
+    Multi-city
+  </label>
+</div>
+
+
+
+
+      <!-- Input Fields -->
+      <div class="grid sm:grid-cols-5 gap-4 mb-6 text-sm">
+        <!-- From -->
+        <div>
+          <label class="block text-xs text-gray-500 mb-1">From</label>
+          <input type="text" placeholder="Enter city or airport"
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" />
+        </div>
+
+        <!-- To (with Swap icon) -->
+        <div class="relative">
+          <label class="block text-xs text-gray-500 mb-1">To</label>
+          <input type="text" placeholder="Enter city or airport"
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" />
+          <div class="absolute -left-6 top-1/2 transform -translate-y-1/2">
+            <div class="bg-white shadow border rounded-full p-1 text-sm">🔁</div>
+          </div>
+        </div>
+
+        <!-- Departure -->
+        <div>
+          <label class="block text-xs text-gray-500 mb-1">Departure</label>
+          <input type="date" value="2025-06-22"
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" />
+        </div>
+
+        <!-- Return -->
+        <div>
+          <label class="block text-xs text-gray-500 mb-1">Return</label>
+          <div class="w-full px-4 py-2 border rounded-lg text-gray-400 bg-white text-xs cursor-pointer">
+            Click to add a return flight for better discounts
+          </div>
+        </div>
+
+        <!-- Travellers & Class -->
+        <div>
+          <label class="block text-xs text-gray-500 mb-1">Travellers & Class</label>
+          <select
+            class="w-full px-4 py-2 border rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-orange-500">
+            <option>1 Adult</option>
+            <option>2 Adults</option>
+            <option>1 Adult, 1 Child, 2 child , 4 members</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- BENEFITS -->
+      <div class="grid sm:grid-cols-2 md:grid-cols-5 gap-3 text-xs">
+        <!-- Special Fares -->
+        <div class="bg-[#e5fff2] text-[#1a9359] px-4 py-2 rounded-lg font-bold flex items-center">
+          <span class="bg-purple-700 text-white px-2 py-1 text-xs rounded mr-2">MORE BENEFITS</span> Special Fares
+        </div>
+
+        <!-- Student -->
+        <div class="border px-3 py-2 rounded-lg flex items-center gap-2">
+          🧑‍🎓 <span>Student<br><span class="text-gray-500 text-xs">Extra Baggage</span></span>
+        </div>
+
+        <!-- Senior Citizen -->
+        <div class="border px-3 py-2 rounded-lg flex items-center gap-2">
+          👵 <span>Senior Citizen<br><span class="text-gray-500 text-xs">Exclusive Discounts</span></span>
+        </div>
+
+        <!-- Armed Forces -->
+        <div class="border px-3 py-2 rounded-lg flex items-center gap-2">
+          🪖 <span>Armed Forces<br><span class="text-gray-500 text-xs">Exclusive Discounts</span></span>
+        </div>
+
+        <!-- Doctors & Nurses -->
+        <div class="border px-3 py-2 rounded-lg flex items-center gap-2">
+          👨‍⚕️ <span>Doctors & Nurses<br><span class="text-gray-500 text-xs">Exclusive Discounts</span></span>
+        </div>
+      </div>
+
+      <!-- SEARCH BUTTON -->
+      <div class="mt-6 flex justify-center">
+        <button
+          class="bg-[#ff5e00] hover:bg-[#e04e00] text-white text-sm sm:text-base font-semibold py-3 px-10 rounded-full shadow-lg">
+          SEARCH FLIGHTS
+        </button>
+      </div>
+    </div>
+  </section>
+
+  
+<div class="bg-orange-500 clip-slant h-64"></div>
+<!-- Offers Section -->
+  <section class="max-w-6xl mx-auto mt-8 p-6 bg-white rounded-lg shadow-md">
+    <h2 class="text-xl font-semibold mb-4">Offers For You</h2>
+    <div class="flex gap-6 overflow-x-auto scrollbar-hide">
+      <!-- Offer 1 -->
+      <div class="w-72 flex-shrink-0 bg-white border rounded-lg shadow-sm">
+        <img src="https://gos3.ibcdn.com/icici-gobibo-jun24-271x171-1718701892.jpg" class="rounded-t-md" />
+        <div class="p-3 text-sm font-medium text-gray-700">
+          Up to 35% OFF on Travel Bookings!
+          <div class="text-xs text-gray-500">Valid till 23rd Jun’25</div>
+        </div>
+      </div>
+      <!-- Offer 2 -->
+      <div class="w-72 flex-shrink-0 bg-white border rounded-lg shadow-sm">
+        <img src="https://gos3.ibcdn.com/icici-gobibo-esc-jun24-271x171-1718701948.jpg" class="rounded-t-md" />
+        <div class="p-3 text-sm font-medium text-gray-700">
+          Up to 35% OFF on Hotels & Homestays!
+          <div class="text-xs text-gray-500">Valid till 23rd Jun’25</div>
+        </div>
+      </div>
+      <!-- Offer 3 -->
+      <div class="w-72 flex-shrink-0 bg-white border rounded-lg shadow-sm">
+        <img src="https://gos3.ibcdn.com/icici-gobibo-flight-jun24-271x171-1718701925.jpg" class="rounded-t-md" />
+        <div class="p-3 text-sm font-medium text-gray-700">
+          Up to 20% OFF on Flights!
+          <div class="text-xs text-gray-500">Valid till 23rd Jun’25</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hotel Store -->
+  <section class="max-w-6xl mx-auto mt-8 p-6 bg-white rounded-lg shadow-md">
+    <h2 class="text-lg font-semibold mb-2">Hotel Stores on Goibibo</h2>
+    <p class="text-sm text-gray-600 mb-4">Your one-stop destination to choose hotels, filtered by brands</p>
+    <img src="https://gos3.ibcdn.com/hotelstore-dweb-banner-271x171-1718702241.jpg" class="rounded-md w-full">
+  </section>
+
+  <!-- Travel Guidelines -->
+  <section class="max-w-6xl mx-auto mt-8 px-6 py-4 bg-[#fff3cd] text-[#856404] border-l-4 border-[#ffeeba] rounded-md">
+    <strong>Safe Travel:</strong> Read the latest domestic & international travel guidelines before you travel.
+    <a href="#" class="underline">Read more</a>
+  </section>
+
+  <!-- Popular Routes -->
+  <section class="max-w-6xl mx-auto mt-8 p-6 bg-white rounded-lg shadow-md">
+    <h2 class="text-lg font-semibold mb-4">Popular Flight Routes</h2>
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4 text-sm text-gray-700">
+      <div><strong>Delhi Flights:</strong> Mumbai, Pune, Bangalore, Goa</div>
+      <div><strong>Mumbai Flights:</strong> Delhi, Ahmedabad, Chennai</div>
+      <div><strong>Bangalore Flights:</strong> Kolkata, Delhi, Pune</div>
+      <div><strong>Goa Flights:</strong> Mumbai, Pune, Indore</div>
+      <div><strong>Hyderabad Flights:</strong> Mumbai, Delhi, Bangalore</div>
+      <div><strong>Lucknow Flights:</strong> Delhi, Mumbai, Pune</div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="max-w-6xl mx-auto mt-8 p-6 bg-white rounded-lg shadow-md">
+    <h2 class="text-lg font-semibold mb-4">Flight Booking FAQs</h2>
+    <div class="space-y-4 text-sm text-gray-800">
+      <div>
+        <p class="font-medium">✅ What are the advantages of online flight booking?</p>
+        <p>Compare prices of multiple airlines quickly and book securely with multiple payment options.</p>
+      </div>
+      <div>
+        <p class="font-medium">📅 When should I book flight tickets?</p>
+        <p>Domestic: 3-4 weeks early. International: 7-8 weeks early for the best prices.</p>
+      </div>
+      <div>
+        <p class="font-medium">🧾 How can I book online?</p>
+        <p>Use the form above to search, compare, and book in a few clicks.</p>
+      </div>
+      <div>
+        <p class="font-medium">📨 When will I get confirmation?</p>
+        <p>Instant confirmation via email and SMS after payment.</p>
+      </div>
+    </div>
+  </section>
+</main>
+<i data-lucide="calendar" class="w-4 h-4 text-gray-500"></i>
+
 
  <!-- footer -->
     <footer class="bg-gray-900 text-white pt-16 pb-8  block">
