@@ -13,11 +13,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
 <script src="https://cdn.tailwindcss.com/3.4.16"></script>
 <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    .clip-slant {
-      clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
-    }
-  </style>
+  
 <script src="https://unpkg.com/lucide@latest"></script>
 <script>tailwind.config={theme:{extend:{colors:{primary:'#FF8A00',secondary:'#FFD580'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
 <style>
@@ -32,10 +28,6 @@
     <!-- Logo + Search -->
     <div class="flex items-center space-x-4">
       <a href="index.html"><img class="w-14 h-10" src="logo.png" alt="logo" /></a>
-
-      
-
-      
     </div>
 
     <!-- HEADER -->
@@ -106,158 +98,86 @@
 
 
 </script>
+<!-- Header ended-->
+ <style>
+  .clip-slant {
+    clip-path:polygon(0 0, 100% 0, 100% 70%,90% 100%,10% 100%,0 70% );
+  }
+  
+</style>
+ <body>
+   <!--background design-->
+  <div class="relative h-[300px] bg-orange-500 flex flex-col justify-end items-center relative z-0 clip-slant overflow-hidden">
+    <h1 class="text-white text-2xl md:text-3xl font-semibold mb-60"> Book Domestic and International Flight Tickets</h1>
+   </div>
+<div class="bg-white rounded-3xl shadow-xl p-8 max-w-7xl mx-auto -mt-40 relative z-10 ">
 
+   <!-- Trip Options -->
+    <div class="flex gap-4 text-sm font-medium text-gray-700 mb-4">
+      <label class="flex items-center gap-1 cursor-pointer">
+        <input type="radio" name="trip" checked class="accent-orange-500"> One-way
+      </label>
+      <label class="flex items-center gap-1 cursor-pointer">
+        <input type="radio" name="trip" class="accent-orange-500"> Round-trip
+      </label>
+      <label class="flex items-center gap-1 cursor-pointer">
+        <input type="radio" name="trip" class="accent-orange-500"> Multi-city
+      </label>
+    </div>
 
- <!-- Header ended-->
-<body>
-
-  <body class="bg-gray-100">
-
-  <!-- Orange Background with Slant -->
-  <div class="relative h-64 bg-orange-500 overflow-hidden">
-    <div class="absolute bottom-0 w-full h-32 bg-white rounded-t-[3rem] z-10"></div>
-    <svg class="absolute bottom-0 left-0 w-full h-32" viewBox="0 0 100 100" preserveAspectRatio="none">
-      <polygon fill="#f97316" points="0,100 100,0 100,100" />
-    </svg>
-    <!-- Title -->
-    <h2 class="text-center text-2xl font-semibold text-white mb-8 my-12">
-      Book Domestic and International Flight Tickets
-    </h2>
-
-  </div>
-  <!-- Title -->
-    <h2 class="text-center text-2xl font-semibold text-white-500 mb-6">
-      Book Domestic and International Flight Tickets
-    </h2>
-
-
-  <!-- White Box Floating -->
-  <div class="relative -mt-40 z-20 max-w-6xl mx-auto bg-white rounded-3xl px-8 py-6">
+  <!-- Input Fields -->
+  <div class="grid grid-cols-1 md:grid-cols-5 gap-4 mb-6">
+    <input type="text" placeholder="From" class="col-span-1 p-3 border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-orange-400" />
+    <input type="text" placeholder="To" class="col-span-1 p-3 border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-orange-400" />
     
-   
+    <div class="col-span-1">
+      <label class="block text-xs text-gray-500 mb-1">Departure</label>
+      <input type="date" class="p-3 border rounded-lg w-full text-sm focus:outline-none focus:ring-2 focus:ring-orange-400" />
+    </div>
 
- <div class="flex gap-6 text-sm font-medium">
-  <!-- One-way -->
-  <label class="flex items-center gap-2 cursor-pointer">
-    <input type="radio" name="trip" value="oneway" class="peer hidden" checked />
-    <span
-      class="w-4 h-4 rounded-full border-2 peer-checked:bg-blue-600 peer-checked:border-blue-600 border-gray-400 transition-all duration-150">
-    </span>
-    One-way
-  </label>
+    <div class="col-span-1">
+      <label class="block text-xs text-gray-500 mb-1">Return</label>
+      <input type="date" class="p-3 border rounded-lg w-full text-sm focus:outline-none focus:ring-2 focus:ring-orange-400" />
+    </div>
 
-  <!-- Round-trip -->
-  <label class="flex items-center gap-2 cursor-pointer">
-    <input type="radio" name="trip" value="roundtrip" class="peer hidden" />
-    <span
-      class="w-4 h-4 rounded-full border-2 peer-checked:bg-blue-600 peer-checked:border-blue-600 border-gray-400 transition-all duration-150">
-    </span>
-    Round-trip
-  </label>
+    <select class="col-span-1 p-3 border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-orange-400">
+      <option>1 Adult - Economy</option>
+      <option>2 Adults - Economy</option>
+      <option>Business Class</option>
+    </select>
+  </div>
 
-  <!-- Multi-city -->
-  <label class="flex items-center gap-2 cursor-pointer">
-    <input type="radio" name="trip" value="multicity" class="peer hidden" />
-    <span
-      class="w-4 h-4 rounded-full border-2 peer-checked:bg-blue-600 peer-checked:border-blue-600 border-gray-400 transition-all duration-150">
-    </span>
-    Multi-city
-  </label>
+  <!-- Benefits Row -->
+  <div class="flex flex-wrap gap-4 items-center bg-green-50 p-4 rounded-lg text-sm text-gray-700 mb-6">
+    <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold">More Benefits</span>
+    <label class="flex items-center gap-2">
+      <input type="checkbox" />
+      👩‍🎓 Student Extra Baggage
+    </label>
+    <label class="flex items-center gap-2">
+      <input type="checkbox" />
+      👴 Senior Citizen Discounts
+    </label>
+    <label class="flex items-center gap-2">
+      <input type="checkbox" />
+      🪖 Armed Forces Discounts
+    </label>
+    <label class="flex items-center gap-2">
+      <input type="checkbox" />
+      👩‍⚕ Doctors & Nurses Discounts
+    </label>
+  </div>
+
+  <!-- Search Button -->
+  <div class="text-center -mb-12">
+    <button class="bg-orange-500 hover:bg-orange-600 text-white px-10 py-3 rounded-full font-semibold shadow-md transition duration-300">
+      SEARCH FLIGHTS
+    </button>
+  </div>
 </div>
 
 
-
-
-      <!-- Input Fields -->
-      <div class="grid sm:grid-cols-5 gap-4 mb-6 text-sm">
-        <!-- From -->
-        <div>
-          <label class="block text-xs text-gray-500 mb-1">From</label>
-          <input type="text" placeholder="Enter city or airport"
-            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" />
-        </div>
-
-        <!-- To (with Swap icon) -->
-        <div class="relative">
-          <label class="block text-xs text-gray-500 mb-1">To</label>
-          <input type="text" placeholder="Enter city or airport"
-            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" />
-          <div class="absolute -left-6 top-1/2 transform -translate-y-1/2">
-            <div class="bg-white shadow border rounded-full p-1 text-sm">🔁</div>
-          </div>
-        </div>
-
-        <!-- Departure -->
-        <div>
-          <label class="block text-xs text-gray-500 mb-1">Departure</label>
-          <input type="date" value="2025-06-22"
-            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" />
-        </div>
-
-        <!-- Return -->
-        <div>
-          <label class="block text-xs text-gray-500 mb-1">Return</label>
-          <div class="w-full px-4 py-2 border rounded-lg text-gray-400 bg-white text-xs cursor-pointer">
-            Click to add a return flight for better discounts
-          </div>
-        </div>
-
-        <!-- Travellers & Class -->
-        <div>
-          <label class="block text-xs text-gray-500 mb-1">Travellers & Class</label>
-          <select
-            class="w-full px-4 py-2 border rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-orange-500">
-            <option>1 Adult</option>
-            <option>2 Adults</option>
-            <option>1 Adult, 1 Child, 2 child , 4 members</option>
-          </select>
-        </div>
-      </div>
-
-      <!-- BENEFITS -->
-      <div class="grid sm:grid-cols-2 md:grid-cols-5 gap-3 text-xs">
-        <!-- Special Fares -->
-        <div class="bg-[#e5fff2] text-[#1a9359] px-4 py-2 rounded-lg font-bold flex items-center">
-          <span class="bg-purple-700 text-white px-2 py-1 text-xs rounded mr-2">MORE BENEFITS</span> Special Fares
-        </div>
-
-        <!-- Student -->
-        <div class="border px-3 py-2 rounded-lg flex items-center gap-2">
-          🧑‍🎓 <span>Student<br><span class="text-gray-500 text-xs">Extra Baggage</span></span>
-        </div>
-
-        <!-- Senior Citizen -->
-        <div class="border px-3 py-2 rounded-lg flex items-center gap-2">
-          👵 <span>Senior Citizen<br><span class="text-gray-500 text-xs">Exclusive Discounts</span></span>
-        </div>
-
-        <!-- Armed Forces -->
-        <div class="border px-3 py-2 rounded-lg flex items-center gap-2">
-          🪖 <span>Armed Forces<br><span class="text-gray-500 text-xs">Exclusive Discounts</span></span>
-        </div>
-
-        <!-- Doctors & Nurses -->
-        <div class="border px-3 py-2 rounded-lg flex items-center gap-2">
-          👨‍⚕️ <span>Doctors & Nurses<br><span class="text-gray-500 text-xs">Exclusive Discounts</span></span>
-        </div>
-      </div>
-
-      <!-- SEARCH BUTTON -->
-      <div class="mt-6 flex justify-center">
-        <button
-          class="bg-[#ff5e00] hover:bg-[#e04e00] text-white text-sm sm:text-base font-semibold py-3 px-10 rounded-full shadow-lg">
-          SEARCH FLIGHTS
-        </button>
-      </div>
-    </div>
-  </section>
-</div
-  
-<div class="p-3 max-w-screen-xl mx-auto">
-  
-
-  
-<!-- Offers Section -->
+  <!-- Offers Section -->
   <section class="max-w-6xl mx-auto mt-8 p-6 bg-white rounded-lg shadow-md">
     <h2 class="text-xl font-semibold mb-4">Offers For You</h2>
     <div class="flex gap-6 overflow-x-auto scrollbar-hide">
