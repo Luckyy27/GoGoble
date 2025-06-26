@@ -82,3 +82,32 @@ Greece Island Gateway	Athens	https://images.unsplash.com/photo-1519608425089-7f3
 Vietnam Nature Escape	Hanoi	https://images.unsplash.com/photo-1528127269322-540a3e14b6b1?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&w=300	Ha Long Bay	https://images.unsplash.com/photo-1528127269322-540a3e14b6b1?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&w=300
 Swiss Scenic Duo	Zurich	https://images.unsplash.com/photo-1582719471387-9c060c4d0a5a?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&w=300	Interlaken	https://images.unsplash.com/photo-1566438480900-0609be27a4be?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&w=300
 Jordan Heritage Tour	Petra	https://images.unsplash.com/photo-1551524559-8af4e6624178?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&w=300	Wadi Rum	https://images.unsplash.com/photo-1581595219315-a187dd40c322?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&w=300
+
+🎁 Travel Offers – Categorized
+🧾 Credit/Debit Card Offers
+Offer	Applicable On	Details
+💳 20% Off with HDFC Credit Card	Dubai, Paris, Goa	Maximum ₹5,000 off, applicable on bookings above ₹25,000
+💳 15% Cashback on ICICI Debit Card	Kerala, Rajasthan	Cashback credited within 15 days; min booking amount ₹15,000
+💳 Flat ₹2,000 Off with SBI Cards	Tokyo, New York	Valid once per user; use code SBITRAVEL during checkout
+
+🎉 Festive & Seasonal Offers
+Offer	Destinations	Details
+🪔 Diwali Dhamaka Sale	All Domestic Tours	Up to ₹7,000 off + free gift voucher worth ₹1,000
+🎄 Christmas in Europe Special	Rome, Paris, Amsterdam	₹10,000 Off on 7+ night packages + complimentary local tour
+🏖️ Summer Splash Deal	Goa, Kerala, Maldives	Flat 25% off for June-July departures
+
+⏰ Limited Time / Early Bird Offers
+Offer	Destinations	Details
+⏳ Early Bird International	Tokyo, London, Sydney	Book 60 days in advance and save up to ₹15,000
+🚀 48-Hour Flash Sale	Domestic + International	Flat ₹3,000 off on bookings above ₹20,000 – Ends tomorrow midnight!
+📆 Weekend Saver	Goa, Rajasthan, Varanasi	₹1,500 off on all bookings made between Friday–Sunday
+
+👨‍👩‍👧‍👦 Family & Group Offers
+Offer	Destinations	Details
+👨‍👩‍👧‍👦 Family Special Combo	Jaipur, Coorg, Singapore	10% off + Free Kid Entry on select attractions
+🧳 Group Tour Discount	Europe, Bali, Kashmir	Book 4 or more travelers & get 1 traveler free
+
+🏩 Hotel + Flight Combo Deals
+Offer	Destinations	Details
+🛫🏨 Flight + Hotel Save More	Dubai, Thailand, Turkey	Save up to ₹20,000 on bundled bookings
+🧖‍♀️ Luxury Combo Package	Maldives, Santorini	Complimentary spa + private transfers for 4+ night stays
