@@ -93,6 +93,16 @@
     opacity: 1;
 }
 
+  .active-btn {
+    background-color: white !important;
+    color: #f97316 !important; /* Tailwind orange-500 */
+  }
+  .tab-btn {
+    background-color: #f97316; /* orange-500 */
+    color: white;
+  }
+
+
         
         /*the styling for national and international ended*/
         
@@ -454,169 +464,174 @@ transform: translateY(0);}}
 
 <!-- Top Destinations -->
 <section class="container mx-auto px-4 py-12 block">
-    <h2 class="text-2xl font-bold text-gray-800 mb-6">Top Destinations</h2>
+    <div class="flex justify-between items-center mb-6">
+        <h2 class="text-2xl font-bold text-gray-800">Top Destinations</h2>
+    </div>
     
-    <!-- International Destinations (shown by default) -->
+    <!-- International Destinations -->
     <div id="internationalContent" class="relative">
-        <div class="flex overflow-x-auto pb-6 gap-4 hide-scrollbar">
-            <!-- International destination cards here -->
+        <div class="flex overflow-x-auto pb-6 gap-4 hide-scrollbar ">
+            <!-- Card 1 -->
             <div class="min-w-[250px] destination-card relative rounded-lg overflow-hidden shadow-md">
-                <img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20Rome%2C%20Italy" alt="Rome" class="w-full h-[200px] object-cover object-top">
+                <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80" alt="Rome" class="w-full h-[200px] object-cover">
                 <div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
                     <h3 class="text-white font-medium">Rome</h3>
                     <p class="text-white text-sm">Italy</p>
                 </div>
                 <div class="overlay absolute inset-0 bg-black/30 flex items-center justify-center">
-                    <button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">From $799</button>
+                    <button class="bg-orange-500 text-white px-4 py-2 rounded-full">From $799</button>
                 </div>
             </div>
-            <!-- More international cards... -->
+            
+            <!-- Card 2 -->
             <div class="min-w-[250px] destination-card relative rounded-lg overflow-hidden shadow-md">
-                <img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20Paris%2C%20France" alt="Paris" class="w-full h-[200px] object-cover object-top">
+                <img src="https://images.unsplash.com/photo-1431274172761-fca41d930114?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80" alt="Paris" class="w-full h-[200px] object-cover">
                 <div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
                     <h3 class="text-white font-medium">Paris</h3>
                     <p class="text-white text-sm">France</p>
                 </div>
                 <div class="overlay absolute inset-0 bg-black/30 flex items-center justify-center">
-                    <a href="Template.html?id=France"><button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">From $849</button></a>
+                    <a href="Template.html?id=France"><button class="bg-orange-500 text-white px-4 py-2 rounded-full">From $849</button></a>
                 </div>
             </div>
+            
+            <!-- Card 3 -->
             <div class="min-w-[250px] destination-card relative rounded-lg overflow-hidden shadow-md">
-                <img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20Tokyo%2C%20Japan" alt="Tokyo" class="w-full h-[200px] object-cover object-top">
+                <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80" alt="Tokyo" class="w-full h-[200px] object-cover">
                 <div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
                     <h3 class="text-white font-medium">Tokyo</h3>
                     <p class="text-white text-sm">Japan</p>
                 </div>
                 <div class="overlay absolute inset-0 bg-black/30 flex items-center justify-center">
-                    <button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">From $1,099</button>
+                    <button class="bg-orange-500 text-white px-4 py-2 rounded-full">From $1,099</button>
                 </div>
             </div>
+            
+            <!-- Card 4 -->
             <div class="min-w-[250px] destination-card relative rounded-lg overflow-hidden shadow-md">
-                <img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20New%20York%20City%2C%20USA" alt="New York" class="w-full h-[200px] object-cover object-top">
+                <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80" alt="New York" class="w-full h-[200px] object-cover">
                 <div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
                     <h3 class="text-white font-medium">New York</h3>
                     <p class="text-white text-sm">USA</p>
                 </div>
                 <div class="overlay absolute inset-0 bg-black/30 flex items-center justify-center">
-                    <button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">From $899</button>
+                    <button class="bg-orange-500 text-white px-4 py-2 rounded-full">From $899</button>
                 </div>
             </div>
+            
+            <!-- Card 5 -->
             <div class="min-w-[250px] destination-card relative rounded-lg overflow-hidden shadow-md">
-                <img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20London%2C%20UK" alt="London" class="w-full h-[200px] object-cover object-top">
+                <img src="https://images.unsplash.com/photo-1529655683826-aba9b3e77383?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80" alt="London" class="w-full h-[200px] object-cover">
                 <div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
                     <h3 class="text-white font-medium">London</h3>
                     <p class="text-white text-sm">UK</p>
                 </div>
                 <div class="overlay absolute inset-0 bg-black/30 flex items-center justify-center">
-                    <button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">From $829</button>
+                    <button class="bg-orange-500 text-white px-4 py-2 rounded-full">From $829</button>
                 </div>
             </div>
+            
+            <!-- Additional cards (6-10) -->
             <div class="min-w-[250px] destination-card relative rounded-lg overflow-hidden shadow-md">
-                <img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20Dubai%2C%20UAE" alt="Dubai" class="w-full h-[200px] object-cover object-top">
+                <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80" alt="Dubai" class="w-full h-[200px] object-cover">
                 <div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
                     <h3 class="text-white font-medium">Dubai</h3>
                     <p class="text-white text-sm">UAE</p>
                 </div>
                 <div class="overlay absolute inset-0 bg-black/30 flex items-center justify-center">
-                    <button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">From $949</button>
+                    <button class="bg-orange-500 text-white px-4 py-2 rounded-full">From $949</button>
                 </div>
             </div>
-             <div class="min-w-[250px] destination-card relative rounded-lg overflow-hidden shadow-md">
-                <img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20Paris%2C%20France" alt="Paris" class="w-full h-[200px] object-cover object-top">
-                <div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
-                    <h3 class="text-white font-medium">Paris</h3>
-                    <p class="text-white text-sm">France</p>
-                </div>
-                <div class="overlay absolute inset-0 bg-black/30 flex items-center justify-center">
-                    <button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">From $849</button>
-                </div>
-            </div>
+            
+            <!-- Add more international cards as needed -->
         </div>
         
-        <button class="absolute -left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center z-10">
-            <i class="ri-arrow-left-s-line text-gray-700 ri-lg"></i>
-        </button>
-        <button class="absolute -right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center z-10">
-            <i class="ri-arrow-right-s-line text-gray-700 ri-lg"></i>
-        </button>
+        <!-- Navigation Arrows -->
+        
     </div>
     
-    <!-- National Destinations (hidden by default) -->
+    <!-- National Destinations -->
     <div id="nationalContent" class="relative hidden">
         <div class="flex overflow-x-auto pb-6 gap-4 hide-scrollbar">
-            <!-- National destination cards here -->
+            <!-- Card 1 -->
             <div class="min-w-[250px] destination-card relative rounded-lg overflow-hidden shadow-md">
-                <img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20Taj%20Mahal" alt="Taj Mahal" class="w-full h-[200px] object-cover object-top">
+                <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80" alt="Taj Mahal" class="w-full h-[200px] object-cover">
                 <div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
                     <h3 class="text-white font-medium">Agra</h3>
                     <p class="text-white text-sm">India</p>
                 </div>
                 <div class="overlay absolute inset-0 bg-black/30 flex items-center justify-center">
-                    <button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">From $299</button>
+                    <button class="bg-orange-500 text-white px-4 py-2 rounded-full">From $299</button>
                 </div>
             </div>
-            <!-- More national cards... -->
+            
+            <!-- Card 2 -->
             <div class="min-w-[250px] destination-card relative rounded-lg overflow-hidden shadow-md">
-                <img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20Goa%20beach" alt="Goa" class="w-full h-[200px] object-cover object-top">
-                <div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
-                    <h3 class="text-white font-medium">Goa</h3>
-                    <p class="text-white text-sm">India</p>
-                </div>
-                <div class="overlay absolute inset-0 bg-black/30 flex items-center justify-center">
-                    <button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">From $199</button>
-                </div>
-            </div>
-            <div class="min-w-[250px] destination-card relative rounded-lg overflow-hidden shadow-md">
-                <img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20Kerala%20backwaters" alt="Kerala" class="w-full h-[200px] object-cover object-top">
-                <div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
-                    <h3 class="text-white font-medium">Kerala</h3>
-                    <p class="text-white text-sm">India</p>
-                </div>
-                <div class="overlay absolute inset-0 bg-black/30 flex items-center justify-center">
-                    <button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">From $249</button>
-                </div>
-            </div>
-            <div class="min-w-[250px] destination-card relative rounded-lg overflow-hidden shadow-md">
-                <img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20Rajasthan%20palace" alt="Rajasthan" class="w-full h-[200px] object-cover object-top">
-                <div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
-                    <h3 class="text-white font-medium">Rajasthan</h3>
-                    <p class="text-white text-sm">India</p>
-                </div>
-                <div class="overlay absolute inset-0 bg-black/30 flex items-center justify-center">
-                    <button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">From $349</button>
-                </div>
-            </div>
-            <div class="min-w-[250px] destination-card relative rounded-lg overflow-hidden shadow-md">
-                <img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20Himalayas" alt="Himalayas" class="w-full h-[200px] object-cover object-top">
+                <img src="https://images.unsplash.com/photo-1524492412937-b33874b7bdd6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80" alt="Himalayas" class="w-full h-[200px] object-cover">
                 <div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
                     <h3 class="text-white font-medium">Himalayas</h3>
                     <p class="text-white text-sm">India</p>
                 </div>
                 <div class="overlay absolute inset-0 bg-black/30 flex items-center justify-center">
-                    <button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">From $399</button>
+                    <button class="bg-orange-500 text-white px-4 py-2 rounded-full">From $399</button>
                 </div>
             </div>
+            
+            <!-- Card 3 -->
             <div class="min-w-[250px] destination-card relative rounded-lg overflow-hidden shadow-md">
-                <img src="https://readdy.ai/api/search-image?query=Beautiful%20view%20of%20Varanasi%20ghats" alt="Varanasi" class="w-full h-[200px] object-cover object-top">
+                <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80" alt="Delhi" class="w-full h-[200px] object-cover">
                 <div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
-                    <h3 class="text-white font-medium">Varanasi</h3>
+                    <h3 class="text-white font-medium">Delhi</h3>
                     <p class="text-white text-sm">India</p>
                 </div>
                 <div class="overlay absolute inset-0 bg-black/30 flex items-center justify-center">
-                    <button class="bg-orange-500 text-white px-4 py-2 rounded-button whitespace-nowrap">From $179</button>
+                    <button class="bg-orange-500 text-white px-4 py-2 rounded-full">From $199</button>
+                </div>
+            </div>
+            
+            <!-- Card 4 -->
+            <div class="min-w-[250px] destination-card relative rounded-lg overflow-hidden shadow-md">
+                <img src="https://images.unsplash.com/photo-1581852057101-768110090b6e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80" alt="Goa" class="w-full h-[200px] object-cover">
+                <div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
+                    <h3 class="text-white font-medium">Goa</h3>
+                    <p class="text-white text-sm">India</p>
+                </div>
+                <div class="overlay absolute inset-0 bg-black/30 flex items-center justify-center">
+                    <button class="bg-orange-500 text-white px-4 py-2 rounded-full">From $349</button>
+                </div>
+            </div>
+            
+            <!-- Card 5 -->
+            <div class="min-w-[250px] destination-card relative rounded-lg overflow-hidden shadow-md">
+                <img src="https://images.unsplash.com/photo-1528127269322-540a3e14b6b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80" alt="Jaipur" class="w-full h-[200px] object-cover">
+                <div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
+                    <h3 class="text-white font-medium">Jaipur</h3>
+                    <p class="text-white text-sm">India</p>
+                </div>
+                <div class="overlay absolute inset-0 bg-black/30 flex items-center justify-center">
+                    <button class="bg-orange-500 text-white px-4 py-2 rounded-full">From $279</button>
+                </div>
+            </div>
+            
+            <!-- Additional national cards -->
+            <div class="min-w-[250px] destination-card relative rounded-lg overflow-hidden shadow-md">
+                <img src="https://images.unsplash.com/photo-1581852057101-768110090b6e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80" alt="Kerala" class="w-full h-[200px] object-cover">
+                <div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
+                    <h3 class="text-white font-medium">Kerala</h3>
+                    <p class="text-white text-sm">India</p>
+                </div>
+                <div class="overlay absolute inset-0 bg-black/30 flex items-center justify-center">
+                    <button class="bg-orange-500 text-white px-4 py-2 rounded-full">From $329</button>
                 </div>
             </div>
         </div>
-        <button class="absolute -left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center z-10">
-            <i class="ri-arrow-left-s-line text-gray-700 ri-lg"></i>
-        </button>
-        <button class="absolute -right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center z-10">
-            <i class="ri-arrow-right-s-line text-gray-700 ri-lg"></i>
-        </button>
+        
+        <!-- Navigation Arrows -->
+        
     </div>
     
     <div class="flex justify-center mt-8">
-        <a href="Destinations.html"><button class="bg-orange-500 text-white px-8 py-3 rounded-button font-medium whitespace-nowrap">View All Destinations</button></a>
+        <a href="Destinations.html"><button class="bg-orange-500 text-white px-8 py-3 rounded-full font-medium">View All Destinations</button></a>
     </div>
 </section>
 
@@ -866,10 +881,23 @@ document.addEventListener('DOMContentLoaded', function() {
     const internationalContent = document.getElementById('internationalContent');
     const nationalContent = document.getElementById('nationalContent');
     
-    // Set international as default active
-    internationalBtn.classList.add('active-btn');
+    // Initialize both sections properly
+    function initSections() {
+        // Make sure international is visible by default
+        internationalContent.classList.remove('hidden');
+        nationalContent.classList.add('hidden');
+        internationalBtn.classList.add('active-btn');
+        nationalBtn.classList.remove('active-btn');
+        
+        // Force a reflow to ensure proper rendering
+        void internationalContent.offsetWidth;
+        void nationalContent.offsetWidth;
+    }
     
-    // Toggle function
+    // Call initialization
+    initSections();
+    
+    // Improved toggle function
     function toggleContent(showInternational) {
         if (showInternational) {
             internationalContent.classList.remove('hidden');
@@ -881,6 +909,9 @@ document.addEventListener('DOMContentLoaded', function() {
             nationalContent.classList.remove('hidden');
             internationalBtn.classList.remove('active-btn');
             nationalBtn.classList.add('active-btn');
+            
+            // Force a reflow when showing national content
+            void nationalContent.offsetWidth;
         }
     }
     
@@ -891,9 +922,13 @@ document.addEventListener('DOMContentLoaded', function() {
     
     nationalBtn.addEventListener('click', function() {
         toggleContent(false);
+        
+        // Additional fix: Ensure scroll position is reset
+        const nationalContainer = nationalContent.querySelector('.hide-scrollbar');
+        nationalContainer.scrollLeft = 0;
     });
 
-    // Navigation arrows functionality
+    // Navigation arrows functionality (unchanged)
     const leftArrows = document.querySelectorAll('.relative button:first-child');
     const rightArrows = document.querySelectorAll('.relative button:last-child');
     const scrollContainers = document.querySelectorAll('.hide-scrollbar');
@@ -909,59 +944,7 @@ document.addEventListener('DOMContentLoaded', function() {
             scrollContainers[index].scrollBy({ left: 300, behavior: 'smooth' });
         });
     });
-});
-
-        /* the script for nation and international section ended*/
-        
-        /*Script for the destination section */
-        id="destination-carousel"
-        document.addEventListener('DOMContentLoaded', function() {
-            const leftArrow = document.querySelector('.ri-arrow-left-s-line').parentElement;
-            const rightArrow = document.querySelector('.ri-arrow-right-s-line').parentElement;
-            const destinationCards = document.querySelectorAll('.destination-card');
-            let currentIndex = 0;
-            const cardsPerPage = window.innerWidth >= 768 ? 4 : 2;
-            const maxIndex = Math.ceil(destinationCards.length / cardsPerPage) - 1;
-            
-            function updateVisibility() {
-                destinationCards.forEach((card, index) => {
-                    const startIdx = currentIndex * cardsPerPage;
-                    const endIdx = startIdx + cardsPerPage - 1;
-                    if (index >= startIdx && index <= endIdx) {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            }
-            
-            leftArrow.addEventListener('click', function() {
-                if (currentIndex > 0) {
-                    currentIndex--;
-                    updateVisibility();
-                }
-            });
-            
-            rightArrow.addEventListener('click', function() {
-                if (currentIndex < maxIndex) {
-                    currentIndex++;
-                    updateVisibility();
-                }
-            });
-            
-            // Initialize
-            updateVisibility();
-            
-            // Handle window resize
-            window.addEventListener('resize', function() {
-                const newCardsPerPage = window.innerWidth >= 768 ? 4 : 2;
-                if (newCardsPerPage !== cardsPerPage) {
-                    currentIndex = 0;
-                    updateVisibility();
-                }
-            });
-        });
-        /*Script for the destination section ended */
+}); /*Script for the destination section ended */
     </script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
