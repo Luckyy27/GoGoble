@@ -39,7 +39,7 @@
 },
   {
   "id": "tokyojapan",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/1/16/Tokyo_Tower_and_around_Skyscrapers.jpg",
+  "image": "https://cdn.pixabay.com/photo/2019/04/20/11/39/japan-4141578_1280.jpg",
   "title": "Tokyo, Japan",
   "description": "Tokyo, a dazzling blend of traditional culture and futuristic innovation, offers ancient temples, vibrant neighborhoods, towering skyscrapers, and world-class cuisine. It's a city that never sleeps and never stops amazing.",
   "price": "₹94,999",
@@ -77,7 +77,7 @@
 },
  {
   "id": "newyorkusa",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/4/4f/New_York_City_at_night_HDR_edit1.jpg",
+  "image": "https://cdn.pixabay.com/photo/2021/09/21/21/23/statue-of-liberty-6644930_1280.jpg",
   "title": "New York, USA",
   "description": "New York City, the city that never sleeps, is a global hub of culture, finance, art, and entertainment. From towering skyscrapers and historic landmarks to Broadway shows and world-class cuisine, NYC is an unforgettable experience.",
   "price": "₹1,09,999",
@@ -115,7 +115,7 @@
 },
   {
   "id": "dubaiuae",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/4/42/Dubai_skyline_2020.jpg",
+  "image": "https://plus.unsplash.com/premium_photo-1661911626941-2bae2185d92c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   "title": "Dubai, UAE",
   "description": "Dubai, a dazzling city in the UAE, is known for luxury shopping, ultramodern architecture, desert adventures, and vibrant nightlife. From the Burj Khalifa to traditional souks, Dubai offers an unforgettable blend of modernity and tradition.",
   "price": "₹84,999",
@@ -191,7 +191,7 @@
 },
    {
   "id": "reykjavik-iceland",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/1/12/Reykjavik_Skyline.jpg",
+  "image": "https://cdn.pixabay.com/photo/2020/04/01/20/41/iceland-4992675_1280.jpg",
   "title": "Reykjavik, Iceland",
   "description": "Reykjavik, the northernmost capital in the world, offers a blend of natural beauty and Nordic culture. It’s the gateway to glaciers, geysers, and the famous Northern Lights.",
   "price": "₹1,14,999",
@@ -220,7 +220,7 @@
 },
 {
   "id": "zurich-switzerland",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/5/50/Zurich_City_Skyline.jpg",
+  "image": "https://cdn.pixabay.com/photo/2019/11/19/07/50/bridge-4636745_1280.jpg",
   "title": "Zurich, Switzerland",
   "description": "Zurich, Switzerland's financial and cultural hub, is known for its picturesque old town, lakeside serenity, and gateway to the Swiss Alps. A perfect blend of nature and urban charm.",
   "price": "₹1,09,999",
@@ -249,7 +249,7 @@
 },
 {
   "id": "toronto-canada",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Toronto_Skyline_from_Centre_Island.jpg",
+  "image": "https://cdn.pixabay.com/photo/2015/11/07/11/00/toronto-city-hall-1030731_1280.jpg",
   "title": "Toronto, Canada",
   "description": "Toronto is a dynamic metropolis known for its iconic CN Tower, vibrant arts scene, diverse culture, and lakeside beauty. It serves as a gateway to Niagara Falls and Canadian adventures.",
   "price": "₹92,999",
@@ -278,7 +278,7 @@
 },
 {
   "id": "santorini-greece",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Santorini_Caldera.jpg",
+  "image": "https://cdn.pixabay.com/photo/2017/01/03/05/16/santorini-1948678_1280.jpg",
   "title": "Santorini, Greece",
   "description": "Santorini is a stunning island in the Aegean Sea, known for its whitewashed houses, blue-domed churches, dramatic sunsets, and volcanic beaches.",
   "price": "₹99,999",
@@ -307,7 +307,7 @@
 },
 {
   "id": "bali-indonesia",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Tegallalang_Rice_Terrace_Bali.jpg",
+  "image": "https://cdn.pixabay.com/photo/2017/02/24/07/07/bali-2094098_1280.jpg",
   "title": "Bali, Indonesia",
   "description": "Bali is a tropical paradise famous for its lush jungles, rice terraces, beaches, temples, and vibrant culture. It’s a favorite destination for relaxation, spirituality, and adventure.",
   "price": "₹88,999",
@@ -336,7 +336,7 @@
 },
 {
   "id": "rio-de-janeiro-brazil",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Cristo_Redentor_-_Rio.jpg",
+  "image": "https://cdn.pixabay.com/photo/2019/12/20/02/25/por-do-sol-4707500_1280.jpg",
   "title": "Rio de Janeiro, Brazil",
   "description": "Rio de Janeiro is a vibrant coastal city famous for its carnival spirit, iconic Christ the Redeemer statue, samba rhythms, and stunning beaches like Copacabana and Ipanema.",
   "price": "₹91,999",
@@ -365,7 +365,7 @@
 },
 {
   "id": "cairo-egypt",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Great_Sphinx_of_Giza_-_20080716a.jpg",
+  "image": "https://images.unsplash.com/photo-1572252009286-268acec5ca0a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   "title": "Cairo, Egypt",
   "description": "Cairo, the capital of Egypt, is home to ancient pyramids, the Sphinx, bustling bazaars, and rich Islamic and Pharaonic heritage. It’s a gateway to timeless wonders.",
   "price": "₹86,999",
@@ -394,7 +394,7 @@
 },
 {
   "id": "amsterdam-netherlands",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Amsterdam_Canals_Boats.jpg",
+  "image": "https://cdn.pixabay.com/photo/2023/08/27/12/07/basilica-of-saint-nicholas-8216814_1280.jpg",
   "title": "Amsterdam, Netherlands",
   "description": "Amsterdam is a charming city of canals, bicycles, tulips, and world-famous museums. Known for its relaxed lifestyle and cultural richness, it's perfect for scenic strolls and art exploration.",
   "price": "₹94,999",
@@ -423,7 +423,7 @@
 },
 {
   "id": "barcelona-spain",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/3/34/Barcelona_aerial_view.jpg",
+  "image": "https://cdn.pixabay.com/photo/2019/12/09/12/14/barcelona-4683398_1280.jpg",
   "title": "Barcelona, Spain",
   "description": "Barcelona is a vibrant Mediterranean city known for Gaudí’s architecture, lively beach culture, Catalonian cuisine, and a blend of ancient history and modern art.",
   "price": "₹91,499",
@@ -452,7 +452,7 @@
 },
 {
   "id": "cape-town-south-africa",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Cape_Town_Cityscape.jpg",
+  "image": "https://cdn.pixabay.com/photo/2016/08/02/09/46/cape-town-1562907_1280.jpg",
   "title": "Cape Town, South Africa",
   "description": "Cape Town, nestled between mountains and sea, is renowned for its natural beauty, Table Mountain, beaches, and wine regions. A city of adventure and culture.",
   "price": "₹87,999",
@@ -481,7 +481,7 @@
 },
 {
   "id": "singapore-singapore",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Singapore_Skyline_from_Esplanade.jpg",
+  "image": "https://cdn.pixabay.com/photo/2018/02/27/06/30/skyscrapers-3184798_1280.jpg",
   "title": "Singapore, Singapore",
   "description": "Singapore is a futuristic city-state known for its clean streets, modern skyline, cultural diversity, and lush green spaces. It’s a perfect mix of technology and tradition.",
   "price": "₹89,999",
@@ -510,7 +510,7 @@
 },
 {
   "id": "bangkok-thailand",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Grand_Palace_Bangkok.jpg",
+  "image": "https://cdn.pixabay.com/photo/2022/03/04/04/04/thailand-7046500_1280.jpg",
   "title": "Bangkok, Thailand",
   "description": "Bangkok is a bustling city known for ornate temples, vibrant street life, delicious food, and a mix of old and new. A hotspot for nightlife, shopping, and culture.",
   "price": "₹78,999",
@@ -539,7 +539,7 @@
 },
 {
   "id": "istanbul-turkey",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Istanbul_skyline.jpg",
+  "image": "https://cdn.pixabay.com/photo/2020/01/22/18/23/istanbul-4785964_1280.jpg",
   "title": "Istanbul, Turkey",
   "description": "Istanbul is a city that straddles two continents. Known for its rich history, Byzantine architecture, bustling bazaars, and Ottoman palaces, it offers a magical fusion of East and West.",
   "price": "₹89,499",
@@ -568,7 +568,7 @@
 },
 {
   "id": "sydney-australia",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/2/25/Sydney_Opera_House_-_Dec_2008.jpg",
+  "image": "https://cdn.pixabay.com/photo/2014/05/26/09/58/sydney-opera-house-354375_1280.jpg",
   "title": "Sydney, Australia",
   "description": "Sydney is a lively city on Australia's east coast, famous for its iconic Opera House, Harbour Bridge, stunning beaches, and laid-back lifestyle.",
   "price": "₹1,14,999",
@@ -597,7 +597,7 @@
 },
 {
   "id": "rome-italy",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Colosseum_in_Rome%2C_Italy_-_April_2007.jpg",
+  "image": "https://images.unsplash.com/photo-1531572753322-ad063cecc140?q=80&w=1176&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   "title": "Rome, Italy",
   "description": "Rome, the Eternal City, is a timeless blend of ancient ruins, Renaissance art, and vibrant street life. It offers history at every corner, from the Colosseum to the Vatican.",
   "price": "₹96,999",
@@ -684,7 +684,7 @@
 },
 {
   "id": "venice-italy",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Venice_Grand_Canal_Sunset.jpg",
+  "image": "https://cdn.pixabay.com/photo/2018/02/26/14/22/venice-3183168_1280.jpg",
   "title": "Venice, Italy",
   "description": "Venice, the floating city, is world-renowned for its romantic canals, historic architecture, and timeless charm. With no roads, only waterways, it offers a unique travel experience unlike any other.",
   "price": "₹99,999",
@@ -713,7 +713,7 @@
 },
 {
   "id": "grand-canyon-usa",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Grand_Canyon_view_from_Pima_Point_2010.jpg",
+  "image": "https://cdn.pixabay.com/photo/2016/12/15/07/54/horseshoe-bend-1908283_1280.jpg",
   "title": "Grand Canyon, USA",
   "description": "The Grand Canyon in Arizona is one of the most awe-inspiring natural wonders in the world, known for its immense scale, layered red rock formations, and dramatic vistas carved by the Colorado River.",
   "price": "₹1,04,999",
@@ -742,7 +742,7 @@
 },
 {
   "id": "kyoto-japan",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/6/68/Kiyomizu-dera%2C_Kyoto%2C_Japan.jpg",
+  "image": "https://cdn.pixabay.com/photo/2016/11/29/12/12/architecture-1869398_1280.jpg",
   "title": "Kyoto, Japan",
   "description": "Kyoto is Japan's cultural capital, famed for its well-preserved temples, traditional wooden houses, geisha districts, and vibrant seasonal beauty—especially during cherry blossom and autumn leaf seasons.",
   "price": "₹93,499",
@@ -800,7 +800,7 @@
 },
 {
   "id": "marrakech-morocco",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/3/33/Marrakech_Jemaa_el-Fnaa_Market.jpg",
+  "image": "https://cdn.pixabay.com/photo/2017/09/13/18/38/morocco-2746495_1280.jpg",
   "title": "Marrakech, Morocco",
   "description": "Marrakech is a vibrant city known for its bustling souks, stunning palaces, aromatic cuisine, and rich Islamic architecture. It's a sensory feast where tradition meets modern culture.",
   "price": "₹84,999",
@@ -830,7 +830,7 @@
 
 {
     "id": "varanasi-india",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/7/75/Varanasi_Ghat_by_night.jpg",
+    "image": "https://cdn.pixabay.com/photo/2020/06/07/04/44/ganga-ghats-5268994_1280.jpg",
     "title": "Varanasi, India",
     "description": "Varanasi is one of the world’s oldest living cities, known for its ghats along the Ganges, spiritual rituals, and vibrant culture. It's a major center of pilgrimage and Hindu traditions.",
     "price": "₹42,999",
@@ -859,7 +859,7 @@
   },
   {
     "id": "jaipur-india",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/d/de/Hawa_Mahal_2011.jpg",
+    "image": "https://cdn.pixabay.com/photo/2018/03/20/20/05/gaitore-ki-chhatriyan-3244463_1280.jpg",
     "title": "Jaipur, India",
     "description": "Jaipur, the Pink City of India, is known for its majestic forts, vibrant bazaars, and royal palaces. It’s a gateway to India’s rich heritage and regal past.",
     "price": "₹46,999",
@@ -888,8 +888,8 @@
   },
   {
     "id": "goa-india",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Palolem_beach%2C_Goa.jpg",
-    "title": "Goa Beaches, India",
+    "image": "https://cdn.pixabay.com/photo/2014/01/23/06/58/church-250243_1280.jpg",
+    "title": "Goa Beaches,Goa",
     "description": "Goa is India’s premier beach destination, known for its golden sands, Portuguese heritage, water sports, and vibrant nightlife.",
     "price": "₹52,999",
     "Ratings": "4.8",
@@ -917,8 +917,8 @@
   },
   {
     "id": "manali-india",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Manali_in_Himachal_Pradesh.jpg",
-    "title": "Manali, India",
+    "image": "https://cdn.pixabay.com/photo/2020/02/22/05/04/snow-4869330_1280.jpg",
+    "title": "Manali,Himachal Pradesh",
     "description": "Manali is a popular hill station in Himachal Pradesh, known for its snow-capped peaks, adventure sports, and scenic landscapes. It's a year-round magnet for travelers and honeymooners.",
     "price": "₹49,999",
     "Ratings": "4.7",
@@ -975,8 +975,8 @@
   },
   {
     "id": "alleppey-india",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Alleppey_Backwaters.jpg",
-    "title": "Alleppey, India",
+    "image": "https://cdn.pixabay.com/photo/2018/02/21/16/27/alleppey-3170776_1280.jpg",
+    "title": "Alleppey, Kerala",
     "description": "Alleppey, also known as Alappuzha, is the Venice of the East, famous for its serene backwaters, traditional houseboats, and lush paddy fields.",
     "price": "₹44,999",
     "Ratings": "4.6",
