@@ -1,28 +1,45 @@
 [
   {
     "id": "European",
-    "name": "European Heritage Tour",
+  "image1": "https://i.pinimg.com/736x/2b/25/36/2b2536e544bd2dec7e3cd57a9abdabfb.jpg",
+  "image2": "https://i.pinimg.com/736x/5d/09/b9/5d09b9e24198a9be09a706a4d26008a7.jpg",
+
+  "title": "European Heritage Tour",
+  "description": "Paris, the romantic capital of France, is known for its world-renowned landmarks, charming cafés, fashion, and rich culture. Explore timeless art, iconic architecture, and the ambiance of love and elegance.",
+  "price": "₹89,999",
+  "Ratings": "4.8",
+
+  "StandardPackage": "3 Nights stay in 3-star hotel, Eiffel Tower visit, Seine River cruise, and city tour by coach. Includes breakfast.",
+  "StandardPackagePrice": "₹59,999",
+
+  "PremiumPackage": "4 Nights stay in 4-star hotel, Eiffel Tower & Louvre Museum guided tours, Seine dinner cruise, and airport transfers.",
+  "PremiumPackagePrice": "₹79,999",
+
+  "LuxuryPackage": "5 Nights in a 5-star luxury suite, private limousine airport transfers, Michelin-starred dinners, exclusive art & fashion tour, and spa package.",
+  "LuxuryPackagePrice": "₹1,29,999",
+
+  "location1": "Eiffel Tower",
+  "des1": "An iconic symbol of Paris, offering panoramic views of the city. Ideal for sunrise or sunset visits.",
+
+  "location2": "Louvre Museum",
+  "des2": "World’s largest art museum and home to the Mona Lisa. A must-visit for art lovers.",
+
+  "location3": "Notre-Dame Cathedral",
+  "des3": "A Gothic masterpiece known for its stained-glass windows and historic significance.",
+
+  "location4": "Montmartre",
+  "des4": "A charming neighborhood famous for street artists, the Sacré-Cœur Basilica, and vibrant cafés.",
+
+  "BestTime": "April to June",
+  "BestTime1": "Mild weather, blooming gardens, and fewer crowds",
+  "BestTime2": "Great time for photography and outdoor cafés",
+
+  "Weather1": "Spring: 12°C to 20°C, pleasant and ideal for sightseeing",
+  "Weather2": "Summer: 17°C to 26°C, warm and vibrant",
+  "Weather3": "Autumn: 10°C to 18°C, colorful foliage and romantic walks",
+  "Weather4": "Winter: 3°C to 7°C, festive lights and fewer tourists"
+
     
-    "price": "$899",
-    "place1":"Paris ",
-    "description1": "The Paris Tour offers a romantic journey through iconic landmarks like the Eiffel Tower, Louvre Museum, and charming street cafés. Experience the rich art, history, and cuisine of France’s capital in unforgettable style.",
-    "image1":"https://i.pinimg.com/736x/2b/25/36/2b2536e544bd2dec7e3cd57a9abdabfb.jpg",
-    "place2":"Rome",
-    "description2": "The Rome trip immerses you in the heart of ancient history, from the Colosseum to the Roman Forum. Explore timeless architecture, vibrant piazzas, and savor authentic Italian cuisine in the Eternal City.",
-    "image2":"https://i.pinimg.com/736x/5d/09/b9/5d09b9e24198a9be09a706a4d26008a7.jpg",
-    "sp":"₹1,3345",
-    "pp":"₹123345",
-    "lp":"₹987665",
-    "sp1":"₹1,3345",
-    "pp1":"₹123345",
-    "lp1":"₹987665",
-    "review":"⭐ 4.8 (328 reviews)",
-    "days":"4-5 Days",
-    "nights":"5",
-    "ao1":"Colosseum, Rome (Italy)",
-    "ao2":"Eiffel Tower & Seine River Cruise, Paris (France)",
-    "ao3":"Neuschwanstein Castle, Bavaria (Germany)",
-    "ao4":"Old Town Walking Tour, Prague (Czech Republic)"
     
   },
   {

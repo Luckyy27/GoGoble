@@ -3,26 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Go-Globe</title>
-    <title>Go Globe</title>
+    <title>Destinations</title>
     <link rel="icon" href="icon.png" type="image/x-icon" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
 <script src="https://cdn.tailwindcss.com/3.4.16"></script>
 <script>tailwind.config={theme:{extend:{colors:{primary:'#FF8A00',secondary:'#FFD580'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
 <style>
- body {
-      font-family: 'Inter', sans-serif;
-    }
-    .faq-toggle i {
-      transition: transform 0.3s ease;
-    }
+  #carouselExampleAutoplaying {
+    height: 50vh; /* Half the screen height */
+    overflow: hidden;
+  }
+
+  .carousel-item {
+    height: 100%;
+  }
+
+  .carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
 </style>
+
 </head>
 <body>
+
 <!-- Header -->
 <header class="top-0 z-50 bg-white shadow-sm border-b-2 border-b-[#FD8C02]">
   <div class="relative container mx-auto px-4 py-3 flex items-center justify-between">
@@ -113,71 +123,37 @@
 
 
     <!-- Header ended-->
-  <script>
-  const btn = document.getElementById('menu-btn');
-  const menu = document.getElementById('mobile-menu');
-
-  btn.addEventListener('click', () => {
-    menu.classList.toggle('hidden');
-  });
-</script>
-
-
- <!-- Header ended-->
-  
-<h1 id="name" class="text-5xl font-bold text-orange-500 text-center mt-3 pb-1"></h1>
-
-<section class="container mx-auto px-4 py-12 border-b-2">
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-      <div id="image1" class="relative bg-cover bg-center h-[300px] w-full rounded-lg shadow-lg"></div>
-
-    </div>
-
-    <div class="p-6">
-      <h3 id="place1" class="text-xl font-bold mb-2"></h3>
-      <p id="description1" class="text-gray-600 mb-4"></p>
-    </div>
-
-  </div>
-</section>
 
 
 
- <!-- 1st place ended-->
- <!-- 2nd place-->
+<!--Body section-->
+    <section  class="relative bg-cover bg-center h-[500px]" style="background-image: url(https://www.visitdubai.com/-/media/gathercontent/poi/b/burj-khalifa/fallback-image/poi-burj-khalifa-3-dtcm-jun-2023.jpg)">
+      <div class="relative h-[300px]">
+                    <div class="absolute inset-0 grid grid-cols-2">
+                        <div  id="image1" class="relative bg-cover bg-center h-[500px]" style="background-image: url(https://www.visitdubai.com/-/media/gathercontent/poi/b/burj-khalifa/fallback-image/poi-burj-khalifa-3-dtcm-jun-2023.jpg)"alt="Paris Day" class="w-full h-full object-cover object-top"></div>
+                        <div  id="image2" class="relative bg-cover bg-center h-[500px]" style="background-image: url(https://www.visitdubai.com/-/media/gathercontent/poi/b/burj-khalifa/fallback-image/poi-burj-khalifa-3-dtcm-jun-2023.jpg)"alt="Paris Day" class="w-full h-full object-cover object-top"></div>
+                    </div>
+                </div>
+      <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-start px-10">
+        <a href="Tours.html"><button class="bg-white text-black rounded px-4 py-1 mb-4">&larr; Back Tours</button></a>
+        <h1 class="text-white text-5xl font-bold mb-2 text-center" id="title"></h1>
+        <p class="text-white text-lg" id="description"></p>
+      </div>
+    </section>
 
-<section class="container mx-auto px-4 py-12 border-b-2">
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-    <div class="p-6">
-      <h3 id="place2" class="text-xl font-bold mb-2"></h3>
-      <p id="description2" class="text-gray-600 mb-4"></p>
-    </div>
-    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-      <div id="image2" class="relative bg-cover bg-center h-[300px]"></div>
-    </div>
-
-
-
-  </div>
-</section>
-
+    <!-- Pricing & Book Now -->
     <div class="flex justify-between items-center px-10 py-6 bg-white shadow">
       <div>
         <p class="text-xl font-semibold">From <span class="text-orange-500 font-bold text-2xl" id="price"></span> per person</p>
         <div class="flex items-center space-x-2 text-sm text-gray-600">
-          <span id="review"></span>
-          <span id="days"></span>
+          <span id="Ratings"></span>
           <span>• Flight included</span>
         </div>
       </div>
-      
+      <button class="bg-orange-500 text-white px-6 py-2 rounded">Book Now</button>
     </div>
 
- <!-- 2nd place ended-->
-<!-- packages-->
- <!-- Main Content Grid -->
+    <!-- Main Content Grid -->
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 px-10 py-6">
       <!-- Left Content -->
       <div class="lg:col-span-2">
@@ -187,99 +163,104 @@
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="border rounded p-4 shadow">
               <h3 class="font-bold text-lg">Standard Package</h3>
-              <p class="text-orange-600 font-semibold" id="sp"></p>
-              <ul class="text-sm mt-2">
-                <li>✓ 4 nights accommodation</li>
-                <li>✓ City tour</li>
-                <li>✓ Airport transfers</li>
-                <li>✓ Daily breakfast</li>
-              </ul>
+              <p class="text-orange-600 font-semibold" id="StandardPackagePrice"></p>
+              <p class="text-sm mt-2" id="StandardPackage"></p>
               <button class="mt-4 bg-orange-500 text-white w-full py-2 rounded">Select Package</button>
             </div>
             <div class="border rounded p-4 shadow">
               <h3 class="font-bold text-lg">Premium Package</h3>
-              <p class="text-orange-600 font-semibold" id="pp"></p>
-              <ul class="text-sm mt-2">
-                <li>✓ 5 nights 4-star accommodation</li>
-                <li>✓ City tour</li>
-                <li>✓ Airport transfers</li>
-                <li>✓ Half-board meals</li>
-              </ul>
+              <p class="text-orange-600 font-semibold" id="PremiumPackagePrice"></p>
+              <p class="text-sm mt-2" id="PremiumPackage"></p>
               <button class="mt-4 bg-orange-500 text-white w-full py-2 rounded">Select Package</button>
             </div>
             <div class="border rounded p-4 shadow">
               <h3 class="font-bold text-lg">Luxury Package</h3>
-              <p class="text-orange-600 font-semibold" id="lp"></p>
-              <ul class="text-sm mt-2">
-                <li>✓ 7 nights 5-star accommodation</li>
-                <li>✓ All tours & activities included</li>
-                <li>✓ Private transfers</li>
-                <li>✓ All-inclusive meals</li>
-              </ul>
+              <p class="text-orange-600 font-semibold" id="LuxuryPackagePrice"></p>
+              <p class="text-sm mt-2" id="LuxuryPackage"></p>
               <button class="mt-4 bg-orange-500 text-white w-full py-2 rounded">Select Package</button>
             </div>
           </div>
         </section>
+
+        <!-- Accommodation Options 
+        <section class="mb-8">
+          <h2 class="text-2xl font-bold mb-4">Accommodation Options</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="border rounded p-4 shadow">
+              <h3 class="font-bold">Burj Al Arab Jumeirah</h3>
+              <p class="text-sm text-gray-600">Jumeirah Beach</p>
+              <p class="mt-2">From <span class="font-semibold">₹5550/night</span></p>
+              <button class="mt-2 text-orange-500">View Hotel</button>
+            </div>
+            <div class="border rounded p-4 shadow">
+              <h3 class="font-bold">Address Downtown</h3>
+              <p class="text-sm text-gray-600">Downtown Dubai</p>
+              <p class="mt-2">From <span class="font-semibold">₹3320/night</span></p>
+              <button class="mt-2 text-orange-500">View Hotel</button>
+            </div>
+            <div class="border rounded p-4 shadow">
+              <h3 class="font-bold">Atlantis The Palm</h3>
+              <p class="text-sm text-gray-600">Palm Jumeirah</p>
+              <p class="mt-2">From <span class="font-semibold">₹2280/night</span></p>
+              <button class="mt-2 text-orange-500">View Hotel</button>
+            </div>
+          </div>
+        </section>-->
+
         <!-- Attractions -->
         <section>
           <h2 class="text-2xl font-bold mb-4">Attractions & Activities</h2>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="border p-4 rounded shadow">
-              <h3 class="font-bold" id="ao1"></h3>
-              <p class="text-sm text-gray-600">1.5 hours • ₹440</p>
-              <p class="text-sm">Visit the world’s tallest building...</p>
+              <h3 class="font-bold text-orange-500" id="location1"></h3>
+              <p class="text-sm " id="des1"></p>
             </div>
             <div class="border p-4 rounded shadow">
-              <h3 class="font-bold" id="ao2"></h3>
-              <p class="text-sm text-gray-600">3 hours • ₹665</p>
-              <p class="text-sm">Explore the iconic palm-shaped island...</p>
+              <h3 class="font-bold text-orange-500" id="location2"></h3>
+              <p class="text-sm" id="des2"></p>
             </div>
             <div class="border p-4 rounded shadow">
-              <h3 class="font-bold" id="ao3"></h3>
-              <p class="text-sm text-gray-600">4 hours • Free entry</p>
-              <p class="text-sm">Shop at one of the world’s largest malls...</p>
+              <h3 class="font-bold text-orange-500" id="location3"></h3>
+              <p class="text-sm" id="des3"></p>
             </div>
             <div class="border p-4 rounded shadow">
-              <h3 class="font-bold" id="ao4"></h3>
-              <p class="text-sm text-gray-600">6 hours • ₹585</p>
-              <p class="text-sm">Experience dune bashing, camel rides...</p>
+              <h3 class="font-bold text-orange-500" id="location4"></h3>
+              <p class="text-sm" id="des4"></p>
             </div>
           </div>
         </section>
 
-        <!-- Travel Info 
+        <!-- Travel Info -->
         <section class="mt-10">
           <h2 class="text-2xl font-bold mb-4">Travel Information</h2>
           <div class="bg-white p-4 rounded shadow">
             <h3 class="text-lg font-semibold">Best Time to Visit</h3>
-            <p class="mt-2 text-sm">Best time to visit Dubai is November to March...</p>
+            <p class="mt-2 text-sm" id="BestTime"></p>
             <div class="grid grid-cols-2 gap-4 mt-4">
               <div>
                 <ul class="text-sm list-disc list-inside">
-                  <li>November to April</li>
-                  <li>December and January are busy</li>
+                  <li id="BestTime1"></li>
+                  <li id="BestTime2"></li>
                   <li>Book accommodations early</li>
                 </ul>
               </div>
               <div>
                 <h4 class="font-semibold">Monthly Weather</h4>
                 <ul class="text-sm">
-                  <li>January: 24°C / 75°F</li>
-                  <li>April: 33°C / 91°F</li>
-                  <li>July: 41°C / 106°F</li>
-                  <li>October: 35°C / 95°F</li>
+                  <li id="Weather1">January: 24°C / 75°F</li>
+                  <li id="Weather2">April: 33°C / 91°F</li>
+                  <li id="Weather3">July: 41°C / 106°F</li>
+                  <li id="Weather4">October: 35°C / 95°F</li>
                 </ul>
               </div>
             </div>
           </div>
-        </section>-->
+        </section>
       </div>
 
-
-  <!-- Package Selection -->
-<!-- Booking Sidebar -->
+      <!-- Booking Sidebar -->
 <div class="bg-white p-6 rounded shadow h-fit" id="bookingSidebar">
-  <h2 class="text-xl font-bold mb-4">Book Your Dubai Package</h2>
+  <h2 class="text-xl font-bold mb-4">Book Your Package</h2>
 
   <label class="block mb-2 text-sm font-semibold">Travel Dates</label>
   <input type="date" class="w-full border px-3 py-2 rounded mb-2" />
@@ -299,16 +280,16 @@
 
   <label class="block mb-2 text-sm font-semibold">Select Package</label>
   <select id="package" class="w-full border px-3 py-2 rounded mb-4">
-    <option value="949">Standard Package - <span id="sp1"></span></option>
-    <option value="1249">Premium Package - <span id="pp1"></span></option>
-    <option value="1549">Luxury Package - <span id="lp1"></span></option>
+    <option value="949">Standard Package - <span id="StandardPackage"></span></option>
+    <option value="1249">Premium Package - <span id="PremiumPackage"></span></option>
+    <option value="1549">Luxury Package - <span id="LuxuryPackage"></span></option>
   </select>
 
   <label class="block mb-2 text-sm font-semibold">Add-ons</label>
   <div class="space-y-1 text-sm mb-4">
-    <label><input type="checkbox" class="addon mr-2" value="30" />Airport Fast Track (₹30)</label><br />
-    <label><input type="checkbox" class="addon mr-2" value="45" />Travel Insurance (₹45)</label><br />
-    <label><input type="checkbox" class="addon mr-2" value="120" />Private Guide (+₹120/day)</label>
+    <label><input type="checkbox" class="addon mr-2" value="90" />Airport Fast Track (₹90)</label><br />
+    <label><input type="checkbox" class="addon mr-2" value="400" />Travel Insurance (₹400)</label><br />
+    <label><input type="checkbox" class="addon mr-2" value="300" />Private Guide (+₹300/day)</label>
   </div>
 
   <label class="block mb-2 text-sm font-semibold">Promo Code</label>
@@ -318,7 +299,7 @@
   </div>
 
   <div class="text-sm text-gray-700 mb-1">
-    Package Price (2 Adults): <span id="packagePrice" class="font-semibold">₹1898</span>
+    Package Price : <span id="packagePrice" class="font-semibold">₹1898</span>
   </div>
   <div class="text-sm text-gray-700 mb-1">
     Taxes & Fees: <span class="font-semibold">₹189</span>
@@ -328,14 +309,14 @@
   <button class="mt-4 w-full bg-orange-500 text-white py-2 rounded">Proceed to Payment</button>
 </div>
     </div>
+  </body>
 
 
 <!--body  section complete-->
 
 
 
-
-  <!-- footer -->
+     <!-- footer -->
     <footer class="bg-gray-900 text-white pt-16 pb-8  block">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
@@ -412,11 +393,19 @@
         </div>
     </footer>
     <!-- footer ended -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+  <script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
 
-
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
+<!--script writting for template -->
 
 <script>
-
+ 
   const params = new URLSearchParams(window.location.search);
   const id = params.get("id");
 
@@ -424,45 +413,54 @@
   fetch("tours.json")
     .then(response => response.json())
     .then(data => {
-      const tours = data.find(d => d.id === id);
-      if (tours) {
+      const destination = data.find(d => d.id === id);
+      if (destination) {
         // Set title and description
-        document.getElementById("name").textContent = tours.name;
-        document.getElementById("place1").textContent = tours.place1;
-        document.getElementById("description1").textContent = tours.description1;
-        document.getElementById("price").textContent = tours.price;
-        document.getElementById("place2").textContent = tours.place2;
-        document.getElementById("description2").textContent = tours.description2;
-        document.getElementById("sp").textContent = tours.sp;
-        document.getElementById("pp").textContent = tours.pp;
-        document.getElementById("lp").textContent = tours.lp;
-        document.getElementById("sp1").textContent = tours.sp1;
-        document.getElementById("pp1").textContent = tours.pp1;
-        document.getElementById("lp1").textContent = tours.lp1;
-        document.getElementById("review").textContent = tours.review;
-        document.getElementById("night").textContent = tours.night;
-        document.getElementById("ao1").textContent = tours.ao1;
-        document.getElementById("ao2").textContent = tours.ao2;
-        document.getElementById("ao3").textContent = tours.ao3;
-        document.getElementById("ao4").textContent = tours.ao4;
+        document.getElementById("title").textContent = destination.title;
+        document.getElementById("description").textContent = destination.description;
+        document.getElementById("price").textContent = destination.price;
+        document.getElementById("Ratings").textContent = destination.Ratings;
+        document.getElementById("StandardPackage").textContent = destination.StandardPackage;
+        document.getElementById("StandardPackagePrice").textContent = destination.StandardPackagePrice;
+        document.getElementById("PremiumPackage").textContent = destination.PremiumPackage;
+        document.getElementById("PremiumPackagePrice").textContent = destination.PremiumPackagePrice;
+        document.getElementById("LuxuryPackage").textContent = destination.LuxuryPackage;
+        document.getElementById("LuxuryPackagePrice").textContent = destination.LuxuryPackagePrice;
+        document.getElementById("location1").textContent = destination.location1;
+        document.getElementById("des1").textContent = destination.des1;
+        document.getElementById("location2").textContent = destination.location2;
+        document.getElementById("des2").textContent = destination.des2;
+        document.getElementById("location3").textContent = destination.location3;
+        document.getElementById("des3").textContent = destination.des3;
+        document.getElementById("location4").textContent = destination.location4;
+        document.getElementById("des4").textContent = destination.des4;
+        document.getElementById("BestTime").textContent = destination.BestTime;
+        document.getElementById("BestTime1").textContent = destination.BestTime1;
+        document.getElementById("BestTime2").textContent = destination.BestTime2;
+        document.getElementById("Weather1").textContent = destination.Weather1;
+        document.getElementById("Weather2").textContent = destination.Weather2;
+        document.getElementById("Weather3").textContent = destination.Weather3;
+        document.getElementById("Weather3").textContent = destination.Weather4;
 
 
 
         // Set background image of the hero section
-          document.getElementById('image1').style.backgroundImage = `url('${tours.image1}')`;
-        document.getElementById("image2").style.backgroundImage = `url('${tours.image2}')`;
+        document.getElementById("image1").style.backgroundImage = `url(${destination.image1})`;
+        document.getElementById("image2").style.backgroundImage = `url(${destination.image2})`;
+
       } else {
-        document.getElementById("title").textContent = "Tour not found";
+        document.getElementById("title").textContent = "Destination not found";
         document.getElementById("description").textContent = "";
         document.getElementById("image").style.backgroundImage = "none";
       }
     })
     .catch(error => {
       console.error("Error loading destination:", error);
-      document.getElementById("title").textContent = "Error loading Tour";
+      document.getElementById("title").textContent = "Error loading destination";
       document.getElementById("description").textContent = "";
     });
 </script>
+<!-- script for booking section-->
 <script>
   let discount = 0;
 
@@ -509,5 +507,9 @@
   // Initial load
   window.onload = calculateTotal;
 </script>
+
+<!-- script for booking section ended--> 
+
+
 </body>
 </html>
