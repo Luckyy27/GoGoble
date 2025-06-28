@@ -290,31 +290,38 @@ transform: translateY(0);}}
 
     <!-- Stats Section -->
     <section class="container mx-auto px-4 -mt-10 relative z-10 justify-center scale-up-center">
-        <div class="bg-white rounded-lg shadow-lg p-6 flex flex-wrap justify-between drop-shadow-md">
-            <div class="w-full sm:w-1/4 text-center mb-4 sm:mb-0 mt-3">
-                <p class="text-2xl font-bold text-gray-800">951+</p>
-                <p class="text-sm text-gray-600">Active Travelers</p>
-            </div>
-            <div class="w-full sm:w-1/4 text-center mb-4 sm:mb-0 mt-3">
-                <p class="text-2xl font-bold text-gray-800">1.5M+</p>
-                <p class="text-sm text-gray-600">Successfull Tours</p>
-            </div>
-            <div class="w-full sm:w-1/4 text-center mb-4 sm:mb-0 mt-3"> 
-                <p class="text-2xl font-bold text-gray-800">
-                    <i class="ri-star-fill text-yellow-400"></i>
-                    <i class="ri-star-fill text-yellow-400"></i>
-                    <i class="ri-star-fill text-yellow-400"></i>
-                    <i class="ri-star-fill text-yellow-400"></i>
-                    <i class="ri-star-fill text-yellow-400"></i>
-                </p>
-                <p class="text-sm text-gray-600">Ratings on Google</p>
-            </div>
-            <div class="w-full sm:w-1/4 text-center mt-3">
-                <p class="text-2xl font-bold text-gray-800">98%</p>
-                <p class="text-sm text-gray-600">Satisfaction Rate</p>
-            </div>
-        </div>
-    </section>
+  <div class="bg-white rounded-lg shadow-lg p-6 flex flex-wrap justify-between drop-shadow-md">
+
+    <div class="w-full sm:w-1/4 text-center mb-4 sm:mb-0 mt-3">
+      <p class="text-2xl font-bold text-orange-500 count-up" data-target="951" data-suffix="+">0+</p>
+      <p class="text-sm text-gray-600">Active Travelers</p>
+    </div>
+
+    <div class="w-full sm:w-1/4 text-center mb-4 sm:mb-0 mt-3">
+      <p class="text-2xl font-bold text-orange-500 count-up" data-target="15" data-suffix="M+">0M+</p>
+      <p class="text-sm text-gray-600">Successful Tours</p>
+    </div>
+
+    <div class="w-full sm:w-1/4 text-center mb-4 sm:mb-0 mt-3"> 
+      <p class="text-2xl font-bold text-gray-800">
+        <i class="ri-star-fill text-yellow-400"></i>
+        <i class="ri-star-fill text-yellow-400"></i>
+        <i class="ri-star-fill text-yellow-400"></i>
+        <i class="ri-star-fill text-yellow-400"></i>
+        <i class="ri-star-fill text-yellow-400"></i>
+      </p>
+      <p class="text-sm text-gray-600">Ratings on Google</p>
+    </div>
+
+    <div class="w-full sm:w-1/4 text-center mt-3">
+      <p class="text-2xl font-bold text-orange-500 count-up" data-target="98" data-suffix="%">0%</p>
+      <p class="text-sm text-gray-600">Satisfaction Rate</p>
+    </div>
+
+  </div>
+</section>
+
+
     <!-- Stats Section ended -->
     
     <!-- Trending offers -->
@@ -620,6 +627,7 @@ transform: translateY(0);}}
         </div>
 </section>
 <!-- Top Destinations ended-->
+ <!-- International and National Section ended -->
     <!-- Why Choose Us -->
     <section class="container mx-auto px-4 py-12 block" >
         <h2 class="text-2xl font-bold text-gray-800 mb-10 text-center">Why Travel With Us?</h2>
@@ -931,6 +939,45 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 }); /*Script for the destination section ended */
     </script>
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const counters = document.querySelectorAll('.count-up');
+
+  const animate = (el, target, suffix) => {
+    let count = 0;
+    const duration = 2000;
+    const increment = target / (duration / 16);
+
+    const update = () => {
+      count += increment;
+      if (count < target) {
+        el.textContent = Math.floor(count).toLocaleString() + suffix;
+        requestAnimationFrame(update);
+      } else {
+        el.textContent = target.toLocaleString() + suffix;
+      }
+    };
+    update();
+  };
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        counters.forEach(counter => {
+          const target = +counter.getAttribute('data-target');
+          const suffix = counter.getAttribute('data-suffix') || "";
+          animate(counter, target, suffix);
+        });
+        obs.disconnect(); // only once
+      }
+    });
+  }, { threshold: 0.5 });
+
+  const statsSection = document.querySelector('.count-up')?.closest('.scale-up-center');
+  if (statsSection) observer.observe(statsSection);
+});
+</script>
+
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 </html>
