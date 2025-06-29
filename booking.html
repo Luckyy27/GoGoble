@@ -114,77 +114,68 @@
 
    <!-- Trip Options -->
  <!-- Trip Options as Toggle Buttons with Rounded Circle -->
-<div class="flex space-x-4 mb-6">
-  <label>
-    <input type="radio" name="trip-type" value="oneway" class="peer sr-only" checked>
-    <span class="inline-flex items-center justify-center rounded-full px-6 py-2 text-sm font-semibold cursor-pointer
-      bg-gray-100 text-gray-700 peer-checked:bg-blue-100 peer-checked:text-blue-600 border-2 border-transparent peer-checked:border-blue-500 transition">
-      One-way
-    </span>
-  </label>
-  <label>
-    <input type="radio" name="trip-type" value="roundtrip" class="peer sr-only">
-    <span class="inline-flex items-center justify-center rounded-full px-6 py-2 text-sm font-semibold cursor-pointer
-      bg-gray-100 text-gray-700 peer-checked:bg-blue-100 peer-checked:text-blue-600 border-2 border-transparent peer-checked:border-blue-500 transition">
-      Round-trip
-    </span>
-  </label>
-  <label>
-    <input type="radio" name="trip-type" value="multicity" class="peer sr-only">
-    <span class="inline-flex items-center justify-center rounded-full px-6 py-2 text-sm font-semibold cursor-pointer
-      bg-gray-100 text-gray-700 peer-checked:bg-blue-100 peer-checked:text-blue-600 border-2 border-transparent peer-checked:border-blue-500 transition">
-      Multi-city
-    </span>
-  </label>
-</div>
+<!-- Trip Type Buttons -->
+<div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+  <!-- Trip Type Buttons -->
+  <div class="flex flex-wrap justify-center md:justify-start space-x-2 mb-6">
+    <label>
+      <input type="radio" name="trip-type" value="oneway" class="peer sr-only" checked>
+      <span class="inline-flex items-center justify-center rounded-full px-6 py-2 text-sm font-semibold cursor-pointer bg-gray-100 text-gray-700 peer-checked:bg-blue-100 peer-checked:text-blue-600 border-2 border-transparent peer-checked:border-blue-500 transition">
+        One-way
+      </span>
+    </label>
+    <label>
+      <input type="radio" name="trip-type" value="roundtrip" class="peer sr-only">
+      <span class="inline-flex items-center justify-center rounded-full px-6 py-2 text-sm font-semibold cursor-pointer bg-gray-100 text-gray-700 peer-checked:bg-blue-100 peer-checked:text-blue-600 border-2 border-transparent peer-checked:border-blue-500 transition">
+        Round-trip
+      </span>
+    </label>
+    <label>
+      <input type="radio" name="trip-type" value="multicity" class="peer sr-only">
+      <span class="inline-flex items-center justify-center rounded-full px-6 py-2 text-sm font-semibold cursor-pointer bg-gray-100 text-gray-700 peer-checked:bg-blue-100 peer-checked:text-blue-600 border-2 border-transparent peer-checked:border-blue-500 transition">
+        Multi-city
+      </span>
+    </label>
+  </div>
+
   <!-- FROM/TO/DEPARTURE/RETURN/TRAVELLERS -->
   <div class="grid grid-cols-1 md:grid-cols-5 gap-4 mb-4">
-    
     <!-- FROM FIELD -->
     <div>
       <label class="block text-sm text-gray-500 mb-1">From</label>
-      <input type="text" placeholder="Enter city or airport"
+      <input list="airports" id="from" name="from" placeholder="Enter city or airport"
         class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 outline-none" />
     </div>
-    <!-- To Input with Swap -->
+
+    <!-- TO Input with Swap -->
     <div class="relative">
-      <label class="text-xs text-gray-500 mb-2 block">To</label>
-      <input type="text" placeholder="Enter city or airport"
-        class="w-full border border-gray-300 rounded-lg px-3 py-2  focus:outline-none focus:ring-2 focus:ring-orange-500" />
-      <!-- Swap icon button -->
-      <div
-        class="absolute -top- left-1/ transform -translate-x-1/2 bg-white border border-gray-300 p-1.3 rounded-full shadow-md md:-left-2 md:top-1/3 ">
+      <label class="block text-sm text-gray-500 mb-1">To</label>
+      <input list="airports" id="to" name="to" placeholder="Enter city or airport"
+        class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500" />
+      <div onclick="swapAirports()" class="absolute top-1/2 left-full -translate-y-1/2 -translate-x-full bg-white border border-gray-300 p-1 rounded-full shadow-md cursor-pointer">
         🔁
       </div>
     </div>
 
-   <!-- DEPARTURE -->
+    <!-- DEPARTURE -->
     <div>
       <label class="block text-sm text-gray-500 mb-1">Departure</label>
-      <div
-        class="w-full border border-gray-300 rounded-lg px-3 py-2 text-gray-800 bg-white cursor-pointer">
-        <div class="font-semibold">22 Jun'25</div>
-        <div class="text-sm text-gray-400">Sunday</div>
-      </div>
+      <input type="date" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 outline-none" />
     </div>
-    
-  
-<!-- RETURN -->
-    <div>
-      <label class="block text-sm text-gray-500 mb-1">Return</label>
-      <div
-        class="w-full border border-gray-300 rounded-lg px-3 py-2 text-gray-400 bg-white cursor-pointer">
-        Click to add a return flight for better discounts
-      </div>
-    </div>
-
     <!-- TRAVELLERS -->
-    <div>
-      <label class="block text-sm text-gray-500 mb-1">Travellers & Class</label>
-      <div
-        class="w-full border border-gray-300 rounded-lg px-3 py-2 text-gray-800 bg-white cursor-pointer">
-        <div class="font-semibold">1 Adult</div>
-        <div class="text-sm text-gray-400">Economy</div>
+    <div class="grid grid-cols-2 gap-2">
+      <div>
+        <label class="block text-sm text-gray-500 mb-1">Travel Class</label>
+        <select class="w-full mb-2 border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 outline-none">
+          <option>Economy</option>
+          <option>Business</option>
+        </select>
+      </div>
+      <div>
+        <label class="block text-sm text-gray-500 mb-1">Adults</label>
+        <input type="number" id="adults" class="mb-2 border border-gray-300 px-2 py-1 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" value="1" min="1" />
+        <label class="block text-sm text-gray-500 mb-1 mt-2">Children</label>
+        <input type="number" id="children" class=" border border-gray-300 px-2 py-1 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" value="0" min="0" />
       </div>
     </div>
   </div>
@@ -193,8 +184,6 @@
   <div class="bg-blue-50 rounded-lg p-4 mb-4">
     <div class="text-xs font-bold text-purple-600 mb-2">MORE BENEFITS</div>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
-      
-      <!-- STUDENT -->
       <label class="flex items-center space-x-2">
         <input type="checkbox" class="form-checkbox text-blue-600" />
         <div>
@@ -202,8 +191,6 @@
           <div class="text-gray-500 text-xs">Extra Baggage</div>
         </div>
       </label>
-
-      <!-- SENIOR CITIZEN -->
       <label class="flex items-center space-x-2">
         <input type="checkbox" class="form-checkbox text-blue-600" />
         <div>
@@ -211,8 +198,6 @@
           <div class="text-gray-500 text-xs">Exclusive Discounts</div>
         </div>
       </label>
-
-      <!-- ARMED FORCES -->
       <label class="flex items-center space-x-2">
         <input type="checkbox" class="form-checkbox text-blue-600" />
         <div>
@@ -220,8 +205,6 @@
           <div class="text-gray-500 text-xs">Exclusive Discounts</div>
         </div>
       </label>
-
-      <!-- DOCTORS -->
       <label class="flex items-center space-x-2">
         <input type="checkbox" class="form-checkbox text-blue-600" />
         <div>
@@ -229,20 +212,55 @@
           <div class="text-gray-500 text-xs">Exclusive Discounts</div>
         </div>
       </label>
-
     </div>
   </div>
+</div>
 
 
-  <!-- Search Button -->
-  <div class="text-center -mb-12">
-    <a href="search.html">
+
+<!-- Search Button -->
+<div class="text-center -mb-12">
+  <a href="search.html">
     <button class="bg-orange-500 hover:bg-orange-600 text-white px-10 py-3 rounded-full font-semibold shadow-md transition duration-300">
       SEARCH FLIGHTS
     </button>
-    </a>
-  </div>
+  </a>
 </div>
+
+<!-- Datalist for Autocomplete -->
+<datalist id="airports">
+  <option value="Agartala – Maharaja Bir Bikram Airport (IXA)"></option>
+  <option value="Agatti – Agatti Island Airport (AGX)"></option>
+  <option value="Ahmedabad – Sardar Vallabhbhai Patel Intl (AMD)"></option>
+  <option value="Amritsar – Sri Guru Ram Dass Jee Intl (ATQ)"></option>
+  <option value="Bengaluru – Kempegowda International (BLR)"></option>
+  <option value="Bhopal – Raja Bhoj Airport (BHO)"></option>
+  <option value="Bhubaneswar – Biju Patnaik Intl (BBI)"></option>
+  <option value="Chennai – Chennai International (MAA)"></option>
+  <option value="Delhi – Indira Gandhi International (DEL)"></option>
+  <option value="Goa – Dabolim Airport (GOI)"></option>
+  <option value="Hyderabad – Rajiv Gandhi International (HYD)"></option>
+  <option value="Jaipur – Jaipur International (JAI)"></option>
+  <option value="Kolkata – Netaji Subhas Chandra Bose Intl (CCU)"></option>
+  <option value="Lucknow – Chaudhary Charan Singh Intl (LKO)"></option>
+  <option value="Mumbai – Chhatrapati Shivaji Maharaj Intl (BOM)"></option>
+  <option value="Patna – Jay Prakash Narayan Intl (PAT)"></option>
+  <option value="Pune – Pune Airport (PNQ)"></option>
+  <option value="Srinagar – Sheikh ul-Alam Intl (SXR)"></option>
+  <option value="Varanasi – Lal Bahadur Shastri Intl (VNS)"></option>
+  <option value="Visakhapatnam – Visakhapatnam International (VTZ)"></option>
+</datalist>
+
+<!-- Swap Function Script -->
+<script>
+  function swapAirports() {
+    const from = document.getElementById('from');
+    const to = document.getElementById('to');
+    const temp = from.value;
+    from.value = to.value;
+    to.value = temp;
+  }
+</script>
 
 
   <!-- Offers Section -->
