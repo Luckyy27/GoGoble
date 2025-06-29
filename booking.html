@@ -33,18 +33,6 @@
     <!-- HEADER -->
   <div class="max-5xl mx-auto px-4 py-3 align-items-center justify-center">
 
-    <!-- Navigation Menu -->
-    <nav class="hidden md:flex gap-10 text-sm font-medium text-gray-700">
-      <a href="#" class="hover:text-orange-500  flex items-center gap-1">
-      ✈️ Flights
-      </a>
-      <a href="#" class="hover:text-orange-500">🏨 Hotels</a>
-      <a href="#" class="hover:text-orange-500">🚆 Trains</a>
-      <a href="#" class="hover:text-orange-500">🚌 Buses</a>
-      <a href="#" class="hover:text-orange-500">🏖 Holidays</a>
-      <a href="#" class="hover:text-orange-500">💱 Forex</a>
-      <a href="#" class="hover:text-orange-500">🛡 Insurance</a>
-    </nav>
 
        <!--- Hamburger -->
       <button id="menu-btn" class="md:hidden text-orange-500 focus:outline-none">
@@ -61,16 +49,7 @@
   <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 space-y-2 bg-white shadow-md border-t border-gray-100">
     <input type="text" placeholder="Search..."
       class="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
-   <nav class="hidden md:flex gap-10 text-sm font-medium text-gray-700">
-      <a href="#" class="hover:text-orange-500  flex items-center gap-1">
-      ✈️ Flights
-      </a>
-      <a href="#" class="hover:text-orange-500">🏨 Hotels</a>
-      <a href="#" class="hover:text-orange-500">🚆 Trains</a>
-      <a href="#" class="hover:text-orange-500">🚌 Buses</a>
-      <a href="#" class="hover:text-orange-500">🏖 Holidays</a>
-      <a href="#" class="hover:text-orange-500">💱 Forex</a>
-      <a href="#" class="hover:text-orange-500">🛡 Insurance</a>
+   
     </nav>
     <div class="flex justify-center">
       <a href="profile.html">
@@ -114,124 +93,124 @@
 
    <!-- Trip Options -->
  <!-- Trip Options as Toggle Buttons with Rounded Circle -->
-<div class="flex space-x-4 mb-6">
-  <label>
-    <input type="radio" name="trip-type" value="oneway" class="peer sr-only" checked>
-    <span class="inline-flex items-center justify-center rounded-full px-6 py-2 text-sm font-semibold cursor-pointer
-      bg-gray-100 text-gray-700 peer-checked:bg-blue-100 peer-checked:text-blue-600 border-2 border-transparent peer-checked:border-blue-500 transition">
-      One-way
-    </span>
-  </label>
-  <label>
-    <input type="radio" name="trip-type" value="roundtrip" class="peer sr-only">
-    <span class="inline-flex items-center justify-center rounded-full px-6 py-2 text-sm font-semibold cursor-pointer
-      bg-gray-100 text-gray-700 peer-checked:bg-blue-100 peer-checked:text-blue-600 border-2 border-transparent peer-checked:border-blue-500 transition">
-      Round-trip
-    </span>
-  </label>
-  <label>
-    <input type="radio" name="trip-type" value="multicity" class="peer sr-only">
-    <span class="inline-flex items-center justify-center rounded-full px-6 py-2 text-sm font-semibold cursor-pointer
-      bg-gray-100 text-gray-700 peer-checked:bg-blue-100 peer-checked:text-blue-600 border-2 border-transparent peer-checked:border-blue-500 transition">
-      Multi-city
-    </span>
-  </label>
+<script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Trip Type Toggle -->
+  <div class="flex space-x-4 mb-6">
+    <button id="one-way" class="trip-toggle selected px-4 py-2 rounded-full text-sm font-medium border border-orange-500 bg-orange-500 text-white">One-way</button>
+  <button id="round-trip" class="trip-toggle px-4 py-2 rounded-full text-sm font-medium border border-orange-500 bg-white text-orange-500">Round-trip</button>
+  <button id="multi-city" class="trip-toggle px-4 py-2 rounded-full text-sm font-medium border border-orange-500 bg-white text-orange-500">Multi-city</button>
+  </div>
+
+  <!-- Input Fields Row -->
+  <div class="flex flex-wrap items-center gap-4">
+    <!-- Add this multi-city block here -->
+<div id="multi-city-fields" class="hidden flex flex-col gap-4 mt-4">
+  <div class="flex gap-2">
+    <input type="text" placeholder="From" class="flex-1 border rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-300" />
+    <input type="date" class="border rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+    <button type="button" class="remove-city bg-red-500 text-white rounded-full px-3 py-1 font-bold hidden">×</button>
+  </div>
 </div>
-  <!-- FROM/TO/DEPARTURE/RETURN/TRAVELLERS -->
-  <div class="grid grid-cols-1 md:grid-cols-5 gap-4 mb-4">
-    
-    <!-- FROM FIELD -->
-    <div>
-      <label class="block text-sm text-gray-500 mb-1">From</label>
-      <input type="text" placeholder="Enter city or airport"
-        class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 outline-none" />
+<button id="add-city" type="button" class="hidden mt-2 px-4 py-2 bg-orange-500 text-white rounded-full font-semibold">+ Add City</button>
+    <!-- From -->
+    <div class="relative w-full sm:w-[16rem]">
+      <label class="block text-sm font-medium text-gray-500 mb-1">From</label>
+      <input type="text" placeholder="Enter city or airport" class="w-full border rounded-xl px-2 py-3 focus:outline-none focus:ring-2 focus:ring-orange-300">
     </div>
-    <!-- To Input with Swap -->
-    <div class="relative">
-      <label class="text-xs text-gray-500 mb-2 block">To</label>
-      <input type="text" placeholder="Enter city or airport"
-        class="w-full border border-gray-300 rounded-lg px-3 py-2  focus:outline-none focus:ring-2 focus:ring-orange-500" />
-      <!-- Swap icon button -->
-      <div
-        class="absolute -top- left-1/ transform -translate-x-1/2 bg-white border border-gray-300 p-1.3 rounded-full shadow-md md:-left-2 md:top-1/3 ">
-        🔁
+
+    <!-- Icon Between From and To -->
+    <div class="flex items-end pb-2">
+      <div class="w-8 h-8 rounded-full bg-white border shadow flex items-center justify-center">
+        <i data-lucide="repeat" class="w-4 h-4 text-blue-500"></i>
       </div>
     </div>
 
-   <!-- DEPARTURE -->
-    <div>
-      <label class="block text-sm text-gray-500 mb-1">Departure</label>
-      <div
-        class="w-full border border-gray-300 rounded-lg px-3 py-2 text-gray-800 bg-white cursor-pointer">
-        <div class="font-semibold">22 Jun'25</div>
-        <div class="text-sm text-gray-400">Sunday</div>
-      </div>
-    </div>
-    
-  
-<!-- RETURN -->
-    <div>
-      <label class="block text-sm text-gray-500 mb-1">Return</label>
-      <div
-        class="w-full border border-gray-300 rounded-lg px-3 py-2 text-gray-400 bg-white cursor-pointer">
-        Click to add a return flight for better discounts
-      </div>
+    <!-- To -->
+    <div class="relative w-full sm:w-[16rem]">
+      <label class="block text-sm font-medium text-gray-500 mb-1">To</label>
+      <input type="text" placeholder="Enter city or airport" class="w-full border rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-300">
     </div>
 
-    <!-- TRAVELLERS -->
-    <div>
-      <label class="block text-sm text-gray-500 mb-1">Travellers & Class</label>
-      <div
-        class="w-full border border-gray-300 rounded-lg px-3 py-2 text-gray-800 bg-white cursor-pointer">
-        <div class="font-semibold">1 Adult</div>
-        <div class="text-sm text-gray-400">Economy</div>
-      </div>
+    <!-- Departure -->
+    <div class="w-full sm:w-[16rem]">
+      <label class="block text-sm font-medium text-gray-500 mb-1">Departure</label>
+      <input type="date" class="w-full border rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-400">
+    </div>
+
+    <!-- Return (only for Round Trip) -->
+    <div id="return-date" class="w-full sm:w-[16rem] hidden">
+      <label class="block text-sm font-medium text-gray-500 mb-1">Return</label>
+      <input type="date" class="w-full border rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-400">
+    </div>
+
+    <!-- Travellers & Class -->
+    <div class="w-full sm:w-[16rem]">
+      <label class="block text-sm font-medium text-gray-500 mb-1">Travellers & Class</label>
+      <select class="w-full border rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-400">
+        <option>1 Adult - Economy</option>
+        <option>2 Adults - Economy</option>
+        <option>1 Adult - Business</option>
+      </select>
     </div>
   </div>
 
-  <!-- SPECIAL FARE OPTIONS -->
-  <div class="bg-blue-50 rounded-lg p-4 mb-4">
-    <div class="text-xs font-bold text-purple-600 mb-2">MORE BENEFITS</div>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
-      
-      <!-- STUDENT -->
-      <label class="flex items-center space-x-2">
-        <input type="checkbox" class="form-checkbox text-blue-600" />
-        <div>
-          <div class="font-semibold flex items-center gap-1">👨‍🎓 Student</div>
-          <div class="text-gray-500 text-xs">Extra Baggage</div>
-        </div>
-      </label>
+  <script>
+  lucide.createIcons();
 
-      <!-- SENIOR CITIZEN -->
-      <label class="flex items-center space-x-2">
-        <input type="checkbox" class="form-checkbox text-blue-600" />
-        <div>
-          <div class="font-semibold flex items-center gap-1">🧓 Senior Citizen</div>
-          <div class="text-gray-500 text-xs">Exclusive Discounts</div>
-        </div>
-      </label>
+ // filepath: c:\Users\nares\OneDrive\ドキュメント\GitHub\GoGoble\booking.html
+const tripButtons = document.querySelectorAll('.trip-toggle');
+const returnDate = document.getElementById('return-date');
+const multiCityFields = document.getElementById('multi-city-fields');
+const addCityBtn = document.getElementById('add-city');
 
-      <!-- ARMED FORCES -->
-      <label class="flex items-center space-x-2">
-        <input type="checkbox" class="form-checkbox text-blue-600" />
-        <div>
-          <div class="font-semibold flex items-center gap-1">🎖️ Armed Forces</div>
-          <div class="text-gray-500 text-xs">Exclusive Discounts</div>
-        </div>
-      </label>
+tripButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    tripButtons.forEach(b => {
+      b.classList.remove('selected', 'bg-orange-500', 'text-white');
+      b.classList.add('bg-white', 'text-orange-500');
+    });
+    btn.classList.add('selected', 'bg-orange-500', 'text-white');
+    btn.classList.remove('bg-white', 'text-orange-500');
 
-      <!-- DOCTORS -->
-      <label class="flex items-center space-x-2">
-        <input type="checkbox" class="form-checkbox text-blue-600" />
-        <div>
-          <div class="font-semibold flex items-center gap-1">🩺 Doctors & Nurses</div>
-          <div class="text-gray-500 text-xs">Exclusive Discounts</div>
-        </div>
-      </label>
+    if (btn.id === 'round-trip') {
+      returnDate.classList.remove('hidden');
+      multiCityFields.classList.add('hidden');
+      addCityBtn.classList.add('hidden');
+    } else if (btn.id === 'multi-city') {
+      returnDate.classList.add('hidden');
+      multiCityFields.classList.remove('hidden');
+      addCityBtn.classList.remove('hidden');
+    } else {
+      returnDate.classList.add('hidden');
+      multiCityFields.classList.add('hidden');
+      addCityBtn.classList.add('hidden');
+    }
+  });
+});
 
-    </div>
-  </div>
+// Add city row
+addCityBtn.addEventListener('click', () => {
+  const row = document.createElement('div');
+  row.className = 'flex gap-2 mt-2';
+  row.innerHTML = `
+    <input type="text" placeholder="From" class="flex-1 border rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-300" />
+    <input type="date" class="border rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+    <button type="button" class="remove-city bg-red-500 text-white rounded-full px-3 py-1 font-bold">×</button>
+  `;
+  multiCityFields.appendChild(row);
+
+  // Remove city row
+  row.querySelector('.remove-city').addEventListener('click', () => {
+    row.remove();
+  });
+});
+</script>
+
+<style>
+  .trip-toggle.selected {
+    font-weight: 600;
+  }
+</style>
 
 
   <!-- Search Button -->
@@ -246,36 +225,65 @@
 
 
   <!-- Offers Section -->
-  <section class="max-w-6xl mx-auto mt-8 p-6 bg-white rounded-lg shadow-md">
-    <h2 class="text-xl font-semibold mb-4">Offers For You</h2>
-    <div class="flex gap-6 overflow-x-auto scrollbar-hide">
-      <!-- Offer 1 -->
-      <div class="w-72 flex-shrink-0 bg-white border rounded-lg shadow-sm">
-        <img src="https://gos3.ibcdn.com/icici-gobibo-jun24-271x171-1718701892.jpg" class="rounded-t-md" />
-        <div class="p-3 text-sm font-medium text-gray-700">
-          Up to 35% OFF on Travel Bookings!
-          <div class="text-xs text-gray-500">Valid till 23rd Jun’25</div>
-        </div>
+  <div class="bg-white p-6 rounded-xl shadow-md max-w-screen-xl mx-auto mt-10">
+  <h2 class="text-2xl font-bold mb-4">Offers For You</h2>
+
+  <!-- Tabs -->
+  <div class="flex flex-wrap gap-2 mb-6">
+    <button class="px-4 py-1 rounded border border-blue-600 text-blue-600 font-semibold bg-blue-100">All</button>
+    <button class="px-4 py-1 rounded border text-gray-600">Bank Offers</button>
+    <button class="px-4 py-1 rounded border text-gray-600">Flights</button>
+    <button class="px-4 py-1 rounded border text-gray-600">Hotels</button>
+    <button class="px-4 py-1 rounded border text-gray-600">Cabs</button>
+    <button class="px-4 py-1 rounded border text-gray-600">Bus</button>
+    <button class="px-4 py-1 rounded border text-gray-600">Trains</button>
+    <a href="#" class="ml-auto text-blue-600 font-medium flex items-center">View All <span class="ml-1">➡️</span></a>
+  </div>
+
+  <!-- Offer Cards Row -->
+  <div class="flex space-x-4 overflow-x-auto pb-2">
+    <!-- Card 1 -->
+    <div class="min-w-[280px] bg-white border rounded-lg shadow-sm p-2">
+      <img src="offer1.avif" alt="Offer 1" class="rounded-lg mb-2">
+      <p class="text-sm text-gray-600">Bus, Hostel, Hotels, Cabs, Flights, Trains</p>
+      <p class="font-semibold text-black text-sm">LIVE: Up to 35% OFF* on Travel Bookings!</p>
+      <p class="text-gray-500 text-xs mt-1">📅 Valid till 23rd Jun'25</p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="min-w-[280px] bg-white border rounded-lg shadow-sm p-2">
+      <img src="offer2.avif" alt="Offer 2" class="rounded-lg mb-2">
+      <p class="text-sm text-gray-600">Hostel, Hotels</p>
+      <p class="font-semibold text-black text-sm">LIVE: Up to 35% OFF* on Hotels & Homestays!</p>
+      <p class="text-gray-500 text-xs mt-1">📅 Valid till 23rd Jun'25</p>
+    </div>
+
+    <!-- Card 3 (Explore Offers) -->
+    <div class="min-w-[200px] flex flex-col items-center justify-center text-center bg-white border rounded-lg shadow-sm px-4 py-6">
+      <div class="bg-blue-100 p-4 rounded-full mb-2">
+        <span class="text-2xl">%</span>
       </div>
-      <!-- Offer 2 -->
-      <div class="w-72 flex-shrink-0 bg-white border rounded-lg shadow-sm">
-        <img src="https://gos3.ibcdn.com/icici-gobibo-esc-jun24-271x171-1718701948.jpg" class="rounded-t-md" />
-        <div class="p-3 text-sm font-medium text-gray-700">
-          Up to 35% OFF on Hotels & Homestays!
-          <div class="text-xs text-gray-500">Valid till 23rd Jun’25</div>
-        </div>
-      </div>
-      <!-- Offer 3 -->
-      <div class="w-72 flex-shrink-0 bg-white border rounded-lg shadow-sm">
-        <img src="https://gos3.ibcdn.com/icici-gobibo-flight-jun24-271x171-1718701925.jpg" class="rounded-t-md" />
-        <div class="p-3 text-sm font-medium text-gray-700">
-          Up to 20% OFF on Flights!
-          <div class="text-xs text-gray-500">Valid till 23rd Jun’25</div>
-        </div>
+      <p class="font-semibold text-gray-800 mb-2">Explore Offers</p>
+      <button class="text-blue-600 border border-blue-600 px-3 py-1 rounded-full text-sm">View all</button>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="min-w-[280px] bg-white border rounded-lg shadow-sm p-2">
+      <img src="/offers-card-3.png" alt="Offer 3" class="rounded-lg mb-2">
+      <p class="text-sm text-gray-600">Flights</p>
+      <p class="font-semibold text-black text-sm">LIVE: Up to 20% OFF* on Flights!</p>
+      <p class="text-gray-500 text-xs mt-1">📅 Valid till 23rd Jun'25</p>
+    </div>
+
+    <!-- Arrow Button -->
+    <div class="flex items-center justify-center min-w-[60px]">
+      <div class="bg-white shadow-lg border rounded-full p-3">
+        ➡️
       </div>
     </div>
-  </section>
+  </div>
 </div>
+
   <!-- Hotel Store -->
   <section class="max-w-6xl mx-auto mt-8 p-6 bg-white rounded-lg shadow-md">
     <h2 class="text-lg font-semibold mb-2">Hotel Stores on Goibibo</h2>
