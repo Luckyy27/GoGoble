@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Go-Globe</title>
+    <title>Go Globe</title>
     <link rel="icon" href="icon.png" type="image/x-icon" />
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
@@ -16,56 +16,7 @@
   
 <script src="https://unpkg.com/lucide@latest"></script>
 <script>tailwind.config={theme:{extend:{colors:{primary:'#FF8A00',secondary:'#FFD580'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
-<style>
-
-</style>
-</head>
-<body>
-  <!-- Header -->
-<header class="top-0 z-50 bg-white shadow-sm border-b-2 border-b-[#FD8C02]">
-  <div class="relative container mx-auto px-4 py-3 flex items-center justify-between">
-
-    <!-- Logo + Search -->
-    <div class="flex items-center space-x-4">
-      <a href="index.html"><img class="w-14 h-10" src="logo.png" alt="logo" /></a>
-    </div>
-
-    <!-- HEADER -->
-  <div class="max-5xl mx-auto px-4 py-3 align-items-center justify-center">
-
-
-       <!--- Hamburger -->
-      <button id="menu-btn" class="md:hidden text-orange-500 focus:outline-none">
-        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2"
-          viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-    </div>
-  </div>
-
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 space-y-2 bg-white shadow-md border-t border-gray-100">
-    <input type="text" placeholder="Search..."
-      class="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
-   
-    </nav>
-    <div class="flex justify-center">
-      <a href="profile.html">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 512 512">
-          <path fill="#FD8C02" fill-rule="evenodd"
-            d="M256 42.667A213.333 213.333 0 0 1 469.334 256c0 117.821-95.513 213.334-213.334 213.334c-117.82 0-213.333-95.513-213.333-213.334C42.667 138.18 138.18 42.667 256 42.667m21.334 234.667h-42.667c-52.815 0-98.158 31.987-117.715 77.648c30.944 43.391 81.692 71.685 139.048 71.685s108.104-28.294 139.049-71.688c-19.557-45.658-64.9-77.645-117.715-77.645M256 106.667c-35.346 0-64 28.654-64 64s28.654 64 64 64s64-28.654 64-64s-28.653-64-64-64" />
-        </svg>
-      </a>
-    </div>
-  </div>
-</header>
-
-
-    <!-- Header ended-->
-
-  <script>
+<script>
   const btn = document.getElementById('menu-btn');
   const menu = document.getElementById('mobile-menu');
 
@@ -84,6 +35,95 @@
   }
   
 </style>
+</head>
+<body>
+<!-- Header -->
+<header class="top-0 z-50 bg-white shadow-sm border-b-2 border-b-[#FD8C02]">
+  <div class="relative container mx-auto px-4 py-3 flex items-center justify-between">
+
+    <!-- Logo + Search -->
+    <div class="flex items-center space-x-4">
+      <a href="index.html"><img class="w-14 h-10" src="logo.png" alt="logo" /></a>
+
+      <!-- Full Search (above 1257px) -->
+      <div class="relative hidden xl:block w-64">
+        <input type="text" placeholder="Search..."
+          class="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" />
+        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+          <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z" />
+          </svg>
+        </div>
+      </div>
+
+      <!-- Circle Search (between 819px–1257px) -->
+      <div class="relative hidden md:block xl:hidden">
+        <button class="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100">
+          <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Centered Nav -->
+    <nav class="hidden md:flex absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 space-x-5">
+      <a href="index.html" class="text-gray-700 hover:text-[#FD8C02]">Home</a>
+      <a href="Destinations.html" class="text-gray-700 hover:text-[#FD8C02]">Destinations</a>
+      <a href="Tours.html" class="text-gray-700 hover:text-[#FD8C02]">Tours</a>
+      <a href="booking.html" class="text-gray-700 hover:text-[#FD8C02]">Booking</a>
+      <a href="aboutus.html" class="text-gray-700 hover:text-[#FD8C02]">About us</a>
+    </nav>
+
+    <!-- Right Side -->
+      <div class="hidden md:flex w-8 h-8 items-center justify-center">
+        <a href="profile.html">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 512 512">
+            <path fill="#FD8C02" fill-rule="evenodd"
+              d="M256 42.667A213.333 213.333 0 0 1 469.334 256c0 117.821-95.513 213.334-213.334 213.334c-117.82 0-213.333-95.513-213.333-213.334C42.667 138.18 138.18 42.667 256 42.667m21.334 234.667h-42.667c-52.815 0-98.158 31.987-117.715 77.648c30.944 43.391 81.692 71.685 139.048 71.685s108.104-28.294 139.049-71.688c-19.557-45.658-64.9-77.645-117.715-77.645M256 106.667c-35.346 0-64 28.654-64 64s28.654 64 64 64s64-28.654 64-64s-28.653-64-64-64" />
+          </svg>
+        </a>
+      </div>
+
+      <!-- Hamburger -->
+      <button id="menu-btn" class="md:hidden text-orange-500 focus:outline-none">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 space-y-2 bg-white shadow-md border-t border-gray-100">
+    <input type="text" placeholder="Search..."
+      class="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" />
+    <a href="index.html" class="block text-gray-700 hover:text-[#FD8C02]">Home</a>
+    <a href="Destinations.html" class="block text-gray-700 hover:text-[#FD8C02]">Destinations</a>
+    <a href="Tours.html" class="block text-gray-700 hover:text-[#FD8C02]">Tours</a>
+    <a href="booking.html" class="block text-gray-700 hover:text-[#FD8C02]">Booking</a>
+    <a href="aboutus.html" class="block text-gray-700 hover:text-[#FD8C02]">About us</a>
+    <div class="flex justify-center">
+      <a href="profile.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 512 512">
+          <path fill="#FD8C02" fill-rule="evenodd"
+            d="M256 42.667A213.333 213.333 0 0 1 469.334 256c0 117.821-95.513 213.334-213.334 213.334c-117.82 0-213.333-95.513-213.333-213.334C42.667 138.18 138.18 42.667 256 42.667m21.334 234.667h-42.667c-52.815 0-98.158 31.987-117.715 77.648c30.944 43.391 81.692 71.685 139.048 71.685s108.104-28.294 139.049-71.688c-19.557-45.658-64.9-77.645-117.715-77.645M256 106.667c-35.346 0-64 28.654-64 64s28.654 64 64 64s64-28.654 64-64s-28.653-64-64-64" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+
+    <!-- Header ended-->
+
+ 
  <body>
    <!--background design-->
   <div class="relative h-[300px] bg-orange-500 flex flex-col justify-end items-center relative z-0 clip-slant overflow-hidden">
@@ -115,26 +155,27 @@
     <!-- From -->
     <div class="relative w-full sm:w-[16rem]">
       <label class="block text-sm font-medium text-gray-500 mb-1">From</label>
-      <input type="text" placeholder="Enter city or airport" class="w-full border rounded-xl px-2 py-3 focus:outline-none focus:ring-2 focus:ring-orange-300">
+      <input list="airports" id="from" name="from" type="text"placeholder="Enter city or airport" class="w-full border rounded-xl px-2 py-3 focus:outline-none focus:ring-2 focus:ring-orange-300">
     </div>
 
     <!-- Icon Between From and To -->
     <div class="flex items-end pb-2">
       <div class="w-8 h-8 rounded-full bg-white border shadow flex items-center justify-center">
-        <i data-lucide="repeat" class="w-4 h-4 text-blue-500"></i>
+        <i data-lucide="repeat" class="w-4 h-4 text-orange-600"></i>
+        
       </div>
     </div>
 
     <!-- To -->
     <div class="relative w-full sm:w-[16rem]">
       <label class="block text-sm font-medium text-gray-500 mb-1">To</label>
-      <input type="text" placeholder="Enter city or airport" class="w-full border rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-300">
+      <input list="airports" id="to" name="to" type="text" placeholder="Enter city or airport" class="w-full border rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-300">
     </div>
 
     <!-- Departure -->
     <div class="w-full sm:w-[16rem]">
       <label class="block text-sm font-medium text-gray-500 mb-1">Departure</label>
-      <input type="date" class="w-full border rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-400">
+      <input type="date" class="w-full border rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-300">
     </div>
 
     <!-- Return (only for Round Trip) -->
@@ -142,22 +183,27 @@
       <label class="block text-sm font-medium text-gray-500 mb-1">Return</label>
       <input type="date" class="w-full border rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-400">
     </div>
-
-    <!-- Travellers & Class -->
-    <div class="w-full sm:w-[16rem]">
-      <label class="block text-sm font-medium text-gray-500 mb-1">Travellers & Class</label>
-      <select class="w-full border rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-400">
-        <option>1 Adult - Economy</option>
-        <option>2 Adults - Economy</option>
-        <option>1 Adult - Business</option>
-      </select>
+<!-- TRAVELLERS -->
+    <div class="grid grid-cols-2 gap-2 w-full sm:w-[16rem]">
+      <div>
+        <label class="block text-sm text-gray-500 mb-1">Travel Class</label>
+        <select class="w-full mb-2 border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-orange-300 outline-none">
+          <option>Economy</option>
+          <option>Business</option>
+        </select>
+      </div>
+      <div>
+        <label class="block text-sm text-gray-500 mb-1">Adults</label>
+        <input type="number" id="adults" class="mb-2 border border-gray-300 px-2 py-1 rounded-lg focus:ring-2 focus:ring-orange-300 outline-none" value="1" min="1" />
+        <label class="block text-sm text-gray-500 mb-1 mt-2">Children</label>
+        <input type="number" id="children" class=" border border-gray-300 px-2 py-1 rounded-lg focus:ring-2 focus:ring-orange-300 outline-none" value="0" min="0" />
+        
+      </div>
     </div>
-  </div>
+   </div>
 
-  <script>
+<script>
   lucide.createIcons();
-
- // filepath: c:\Users\nares\OneDrive\ドキュメント\GitHub\GoGoble\booking.html
 const tripButtons = document.querySelectorAll('.trip-toggle');
 const returnDate = document.getElementById('return-date');
 const multiCityFields = document.getElementById('multi-city-fields');
@@ -204,6 +250,14 @@ addCityBtn.addEventListener('click', () => {
     row.remove();
   });
 });
+<!-- Swap Function Script --> 
+ function swapAirports() {
+    const from = document.getElementById('from');
+    const to = document.getElementById('to');
+    const temp = from.value;
+    from.value = to.value;
+    to.value = temp;
+  }
 </script>
 
 <style>
@@ -211,71 +265,6 @@ addCityBtn.addEventListener('click', () => {
     font-weight: 600;
   }
 </style>
-<!-- Trip Type Buttons -->
-<div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
-  <!-- Trip Type Buttons -->
-  <div class="flex flex-wrap justify-center md:justify-start space-x-2 mb-6">
-    <label>
-      <input type="radio" name="trip-type" value="oneway" class="peer sr-only" checked>
-      <span class="inline-flex items-center justify-center rounded-full px-6 py-2 text-sm font-semibold cursor-pointer bg-gray-100 text-gray-700 peer-checked:bg-blue-100 peer-checked:text-blue-600 border-2 border-transparent peer-checked:border-blue-500 transition">
-        One-way
-      </span>
-    </label>
-    <label>
-      <input type="radio" name="trip-type" value="roundtrip" class="peer sr-only">
-      <span class="inline-flex items-center justify-center rounded-full px-6 py-2 text-sm font-semibold cursor-pointer bg-gray-100 text-gray-700 peer-checked:bg-blue-100 peer-checked:text-blue-600 border-2 border-transparent peer-checked:border-blue-500 transition">
-        Round-trip
-      </span>
-    </label>
-    <label>
-      <input type="radio" name="trip-type" value="multicity" class="peer sr-only">
-      <span class="inline-flex items-center justify-center rounded-full px-6 py-2 text-sm font-semibold cursor-pointer bg-gray-100 text-gray-700 peer-checked:bg-blue-100 peer-checked:text-blue-600 border-2 border-transparent peer-checked:border-blue-500 transition">
-        Multi-city
-      </span>
-    </label>
-  </div>
-
-  <!-- FROM/TO/DEPARTURE/RETURN/TRAVELLERS -->
-  <div class="grid grid-cols-1 md:grid-cols-5 gap-4 mb-4">
-    <!-- FROM FIELD -->
-    <div>
-      <label class="block text-sm text-gray-500 mb-1">From</label>
-      <input list="airports" id="from" name="from" placeholder="Enter city or airport"
-        class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 outline-none" />
-    </div>
-
-    <!-- TO Input with Swap -->
-    <div class="relative">
-      <label class="block text-sm text-gray-500 mb-1">To</label>
-      <input list="airports" id="to" name="to" placeholder="Enter city or airport"
-        class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500" />
-      <div onclick="swapAirports()" class="absolute top-1/2 left-full -translate-y-1/2 -translate-x-full bg-white border border-gray-300 p-1 rounded-full shadow-md cursor-pointer">
-        🔁
-      </div>
-    </div>
-
-    <!-- DEPARTURE -->
-    <div>
-      <label class="block text-sm text-gray-500 mb-1">Departure</label>
-      <input type="date" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 outline-none" />
-    </div>
-    <!-- TRAVELLERS -->
-    <div class="grid grid-cols-2 gap-2">
-      <div>
-        <label class="block text-sm text-gray-500 mb-1">Travel Class</label>
-        <select class="w-full mb-2 border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 outline-none">
-          <option>Economy</option>
-          <option>Business</option>
-        </select>
-      </div>
-      <div>
-        <label class="block text-sm text-gray-500 mb-1">Adults</label>
-        <input type="number" id="adults" class="mb-2 border border-gray-300 px-2 py-1 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" value="1" min="1" />
-        <label class="block text-sm text-gray-500 mb-1 mt-2">Children</label>
-        <input type="number" id="children" class=" border border-gray-300 px-2 py-1 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" value="0" min="0" />
-      </div>
-    </div>
-  </div>
 
   <!-- SPECIAL FARE OPTIONS -->
   <div class="bg-blue-50 rounded-lg p-4 mb-4">
@@ -311,9 +300,6 @@ addCityBtn.addEventListener('click', () => {
       </label>
     </div>
   </div>
-</div>
-
-
 
 <!-- Search Button -->
 <div class="text-center -mb-12">
@@ -322,7 +308,7 @@ addCityBtn.addEventListener('click', () => {
       SEARCH FLIGHTS
     </button>
   </a>
-</div>
+</div></div>
 
 <!-- Datalist for Autocomplete -->
 <datalist id="airports">
@@ -361,8 +347,8 @@ addCityBtn.addEventListener('click', () => {
 
 
   <!-- Offers Section -->
-  <div class="bg-white p-6 rounded-xl shadow-md max-w-screen-xl mx-auto mt-10">
-  <h2 class="text-2xl font-bold mb-4">Offers For You</h2>
+  <div class="bg-white p-6 rounded-xl shadow-xl max-w-6xl mx-auto mt-20 relative"> 
+  <h2 class="text-2xl font-bold mb-4 text-center">Offers For You</h2>
 
   <!-- Tabs -->
   <div class="flex flex-wrap gap-2 mb-6">
@@ -377,10 +363,10 @@ addCityBtn.addEventListener('click', () => {
   </div>
 
   <!-- Offer Cards Row -->
-  <div class="flex space-x-4 overflow-x-auto pb-2">
+  <div class="flex space-x-3 bg-white rounded-xl p-6 shadow-lg ">
     <!-- Card 1 -->
-    <div class="min-w-[280px] bg-white border rounded-lg shadow-sm p-2">
-      <img src="offer1.avif" alt="Offer 1" class="rounded-lg mb-2">
+    <div class="min-w-[280px] bg-white rounded-lg  p-2">
+      <img src="offer1.avif" alt="Offer 1" class="mb-2">
       <p class="text-sm text-gray-600">Bus, Hostel, Hotels, Cabs, Flights, Trains</p>
       <p class="font-semibold text-black text-sm">LIVE: Up to 35% OFF* on Travel Bookings!</p>
       <p class="text-gray-500 text-xs mt-1">📅 Valid till 23rd Jun'25</p>
@@ -405,7 +391,7 @@ addCityBtn.addEventListener('click', () => {
 
     <!-- Card 4 -->
     <div class="min-w-[280px] bg-white border rounded-lg shadow-sm p-2">
-      <img src="/offers-card-3.png" alt="Offer 3" class="rounded-lg mb-2">
+      <img src="offer 3.jpg" alt="Offer 3" class="rounded-lg mb-2">
       <p class="text-sm text-gray-600">Flights</p>
       <p class="font-semibold text-black text-sm">LIVE: Up to 20% OFF* on Flights!</p>
       <p class="text-gray-500 text-xs mt-1">📅 Valid till 23rd Jun'25</p>
@@ -421,11 +407,30 @@ addCityBtn.addEventListener('click', () => {
 </div>
 
   <!-- Hotel Store -->
-  <section class="max-w-6xl mx-auto mt-8 p-6 bg-white rounded-lg shadow-md">
-    <h2 class="text-lg font-semibold mb-2">Hotel Stores on Goibibo</h2>
-    <p class="text-sm text-gray-600 mb-4">Your one-stop destination to choose hotels, filtered by brands</p>
-    <img src="https://gos3.ibcdn.com/hotelstore-dweb-banner-271x171-1718702241.jpg" class="rounded-md w-full">
-  </section>
+  <div class="bg- p-6 rounded-xl max-w-6xl mx-auto shadow-lg flex items-center justify-between transition-transform duration-300 hover:scale-105">
+  <!-- Left Text Section -->
+  <div class="w-1/2 pr-6">
+    <p class="text-sm text-gray-500 font-medium mb-1">Introducing</p>
+    <h2 class="text-xl font-bold text-gray-800 mb-1">Hotel Stores on Goibibo</h2>
+    <p class="text-sm text-gray-600">Your one-stop destination to choose hotels, filtered by brands</p>
+  </div>
+
+  <!-- Right Image Card Section -->
+  <div class="w-1/2">
+    <div class="relative rounded-lg overflow-hidden shadow-md">
+      <img
+        src="hotel stay.jpg"
+        alt="Hotel Le Roi"
+        class="w-full h-40 object-cover"
+      />
+      <!-- Hotel name overlay -->
+      <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black via-transparent to-transparent text-white p-3">
+        <p class="text-sm font-semibold">Le Roi</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 
   <!-- Travel Guidelines -->
   <section class="max-w-6xl mx-auto mt-8 px-6 py-4 bg-[#fff3cd] text-[#856404] border-l-4 border-[#ffeeba] rounded-md">
@@ -434,7 +439,7 @@ addCityBtn.addEventListener('click', () => {
   </section>
 
   <!-- Popular Routes -->
-  <section class="max-w-6xl mx-auto mt-8 p-6 bg-white rounded-lg shadow-md">
+  <section class="max-w-6xl mx-auto mt-8 p-6 bg-white rounded-lg shadow-lg transition-transform duration-300 hover:scale-105">
     <h2 class="text-lg font-semibold mb-4">Popular Flight Routes</h2>
     <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4 text-sm text-gray-700">
       <div><strong>Delhi Flights:</strong> Mumbai, Pune, Bangalore, Goa</div>
@@ -447,7 +452,7 @@ addCityBtn.addEventListener('click', () => {
   </section>
 
   <!-- FAQ Section -->
-  <section class="max-w-6xl mx-auto mt-8 p-6 bg-white rounded-lg shadow-md">
+  <section class="max-w-6xl mx-auto mt-8 p-6 bg-white rounded-lg shadow-lg transition-transform duration-300 hover:scale-105">
     <h2 class="text-lg font-semibold mb-4">Flight Booking FAQs</h2>
     <div class="space-y-4 text-sm text-gray-800">
       <div>
@@ -473,7 +478,7 @@ addCityBtn.addEventListener('click', () => {
 
 
  <!-- footer -->
-    <footer class="bg-gray-900 text-white pt-16 pb-8  block">
+    <footer class="bg-gray-900 text-white pt-16 pb-8  block mt-4">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
                 <div>
@@ -542,7 +547,7 @@ addCityBtn.addEventListener('click', () => {
                 <div class="flex flex-col md:flex-row justify-between items-center">
                     <p class="text-gray-400 mb-4 md:mb-0">© 2025 Travel Agency. All rights reserved.</p>
                     <div class="flex items-center hover:text-orange-500 space-x-4 mr-10">
-                        <a href="Developers.html"><h4 class="text-lg font-bold mb-4">Website Developers</h4></a>
+                        <a href="#"><h4 class="text-lg font-bold mb-4">Website Developers</h4></a>
                     </div>
                 </div>
             </div>
