@@ -124,11 +124,12 @@
     <!-- Header ended-->
 
  
- <body>
+ 
    <!--background design-->
   <div class="relative h-[300px] bg-orange-500 flex flex-col justify-end items-center relative z-0 clip-slant overflow-hidden">
-    <h1 class="text-white text-2xl md:text-3xl font-semibold mb-60"> Book Domestic and International Flight Tickets</h1>
+    <h1 class="text-white text-2xl md:text-3xl font-semibold mb-60"> Book Domestic Flight Tickets</h1>
    </div>
+  
 <div class="bg-white rounded-3xl shadow-xl p-8 max-w-7xl mx-auto -mt-40 relative z-10 ">
 
    <!-- Trip Options -->
@@ -146,7 +147,11 @@
     <!-- Add this multi-city block here -->
 <div id="multi-city-fields" class="hidden flex flex-col gap-4 mt-4">
   <div class="flex gap-2">
-    <input type="text" placeholder="From" class="flex-1 border rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-300" />
+<!-- From -->
+    <div class="relative w-full sm:w-[16rem]">
+      <label class="block text-sm font-medium text-gray-500 mb-1">From</label>
+      <input list="airports" id="from" name="from" type="text"placeholder="Enter city or airport" class="w-full border rounded-xl px-2 py-3 focus:outline-none focus:ring-2 focus:ring-orange-300">
+    </div>
     <input type="date" class="border rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-400" />
     <button type="button" class="remove-city bg-red-500 text-white rounded-full px-3 py-1 font-bold hidden">×</button>
   </div>
@@ -239,7 +244,6 @@ addCityBtn.addEventListener('click', () => {
   const row = document.createElement('div');
   row.className = 'flex gap-2 mt-2';
   row.innerHTML = `
-    <input type="text" placeholder="From" class="flex-1 border rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-300" />
     <input type="date" class="border rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-400" />
     <button type="button" class="remove-city bg-red-500 text-white rounded-full px-3 py-1 font-bold">×</button>
   `;
@@ -263,43 +267,43 @@ addCityBtn.addEventListener('click', () => {
 <style>
   .trip-toggle.selected {
     font-weight: 600;
-  }
 </style>
 
   <!-- SPECIAL FARE OPTIONS -->
-  <div class="bg-blue-50 rounded-lg p-4 mb-4">
-    <div class="text-xs font-bold text-purple-600 mb-2">MORE BENEFITS</div>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
-      <label class="flex items-center space-x-2">
-        <input type="checkbox" class="form-checkbox text-blue-600" />
-        <div>
-          <div class="font-semibold flex items-center gap-1">👨‍🎓 Student</div>
-          <div class="text-gray-500 text-xs">Extra Baggage</div>
-        </div>
-      </label>
-      <label class="flex items-center space-x-2">
-        <input type="checkbox" class="form-checkbox text-blue-600" />
-        <div>
-          <div class="font-semibold flex items-center gap-1">🧓 Senior Citizen</div>
-          <div class="text-gray-500 text-xs">Exclusive Discounts</div>
-        </div>
-      </label>
-      <label class="flex items-center space-x-2">
-        <input type="checkbox" class="form-checkbox text-blue-600" />
-        <div>
-          <div class="font-semibold flex items-center gap-1">🎖️ Armed Forces</div>
-          <div class="text-gray-500 text-xs">Exclusive Discounts</div>
-        </div>
-      </label>
-      <label class="flex items-center space-x-2">
-        <input type="checkbox" class="form-checkbox text-blue-600" />
-        <div>
-          <div class="font-semibold flex items-center gap-1">🩺 Doctors & Nurses</div>
-          <div class="text-gray-500 text-xs">Exclusive Discounts</div>
-        </div>
-      </label>
-    </div>
+<div class="bg-orange-50 rounded-lg p-4 mb-4">
+  <div class="text-xs font-bold text-orange-600 mb-2">MORE BENEFITS</div>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
+    <label class="flex items-center space-x-2">
+      <input type="radio" name="benefit" class="form-radio accent-orange-500" />
+      <div>
+        <div class="font-semibold flex items-center gap-1">👨‍🎓 Student</div>
+        <div class="text-gray-500 text-xs">Extra Baggage</div>
+      </div>
+    </label>
+    <label class="flex items-center space-x-2">
+      <input type="radio" name="benefit" class="form-radio accent-orange-500" />
+      <div>
+        <div class="font-semibold flex items-center gap-1">🧓 Senior Citizen</div>
+        <div class="text-gray-500 text-xs">Exclusive Discounts</div>
+      </div>
+    </label>
+    <label class="flex items-center space-x-2">
+      <input type="radio" name="benefit" class="form-radio accent-orange-500" />
+      <div>
+        <div class="font-semibold flex items-center gap-1">🎖️ Armed Forces</div>
+        <div class="text-gray-500 text-xs">Exclusive Discounts</div>
+      </div>
+    </label>
+    <label class="flex items-center space-x-2">
+      <input type="radio" name="benefit" class="form-radio accent-orange-500" />
+      <div>
+        <div class="font-semibold flex items-center gap-1">🩺 Doctors & Nurses</div>
+        <div class="text-gray-500 text-xs">Exclusive Discounts</div>
+      </div>
+    </label>
   </div>
+</div>
+
 
 <!-- Search Button -->
 <div class="text-center -mb-12">
@@ -308,7 +312,9 @@ addCityBtn.addEventListener('click', () => {
       SEARCH FLIGHTS
     </button>
   </a>
-</div></div>
+</div>
+</div>
+
 
 <!-- Datalist for Autocomplete -->
 <datalist id="airports">
@@ -352,7 +358,7 @@ addCityBtn.addEventListener('click', () => {
 
   <!-- Tabs -->
   <div class="flex flex-wrap gap-2 mb-6">
-    <button class="px-4 py-1 rounded border border-blue-600 text-blue-600 font-semibold bg-blue-100">All</button>
+    <button class="px-4 py-1 rounded border text-white font-medium bg-orange-500">All</button>
     <button class="px-4 py-1 rounded border text-gray-600">Bank Offers</button>
     <button class="px-4 py-1 rounded border text-gray-600">Flights</button>
     <button class="px-4 py-1 rounded border text-gray-600">Hotels</button>
@@ -363,9 +369,9 @@ addCityBtn.addEventListener('click', () => {
   </div>
 
   <!-- Offer Cards Row -->
-  <div class="flex space-x-3 bg-white rounded-xl p-6 shadow-lg ">
+  <div class="flex space-x-3  ">
     <!-- Card 1 -->
-    <div class="min-w-[280px] bg-white rounded-lg  p-2">
+    <div class="min-w-[280px] bg-white rounded-lg p-2 shandow-lg transition-transform duration-300 hover:scale-105 ">
       <img src="offer1.avif" alt="Offer 1" class="mb-2">
       <p class="text-sm text-gray-600">Bus, Hostel, Hotels, Cabs, Flights, Trains</p>
       <p class="font-semibold text-black text-sm">LIVE: Up to 35% OFF* on Travel Bookings!</p>
@@ -373,7 +379,7 @@ addCityBtn.addEventListener('click', () => {
     </div>
 
     <!-- Card 2 -->
-    <div class="min-w-[280px] bg-white border rounded-lg shadow-sm p-2">
+    <div class="min-w-[280px] bg-white border rounded-lg shadow-sm p-2 transition-transform duration-300 hover:scale-105">
       <img src="offer2.avif" alt="Offer 2" class="rounded-lg mb-2">
       <p class="text-sm text-gray-600">Hostel, Hotels</p>
       <p class="font-semibold text-black text-sm">LIVE: Up to 35% OFF* on Hotels & Homestays!</p>
@@ -390,7 +396,7 @@ addCityBtn.addEventListener('click', () => {
     </div>
 
     <!-- Card 4 -->
-    <div class="min-w-[280px] bg-white border rounded-lg shadow-sm p-2">
+    <div class="min-w-[280px] bg-white border rounded-lg shadow-sm p-2 transition-transform duration-300 hover:scale-105">
       <img src="offer 3.jpg" alt="Offer 3" class="rounded-lg mb-2">
       <p class="text-sm text-gray-600">Flights</p>
       <p class="font-semibold text-black text-sm">LIVE: Up to 20% OFF* on Flights!</p>
@@ -411,7 +417,7 @@ addCityBtn.addEventListener('click', () => {
   <!-- Left Text Section -->
   <div class="w-1/2 pr-6">
     <p class="text-sm text-gray-500 font-medium mb-1">Introducing</p>
-    <h2 class="text-xl font-bold text-gray-800 mb-1">Hotel Stores on Goibibo</h2>
+    <h2 class="text-xl font-bold text-gray-800 mb-1">Hotel Stores on Go-Globe</h2>
     <p class="text-sm text-gray-600">Your one-stop destination to choose hotels, filtered by brands</p>
   </div>
 
