@@ -1,11 +1,11 @@
 [
-  {
-    "id": "European",
+{
+  "id": "european-heritage",
   "image1": "https://i.pinimg.com/736x/2b/25/36/2b2536e544bd2dec7e3cd57a9abdabfb.jpg",
   "image2": "https://i.pinimg.com/736x/5d/09/b9/5d09b9e24198a9be09a706a4d26008a7.jpg",
 
   "title": "European Heritage Tour",
-  "description": "Paris, the romantic capital of France, is known for its world-renowned landmarks, charming cafés, fashion, and rich culture. Explore timeless art, iconic architecture, and the ambiance of love and elegance.",
+  "description": "Explore the historical and cultural treasures of Europe in this immersive journey through iconic cities like Paris, Rome, and Vienna. From architectural marvels to artistic masterpieces, step back in time and experience the continent's rich legacy.",
   "price": "₹89,999",
   "Ratings": "4.8",
 
@@ -18,75 +18,506 @@
   "LuxuryPackage": "5 Nights in a 5-star luxury suite, private limousine airport transfers, Michelin-starred dinners, exclusive art & fashion tour, and spa package.",
   "LuxuryPackagePrice": "₹1,29,999",
 
-  "location1": "Eiffel Tower",
-  "des1": "An iconic symbol of Paris, offering panoramic views of the city. Ideal for sunrise or sunset visits.",
+  "location1": "Paris, France",
+  "des1": "An iconic city known for its romance, art, and historic landmarks including the Eiffel Tower and the Louvre.",
 
-  "location2": "Louvre Museum",
-  "des2": "World’s largest art museum and home to the Mona Lisa. A must-visit for art lovers.",
+  "location2": "Rome, Italy",
+  "des2": "The Eternal City offering ancient ruins like the Colosseum and Roman Forum, and treasures of Vatican City.",
 
-  "location3": "Notre-Dame Cathedral",
-  "des3": "A Gothic masterpiece known for its stained-glass windows and historic significance.",
+  "location3": "Vienna, Austria",
+  "des3": "A city of imperial history, elegant palaces, classical music, and beautiful coffee houses.",
 
-  "location4": "Montmartre",
-  "des4": "A charming neighborhood famous for street artists, the Sacré-Cœur Basilica, and vibrant cafés.",
+  "location4": "Amsterdam, Netherlands",
+  "des4": "Charming canals, museums like the Rijksmuseum, and vibrant tulip gardens bring Dutch culture to life.",
 
-  "BestTime": "April to June",
-  "BestTime1": "Mild weather, blooming gardens, and fewer crowds",
-  "BestTime2": "Great time for photography and outdoor cafés",
+  "BestTime": "April to June & September to October",
+  "BestTime1": "Spring offers blooming flowers, fewer crowds, and pleasant weather",
+  "BestTime2": "Autumn provides crisp air, golden scenery, and cultural festivals",
 
-  "Weather1": "Spring: 12°C to 20°C, pleasant and ideal for sightseeing",
-  "Weather2": "Summer: 17°C to 26°C, warm and vibrant",
-  "Weather3": "Autumn: 10°C to 18°C, colorful foliage and romantic walks",
-  "Weather4": "Winter: 3°C to 7°C, festive lights and fewer tourists"
-
-    
-    
-  },
+  "Weather1": "Spring: 10°C to 18°C, mild and colorful",
+  "Weather2": "Summer: 18°C to 27°C, lively and warm",
+  "Weather3": "Autumn: 12°C to 20°C, cozy and picturesque",
+  "Weather4": "Winter: 0°C to 8°C, festive and quieter with occasional snow"
+}
+,
   {
-    "id": "Japan",
-    "name": "Japan Discovery Tour",
-    "image": "https://i.pinimg.com/736x/b3/93/81/b3938122aaad4a58428d6fb1b6b6647d.jpg",
-    "price": "$988",
-    "place1":"futuristic cities ",
-    "description1": "Japan's futuristic cities like Tokyo and Osaka blend cutting-edge technology with tradition, offering smart infrastructure, high-speed transport, and innovative architecture. From glowing skyscrapers to robotic services, they showcase the future of urban living.",
-    "image1": "https://i.pinimg.com/736x/2b/25/36/2b2536e544bd2dec7e3cd57a9abdabfb.jpg",
-    "place2":"historic temples",
-    "description2": "Japan's historic temples like Kiyomizu-dera, Senso-ji, and Todai-ji showcase ancient architecture and deep spiritual heritage. They are cultural landmarks attracting millions of visitors each year.",
-    "image2": "https://i.pinimg.com/736x/5d/09/b9/5d09b9e24198a9be09a706a4d26008a7.jpg",
-    "sp":"₹1,33",
-    "pp":"₹125",
-    "lp":"9865",
-    "sp1":"₹1,33",
-    "pp1":"₹125",
-    "lp1":"₹9865",
-    "review":"⭐ 4.0 (328 reviews)",
-     "days":"14-15 Days",
-     "nights":"4",
-    "ao1":"Tokyo Skytree & Shibuya Crossing",
-    "ao2":"Fushimi Inari Shrine, Kyoto",
-    "ao3":"Mount Fuji Day Trip & Lake Ashi Cruise",
-    "ao4":"Hiroshima Peace Memorial Park & Museum"
-  },
-  {
-    "id": "Balli",
-    "title": "Bali, Indonesia",
-    "image": "https://i.pinimg.com/736x/8e/81/7d/8e817dffc3f7543e1af6c4cff4cdc664.jpg",
-    "price": "$799",
-    "description": "Discover Balli."
+  "id": "japan-discovery",
+  "image1": "https://cdn.pixabay.com/photo/2015/06/29/04/41/tokyo-tower-825196_1280.jpg",
+  "image2": "https://cdn.pixabay.com/photo/2021/01/19/14/45/alley-5931413_1280.jpg",
+  "title": "Japan Discovery Tour",
+  "description": "Experience the harmonious blend of tradition and innovation in Japan. From ancient temples and cherry blossoms to neon-lit cities and bullet trains, this tour brings you the essence of Japanese culture, nature, and modernity.",
+  "price": "₹94,999",
+  "Ratings": "4.9",
 
-  },
+  "StandardPackage": "3 Nights stay in 3-star hotels in Tokyo and Kyoto, city sightseeing, temple visits, and local rail passes. Includes daily breakfast.",
+  "StandardPackagePrice": "₹62,999",
+
+  "PremiumPackage": "4 Nights stay in 4-star hotels, guided tours of Tokyo, Kyoto, and Nara, traditional tea ceremony, and Shinkansen travel.",
+  "PremiumPackagePrice": "₹84,999",
+
+  "LuxuryPackage": "5 Nights in 5-star hotels and ryokan stays, private guided tours, Kaiseki dinner, geisha show, Mt. Fuji day trip, and onsen experience.",
+  "LuxuryPackagePrice": "₹1,34,999",
+
+  "location1": "Tokyo",
+  "des1": "Japan’s vibrant capital city, known for its skyscrapers, shopping districts like Shibuya, and ancient temples like Senso-ji.",
+
+  "location2": "Kyoto",
+  "des2": "Cultural heart of Japan with stunning temples, bamboo forests, and traditional wooden houses. Ideal for history and tea lovers.",
+
+  "location3": "Mount Fuji",
+  "des3": "Japan's most iconic volcano and UNESCO World Heritage Site. Perfect for scenic viewing and nature photography.",
+
+  "location4": "Nara",
+  "des4": "Historic city with friendly deer roaming near ancient temples like Todai-ji, home to the Great Buddha statue.",
+
+  "BestTime": "March to May & October to November",
+  "BestTime1": "Spring for cherry blossoms and pleasant weather",
+  "BestTime2": "Autumn for colorful foliage and cultural festivals",
+
+  "Weather1": "Spring: 10°C to 20°C, ideal for cherry blossom viewing",
+  "Weather2": "Summer: 22°C to 32°C, hot with festivals and fireworks",
+  "Weather3": "Autumn: 12°C to 22°C, crisp air and vibrant leaves",
+  "Weather4": "Winter: 2°C to 10°C, cold and clear with snowy landscapes"
+}
+,
   {
-    "id": "Venice",
-    "title": "Venice, Italy",
-    "image": "https://i.pinimg.com/736x/f7/b8/1a/f7b81aaa3376d7f6251106618722ad11.jpg",
-    "price": "$849",
-    "description": "fall love in venice."
-  },
+  "id": "italy-romance",
+  "image1": "https://cdn.pixabay.com/photo/2018/02/26/14/22/venice-3183168_1280.jpg",
+  "image2": "https://cdn.pixabay.com/photo/2020/08/08/18/58/florence-5473716_1280.jpg",
+  "title": "Italy Romance Tour",
+  "description": "Fall in love with the timeless charm of Italy. From romantic gondola rides in Venice to wine tasting in Tuscany and sunset strolls in Rome, this tour is crafted for couples and honeymooners seeking unforgettable memories.",
+  "price": "₹92,999",
+  "Ratings": "4.9",
+
+  "StandardPackage": "3 Nights in 3-star hotels across Rome and Venice, Colosseum visit, romantic gondola ride, and local guide. Includes breakfast.",
+  "StandardPackagePrice": "₹59,999",
+
+  "PremiumPackage": "4 Nights in 4-star hotels in Rome, Venice, and Florence, guided city tours, sunset dinner in Trastevere, and wine tasting in Chianti.",
+  "PremiumPackagePrice": "₹82,999",
+
+  "LuxuryPackage": "5 Nights in 5-star romantic suites, private gondola serenade, exclusive Vatican tour, couples spa, and candlelit dinner in Tuscany.",
+  "LuxuryPackagePrice": "₹1,29,999",
+
+  "location1": "Venice",
+  "des1": "The floating city with charming canals, gondolas, and romantic bridges. A dream for couples.",
+
+  "location2": "Rome",
+  "des2": "The Eternal City filled with ancient wonders like the Colosseum and Trevi Fountain — toss a coin for love!",
+
+  "location3": "Florence",
+  "des3": "Cradle of the Renaissance with majestic art, Duomo Cathedral, and stunning sunsets over the Arno River.",
+
+  "location4": "Tuscany",
+  "des4": "A region of rolling hills, vineyards, and quiet villages — perfect for wine tasting and countryside escapes.",
+
+  "BestTime": "April to June & September to October",
+  "BestTime1": "Spring and early summer offer warm weather and blooming beauty",
+  "BestTime2": "Fall is ideal for fewer crowds and wine harvest festivals",
+
+  "Weather1": "Spring: 13°C to 22°C, colorful and mild",
+  "Weather2": "Summer: 23°C to 30°C, bright and lively",
+  "Weather3": "Autumn: 15°C to 24°C, cool and romantic",
+  "Weather4": "Winter: 5°C to 13°C, peaceful with holiday charm"
+}
+,
   {
-    "id": "india",
-    "title": "eluru, andra pradesh",
-    "image": "https://i.pinimg.com/736x/f7/b8/1a/f7b81aaa3376d7f6251106618722ad11.jpg",
-    "price": "$849",
-    "description": "fall love in venice."
-  }
+  "id": "european-charmer",
+  "image1": "https://cdn.pixabay.com/photo/2021/11/08/11/33/amsterdam-centraal-station-6778948_1280.jpg",
+  "image2": "https://cdn.pixabay.com/photo/2018/09/13/21/21/the-belfry-of-bruges-3675779_1280.jpg",
+  "title": "European Charmer Tour",
+  "description": "Unveil the beauty and elegance of Europe’s most captivating cities — from the canals of Amsterdam to the romance of Paris and the charm of Bruges. This tour is a delightful blend of history, culture, and scenic wonders.",
+  "price": "₹1,02,999",
+  "Ratings": "4.9",
+
+  "StandardPackage": "3 Nights in 3-star hotels across Amsterdam and Paris, guided walking tours, canal cruise, and intercity train transfers.",
+  "StandardPackagePrice": "₹67,999",
+
+  "PremiumPackage": "4 Nights in 4-star boutique hotels, private museum entries, local food tours, and sunset cruise on the Seine.",
+  "PremiumPackagePrice": "₹88,999",
+
+  "LuxuryPackage": "5 Nights in 5-star properties, business-class train rides, fine dining experiences, personal photographer, and luxury spa access.",
+  "LuxuryPackagePrice": "₹1,44,999",
+
+  "location1": "Amsterdam",
+  "des1": "Picturesque canals, vibrant tulip markets, and historic townhouses define the cozy charm of this Dutch capital.",
+
+  "location2": "Paris",
+  "des2": "The city of light and love, where iconic landmarks like the Eiffel Tower and Louvre meet romantic cafés.",
+
+  "location3": "Bruges",
+  "des3": "A fairy-tale Belgian town with cobbled streets, medieval buildings, and dreamy boat rides through the canals.",
+
+  "location4": "Versailles",
+  "des4": "A majestic escape from Paris featuring the grand Palace of Versailles, lush gardens, and royal elegance.",
+
+  "BestTime": "May to September",
+  "BestTime1": "Late spring and summer offer warm weather, blooming gardens, and cultural festivals",
+  "BestTime2": "Perfect for river cruises, walking tours, and outdoor cafés",
+
+  "Weather1": "Spring: 10°C to 18°C, crisp and colorful",
+  "Weather2": "Summer: 18°C to 26°C, warm and lively",
+  "Weather3": "Autumn: 12°C to 20°C, golden and romantic",
+  "Weather4": "Winter: 2°C to 7°C, quiet and festive with Christmas markets"
+}
+,
+ {
+  "id": "european-charmer",
+  "image1": "",
+  "image2": "",
+  "title": "European Charmer",
+  "description": "Embark on a magical journey through Europe’s most charming cities — from the canals of Amsterdam to the cobbled streets of Prague and the romantic boulevards of Paris. This tour is designed for cultural explorers and romance seekers alike.",
+  "price": "₹99,999",
+  "Ratings": "4.8",
+
+  "StandardPackage": "4 Nights in 3-star hotels across Paris, Amsterdam, and Brussels with guided walking tours and local transfers.",
+  "StandardPackagePrice": "₹64,999",
+
+  "PremiumPackage": "5 Nights in 4-star hotels, canal cruise in Amsterdam, Eiffel Tower ticket, and day trip to Bruges with gourmet dinner in Paris.",
+  "PremiumPackagePrice": "₹89,999",
+
+  "LuxuryPackage": "6 Nights in boutique 5-star hotels, private guided experiences, Seine River dinner cruise, chocolate tasting in Belgium, and art museum VIP entry.",
+  "LuxuryPackagePrice": "₹1,39,999",
+
+  "location1": "Paris, France",
+  "des1": "City of Light — home to the Eiffel Tower, Louvre Museum, and unmatched Parisian romance.",
+
+  "location2": "Amsterdam, Netherlands",
+  "des2": "Famous for its scenic canals, historic townhouses, and vibrant flower markets.",
+
+  "location3": "Brussels, Belgium",
+  "des3": "A fusion of old-world charm and modern elegance, known for chocolates, waffles, and the Atomium.",
+
+  "location4": "Prague, Czech Republic",
+  "des4": "The ‘City of a Hundred Spires’ — fairy tale castles, baroque bridges, and medieval charm.",
+
+  "BestTime": "April to June & September to October",
+  "BestTime1": "Spring brings mild weather and blooming city parks",
+  "BestTime2": "Autumn offers golden cityscapes and fewer tourists",
+
+  "Weather1": "Spring: 10°C to 18°C, ideal for sightseeing and outdoor cafés",
+  "Weather2": "Summer: 18°C to 27°C, vibrant and bustling",
+  "Weather3": "Autumn: 10°C to 20°C, cozy and colorful",
+  "Weather4": "Winter: 0°C to 8°C, crisp air and holiday lights"
+},
+{
+  "id": "american-capital-trail",
+  "image1": "https://cdn.pixabay.com/photo/2020/04/14/15/35/capital-5043172_1280.jpg",
+  "image2": "https://cdn.pixabay.com/photo/2021/08/18/05/07/library-6554635_1280.jpg",
+  "title": "American Capital Trail",
+  "description": "Follow the path of American heritage and power through iconic cities like Washington D.C., Philadelphia, and New York. Explore historic landmarks, grand monuments, and the modern heartbeat of democracy.",
+  "price": "₹1,04,999",
+  "Ratings": "4.7",
+
+  "StandardPackage": "4 Nights in 3-star hotels across Washington D.C. and Philadelphia with guided Capitol tour, Liberty Bell visit, and hop-on hop-off bus access.",
+  "StandardPackagePrice": "₹69,999",
+
+  "PremiumPackage": "5 Nights in 4-star hotels, private museum passes, NYC ferry to Statue of Liberty, and night tour of illuminated landmarks.",
+  "PremiumPackagePrice": "₹89,999",
+
+  "LuxuryPackage": "6 Nights in luxury suites, White House photo op tour, Broadway show in NYC, private limo transfers, and gourmet food tour.",
+  "LuxuryPackagePrice": "₹1,49,999",
+
+  "location1": "Washington D.C.",
+  "des1": "Capital of the USA — home to the White House, National Mall, and Smithsonian museums.",
+
+  "location2": "Philadelphia",
+  "des2": "Birthplace of American independence — visit the Liberty Bell, Independence Hall, and classic cobblestone alleys.",
+
+  "location3": "New York City",
+  "des3": "The city that never sleeps — explore Times Square, Central Park, and take in the skyline from the Empire State Building.",
+
+  "location4": "Boston",
+  "des4": "Historical hub of the American Revolution with Harvard University, Freedom Trail, and colonial-era charm.",
+
+  "BestTime": "April to June & September to November",
+  "BestTime1": "Spring brings cherry blossoms in D.C. and ideal sightseeing weather",
+  "BestTime2": "Autumn is perfect for fall foliage and cooler temperatures",
+
+  "Weather1": "Spring: 12°C to 22°C, fresh and scenic",
+  "Weather2": "Summer: 22°C to 30°C, busy and sunny",
+  "Weather3": "Autumn: 10°C to 20°C, crisp air and colorful leaves",
+  "Weather4": "Winter: -2°C to 8°C, chilly with holiday decorations"
+},
+{
+  "id": "japanese-essence",
+  "image1": "https://cdn.pixabay.com/photo/2017/03/07/13/43/landscape-2124033_1280.jpg",
+  "image2": "https://cdn.pixabay.com/photo/2017/03/07/16/07/mount-fuji-2124485_1280.jpg",
+  "title": "Japanese Essence",
+  "description": "Uncover the soul of Japan through this immersive journey featuring Tokyo's modern marvels, Kyoto's timeless temples, and cultural moments that blend tradition with innovation. A tour that captures Japan’s elegance, precision, and spirit.",
+  "price": "₹97,999",
+  "Ratings": "4.9",
+
+  "StandardPackage": "4 Nights in 3-star hotels across Tokyo and Kyoto with city highlights, bullet train transfers, and temple tours. Includes breakfast.",
+  "StandardPackagePrice": "₹66,999",
+
+  "PremiumPackage": "5 Nights in 4-star accommodations, guided tea ceremony, Nara deer park visit, and sushi-making workshop.",
+  "PremiumPackagePrice": "₹89,999",
+
+  "LuxuryPackage": "6 Nights in 5-star hotels and traditional ryokans, private geisha dinner, Mt. Fuji day trip, onsen experience, and exclusive cultural shows.",
+  "LuxuryPackagePrice": "₹1,39,999",
+
+  "location1": "Tokyo",
+  "des1": "Japan’s futuristic capital — explore Shibuya Crossing, Tokyo Tower, and historic Asakusa district.",
+
+  "location2": "Kyoto",
+  "des2": "Cultural heart of Japan — visit Kinkaku-ji (Golden Pavilion), Arashiyama Bamboo Grove, and Fushimi Inari Shrine.",
+
+  "location3": "Nara",
+  "des3": "An ancient city home to sacred deer and the Great Buddha of Todai-ji Temple.",
+
+  "location4": "Mount Fuji",
+  "des4": "Japan’s iconic peak offering breathtaking views, perfect for nature lovers and photographers.",
+
+  "BestTime": "March to May & October to November",
+  "BestTime1": "Spring for cherry blossoms and tranquil gardens",
+  "BestTime2": "Autumn for brilliant foliage and crisp weather",
+
+  "Weather1": "Spring: 10°C to 20°C, colorful and calm",
+  "Weather2": "Summer: 23°C to 32°C, hot with festival vibes",
+  "Weather3": "Autumn: 12°C to 22°C, clear and vibrant",
+  "Weather4": "Winter: 2°C to 10°C, serene with snowy scenery"
+},
+{
+  "id": "thai-delight",
+  "image1": "https://cdn.pixabay.com/photo/2021/12/31/13/06/bay-6905658_1280.jpg",
+  "image2": "https://cdn.pixabay.com/photo/2014/10/15/09/49/poda-island-489425_1280.jpg",
+  "title": "Thai Delight",
+  "description": "Uncover the exotic beauty of Thailand — from the golden temples of Bangkok to the turquoise waters of Phuket. This journey blends rich culture, delicious cuisine, and island serenity for the perfect Southeast Asian getaway.",
+  "price": "₹74,999",
+  "Ratings": "4.7",
+
+  "StandardPackage": "3 Nights in 3-star hotels in Bangkok and Pattaya, Grand Palace tour, Coral Island day trip, and local transport. Includes breakfast.",
+  "StandardPackagePrice": "₹49,999",
+
+  "PremiumPackage": "4 Nights in 4-star hotels, floating market tour, Thai cultural show, visit to Wat Arun, and guided food tour in Bangkok.",
+  "PremiumPackagePrice": "₹64,999",
+
+  "LuxuryPackage": "5 Nights in 5-star beach resorts in Phuket and Krabi, private speedboat tour to Phi Phi Islands, spa treatments, and fine dining.",
+  "LuxuryPackagePrice": "₹99,999",
+
+  "location1": "Bangkok",
+  "des1": "Thailand’s vibrant capital filled with ornate temples, bustling street markets, and luxurious malls.",
+
+  "location2": "Phuket",
+  "des2": "A tropical island paradise offering stunning beaches, water sports, and a lively nightlife.",
+
+  "location3": "Chiang Mai",
+  "des3": "A peaceful mountain city known for temples, night bazaars, and elephant sanctuaries.",
+
+  "location4": "Krabi",
+  "des4": "Famous for its dramatic cliffs, crystal-clear water, and access to Railay Beach and island hopping.",
+
+  "BestTime": "November to March",
+  "BestTime1": "Cool, dry season perfect for beach activities and outdoor exploration",
+  "BestTime2": "Festive time with events like Loi Krathong and Thai New Year (Songkran)",
+
+  "Weather1": "Winter: 23°C to 30°C, dry and breezy — best for travel",
+  "Weather2": "Summer: 26°C to 34°C, hot and humid with clear mornings",
+  "Weather3": "Monsoon: 24°C to 32°C, lush landscapes and fewer tourists",
+  "Weather4": "Autumn: 25°C to 33°C, occasional rain but great value"
+},
+{
+  "id": "emirates-explorer",
+  "image1": "https://cdn.pixabay.com/photo/2017/08/10/16/11/burj-al-arab-2624317_1280.jpg",
+  "image2": "https://cdn.pixabay.com/photo/2021/03/15/17/51/sharjah-6097583_1280.jpg",
+  "title": "Emirates Explorer",
+  "description": "Discover the modern marvels and ancient traditions of the UAE with this dazzling tour through Dubai, Abu Dhabi, and beyond. From glittering skyscrapers to desert adventures, experience luxury, culture, and adventure in one unforgettable journey.",
+  "price": "₹88,999",
+  "Ratings": "4.8",
+
+  "StandardPackage": "3 Nights in 3-star hotels in Dubai, half-day city tour, Dhow cruise dinner, and desert safari. Includes daily breakfast.",
+  "StandardPackagePrice": "₹57,999",
+
+  "PremiumPackage": "4 Nights in 4-star hotels, Burj Khalifa entry, Louvre Abu Dhabi visit, guided desert dune bashing, and marina dinner cruise.",
+  "PremiumPackagePrice": "₹76,999",
+
+  "LuxuryPackage": "5 Nights in 5-star luxury hotels, private desert glamping experience, helicopter tour over Dubai, gourmet dining, and spa treatments.",
+  "LuxuryPackagePrice": "₹1,24,999",
+
+  "location1": "Dubai",
+  "des1": "A futuristic city with iconic landmarks like Burj Khalifa, Dubai Mall, and Palm Jumeirah.",
+
+  "location2": "Abu Dhabi",
+  "des2": "The capital of the UAE, home to the majestic Sheikh Zayed Grand Mosque and cultural gems like the Louvre Abu Dhabi.",
+
+  "location3": "Sharjah",
+  "des3": "Known as the cultural capital of the Emirates, featuring museums, heritage sites, and souks.",
+
+  "location4": "Al Ain",
+  "des4": "A historic oasis city with lush gardens, camel markets, and UNESCO-listed forts.",
+
+  "BestTime": "November to March",
+  "BestTime1": "Cool and pleasant climate ideal for desert safaris and outdoor sightseeing",
+  "BestTime2": "Festivals and events like Dubai Shopping Festival make it lively and luxurious",
+
+  "Weather1": "Winter: 18°C to 28°C, perfect for travel",
+  "Weather2": "Spring: 22°C to 35°C, warm and clear",
+  "Weather3": "Summer: 30°C to 45°C, very hot — ideal for indoor attractions and malls",
+  "Weather4": "Autumn: 25°C to 35°C, transitioning to pleasant weather"
+},
+{
+  "id": "pharaohs-footstep",
+  "image1": "https://cdn.pixabay.com/photo/2019/01/24/21/27/sphinx-3953372_1280.jpg",
+  "image2": "https://cdn.pixabay.com/photo/2020/01/28/07/57/luxor-4799144_1280.jpg",
+  "title": "Pharaoh’s Footstep",
+  "description": "Step into the land of the pharaohs with this awe-inspiring journey through Egypt. From the iconic pyramids to the mystical Nile and ancient temples, explore thousands of years of history, mystery, and majestic wonders.",
+  "price": "₹79,999",
+  "Ratings": "4.7",
+
+  "StandardPackage": "3 Nights in 3-star hotels in Cairo and Luxor, guided tours of the Pyramids and Egyptian Museum, Nile side dinner. Includes daily breakfast.",
+  "StandardPackagePrice": "₹52,999",
+
+  "PremiumPackage": "4 Nights in 4-star hotels, visit to Valley of the Kings, camel ride near the pyramids, and Nile dinner cruise with cultural show.",
+  "PremiumPackagePrice": "₹72,999",
+
+  "LuxuryPackage": "5 Nights in 5-star hotels and deluxe Nile cruise, private Egyptologist guide, hot air balloon over Luxor, and gourmet dining experiences.",
+  "LuxuryPackagePrice": "₹1,14,999",
+
+  "location1": "Cairo",
+  "des1": "Home to the Great Pyramids of Giza, the Sphinx, and the Egyptian Museum housing priceless artifacts including King Tutankhamun’s treasures.",
+
+  "location2": "Luxor",
+  "des2": "Known as the world’s greatest open-air museum, featuring Karnak Temple, Valley of the Kings, and Luxor Temple.",
+
+  "location3": "Aswan",
+  "des3": "A serene Nile-side city with beautiful temples, markets, and access to Abu Simbel by boat or air.",
+
+  "location4": "Alexandria",
+  "des4": "The Mediterranean gem of Egypt, boasting the historic Citadel of Qaitbay and the modern Bibliotheca Alexandrina.",
+
+  "BestTime": "October to April",
+  "BestTime1": "Cool and dry weather ideal for exploring ancient ruins and desert landscapes",
+  "BestTime2": "Cultural festivals and fewer crowds make winter travel more enjoyable",
+
+  "Weather1": "Winter: 13°C to 23°C, comfortable and sunny",
+  "Weather2": "Spring: 18°C to 30°C, warm and breezy",
+  "Weather3": "Summer: 25°C to 40°C, hot and dry — ideal for cruise travel",
+  "Weather4": "Autumn: 20°C to 32°C, mild and great for temple visits"
+},
+{
+  "id": "south-african-wonders",
+  "image1": "https://cdn.pixabay.com/photo/2019/07/07/10/56/johannesburg-4322256_1280.jpg",
+  "image2": "https://cdn.pixabay.com/photo/2021/09/17/13/19/vineyard-6632661_1280.jpg",
+  "title": "South African Wonders",
+  "description": "From majestic mountains to thrilling wildlife safaris and vibrant coastal cities, explore the diverse beauty of South Africa. This tour offers an unforgettable blend of culture, nature, and adventure across the country’s top destinations.",
+  "price": "₹94,999",
+  "Ratings": "4.8",
+
+  "StandardPackage": "4 Nights in 3-star hotels in Cape Town and Johannesburg, Table Mountain tour, city highlights, and Kruger safari drive. Includes breakfast.",
+  "StandardPackagePrice": "₹63,999",
+
+  "PremiumPackage": "5 Nights in 4-star hotels and safari lodges, Robben Island tour, full-day Kruger guided safari, and Cape Point excursion.",
+  "PremiumPackagePrice": "₹84,999",
+
+  "LuxuryPackage": "6 Nights in luxury lodges and waterfront resorts, private wine tour in Stellenbosch, sunset safari, and helicopter ride over Cape Town.",
+  "LuxuryPackagePrice": "₹1,29,999",
+
+  "location1": "Cape Town",
+  "des1": "A stunning city nestled between mountains and sea, famous for Table Mountain, V&A Waterfront, and Cape Point.",
+
+  "location2": "Kruger National Park",
+  "des2": "One of Africa’s largest game reserves, home to the Big Five — ideal for thrilling safari experiences.",
+
+  "location3": "Johannesburg",
+  "des3": "South Africa’s economic hub and cultural heartland, featuring Apartheid Museum and vibrant townships like Soweto.",
+
+  "location4": "Stellenbosch",
+  "des4": "A scenic wine region known for its historic Cape Dutch architecture and world-class vineyards.",
+
+  "BestTime": "May to September",
+  "BestTime1": "Dry season is best for wildlife viewing, especially in Kruger",
+  "BestTime2": "Cooler temperatures make city and mountain exploration more enjoyable",
+
+  "Weather1": "Winter: 8°C to 18°C, dry and excellent for safaris",
+  "Weather2": "Spring: 12°C to 22°C, blooming landscapes and clear skies",
+  "Weather3": "Summer: 18°C to 30°C, warm and ideal for coastlines",
+  "Weather4": "Autumn: 10°C to 20°C, comfortable for vineyards and outdoor activities"
+},
+{
+  "id": "royal-uk-expedition",
+  "image1": "https://cdn.pixabay.com/photo/2015/04/06/11/38/windsor-castle-709166_1280.jpg",
+  "image2": "https://cdn.pixabay.com/photo/2023/01/19/10/24/castle-7728772_1280.jpg",
+  "title": "Royal UK Expedition",
+  "description": "Unveil the grandeur of the United Kingdom with this regal journey across historic castles, royal landmarks, scenic countryside, and bustling cities. This tour captures the essence of British heritage and elegance.",
+  "price": "₹99,999",
+  "Ratings": "4.8",
+
+  "StandardPackage": "4 Nights in 3-star hotels across London and Edinburgh, guided Buckingham Palace exterior visit, Tower of London entry, and local transfers.",
+  "StandardPackagePrice": "₹64,999",
+
+  "PremiumPackage": "5 Nights in 4-star hotels, access to Windsor Castle, a scenic train ride to the Scottish Highlands, and afternoon tea in London.",
+  "PremiumPackagePrice": "₹87,999",
+
+  "LuxuryPackage": "6 Nights in 5-star heritage hotels, private palace tours, Scottish whisky tasting, chauffeured countryside tour, and fine dining experiences.",
+  "LuxuryPackagePrice": "₹1,39,999",
+
+  "location1": "London",
+  "des1": "The capital of the UK, featuring royal landmarks like Buckingham Palace, Big Ben, and the Tower Bridge.",
+
+  "location2": "Windsor",
+  "des2": "Home to Windsor Castle, the oldest and largest occupied castle in the world and one of the Queen’s residences.",
+
+  "location3": "Edinburgh",
+  "des3": "Scotland’s historic capital, crowned by Edinburgh Castle and known for its dramatic landscape and cultural charm.",
+
+  "location4": "Scottish Highlands",
+  "des4": "A breathtaking region of lochs, glens, and castles — perfect for scenic drives, hikes, and traditional folklore experiences.",
+
+  "BestTime": "May to September",
+  "BestTime1": "Summer offers longer daylight and clear skies — perfect for countryside exploration",
+  "BestTime2": "Festivals like Edinburgh Fringe and royal events enhance the cultural vibe",
+
+  "Weather1": "Spring: 8°C to 16°C, blooming gardens and moderate rainfall",
+  "Weather2": "Summer: 14°C to 23°C, warm and great for outdoor tours",
+  "Weather3": "Autumn: 10°C to 18°C, colorful foliage and fewer crowds",
+  "Weather4": "Winter: 2°C to 8°C, crisp and festive with cozy pub culture"
+},
+{
+  "id": "brazil-carnival-combo",
+  "image1": "https://cdn.pixabay.com/photo/2021/08/03/12/21/ocean-6519346_1280.jpg",
+  "image2": "https://cdn.pixabay.com/photo/2020/04/13/22/23/waterfall-5040217_1280.jpg",
+  "title": "Brazil Carnival Combo",
+  "description": "Immerse yourself in the vibrant culture of Brazil with this colorful journey through Rio de Janeiro’s iconic carnival, tropical beaches, Amazonian adventures, and the thunderous beauty of Iguazu Falls.",
+  "price": "₹96,999",
+  "Ratings": "4.9",
+
+  "StandardPackage": "4 Nights in 3-star hotels in Rio and São Paulo, carnival city tour, samba street party experience, and Christ the Redeemer visit. Includes breakfast.",
+  "StandardPackagePrice": "₹62,999",
+
+  "PremiumPackage": "5 Nights in 4-star hotels, reserved seats at Sambadrome Parade, Sugarloaf Mountain cable car, Copacabana beach evening, and Amazon riverboat tour.",
+  "PremiumPackagePrice": "₹84,999",
+
+  "LuxuryPackage": "6 Nights in 5-star beachfront hotels, VIP Carnival box seats, helicopter tour over Rio, private Amazon rainforest lodge stay, and gourmet Brazilian dining.",
+  "LuxuryPackagePrice": "₹1,29,999",
+
+  "location1": "Rio de Janeiro",
+  "des1": "The heart of Brazil’s Carnival — famous for Christ the Redeemer, Copacabana Beach, and Sugarloaf Mountain.",
+
+  "location2": "São Paulo",
+  "des2": "Brazil’s cosmopolitan center with a thriving arts scene, culinary diversity, and electrifying nightlife.",
+
+  "location3": "Manaus (Amazon)",
+  "des3": "Gateway to the Amazon rainforest, offering jungle lodge experiences, river cruises, and wildlife encounters.",
+
+  "location4": "Iguazu Falls",
+  "des4": "One of the world's largest and most powerful waterfall systems, nestled on the Brazil-Argentina border.",
+
+  "BestTime": "February & May to September",
+  "BestTime1": "February for Carnival season — the ultimate cultural celebration",
+  "BestTime2": "May–September offers dry, pleasant weather for jungle and falls exploration",
+
+  "Weather1": "Summer: 24°C to 34°C, hot and festive (Carnival season)",
+  "Weather2": "Autumn: 20°C to 30°C, less humid with clear skies",
+  "Weather3": "Winter: 18°C to 27°C, ideal for city tours and Amazon trips",
+  "Weather4": "Spring: 22°C to 32°C, lush greenery and vibrant energy"
+}
+
+
+
+
+
+
+
+
+
 ]
