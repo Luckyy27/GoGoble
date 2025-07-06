@@ -185,19 +185,23 @@ transform: translateY(0);}}
       <a href="#index"><img class="w-14 h-10" src="logo.png" alt="logo" /></a>
 
       <!-- Full Search (above 1257px) -->
-      <div class="relative hidden xl:block w-64">
-        <input type="text" placeholder="Search..."
-          class="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" />
-        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-          <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2"
-            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z" />
-          </svg>
-        </div>
-      </div>
+<div class="relative w-full max-w-xs">
+  <input id="searchBox" type="text" placeholder="Search..."
+    class="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" />
+  <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+    <!-- Search Icon -->
+    <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2"
+      viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round"
+        d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z" /></svg>
+  </div>
 
-      <!-- Circle Search (between 819px–1257px) -->
+  <!-- Suggestions -->
+  <div id="suggestions"
+    class="absolute z-50 w-full bg-white border rounded-lg mt-1 shadow-lg hidden max-h-60 overflow-y-auto">
+  </div>
+</div>
+
+      <!-- Circle Search (between 819px–1257px) 
       <div class="relative hidden md:block xl:hidden">
         <button class="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100">
           <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2"
@@ -206,7 +210,7 @@ transform: translateY(0);}}
               d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z" />
           </svg>
         </button>
-      </div>
+      </div>-->
     </div>
 
     <!-- Centered Nav -->
@@ -245,8 +249,7 @@ transform: translateY(0);}}
 
   <!-- Mobile Menu -->
   <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 space-y-2 bg-white shadow-md border-t border-gray-100">
-    <input type="text" placeholder="Search..."
-      class="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" />
+
     <a href="#index" class="block text-gray-700 hover:text-[#FD8C02]">Home</a>
     <a href="Destinations.html" class="block text-gray-700 hover:text-[#FD8C02]">Destinations</a>
     <a href="Tours.html" class="block text-gray-700 hover:text-[#FD8C02]">Tours</a>
@@ -975,6 +978,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const statsSection = document.querySelector('.count-up')?.closest('.scale-up-center');
   if (statsSection) observer.observe(statsSection);
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const searchBox = document.getElementById("searchBox");
+  const suggestions = document.getElementById("suggestions");
+  let destinations = [];
+
+  fetch("destinations.json")
+    .then(res => res.json())
+    .then(data => destinations = data);
+
+  searchBox.addEventListener("input", () => {
+    const query = searchBox.value.toLowerCase().trim();
+    suggestions.innerHTML = "";
+
+    if (!query) return suggestions.classList.add("hidden");
+
+    const matches = destinations.filter(dest =>
+      dest.title.toLowerCase().includes(query)
+    );
+
+    if (!matches.length) return suggestions.classList.add("hidden");
+
+    matches.forEach(dest => {
+      const div = document.createElement("div");
+      div.className = "p-2 hover:bg-orange-100 cursor-pointer flex items-center gap-3";
+      div.innerHTML = `<img src="${dest.image}" class="w-12 h-12 object-cover rounded" />
+                       <span>${dest.title}</span>`;
+      div.onclick = () => {
+        window.location.href = `template.html?destinationId=${dest.id}`;
+      };
+      suggestions.appendChild(div);
+    });
+
+    suggestions.classList.remove("hidden");
+  });
 });
 </script>
 

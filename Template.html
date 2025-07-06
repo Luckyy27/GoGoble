@@ -501,6 +501,55 @@
 </script>
 
 <!-- script for booking section ended--> 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const destinationId = urlParams.get("destinationId");
+
+  if (!destinationId) return;
+
+  fetch("destinations.json")
+    .then(res => res.json())
+    .then(data => {
+      const match = data.find(item => item.id === destinationId);
+      if (!match) return;
+
+      // Example render (adjust as needed)
+
+
+       document.getElementById("title").textContent = match.title;
+        document.getElementById("description").textContent = match.description;
+        document.getElementById("price").textContent = match.price;
+        document.getElementById("Ratings").textContent = match.Ratings;
+        document.getElementById("StandardPackage").textContent = match.StandardPackage;
+        document.getElementById("StandardPackagePrice").textContent = match.StandardPackagePrice;
+        document.getElementById("PremiumPackage").textContent =match.PremiumPackage;
+        document.getElementById("PremiumPackagePrice").textContent = match.PremiumPackagePrice;
+        document.getElementById("LuxuryPackage").textContent = match.LuxuryPackage;
+        document.getElementById("LuxuryPackagePrice").textContent = match.LuxuryPackagePrice;
+        document.getElementById("location1").textContent = match.location1;
+        document.getElementById("des1").textContent = match.des1;
+        document.getElementById("location2").textContent = match.location2;
+        document.getElementById("des2").textContent = match.des2;
+        document.getElementById("location3").textContent = match.location3;
+        document.getElementById("des3").textContent = match.des3;
+        document.getElementById("location4").textContent = match.location4;
+        document.getElementById("des4").textContent = match.des4;
+        document.getElementById("BestTime").textContent = match.BestTime;
+        document.getElementById("BestTime1").textContent = match.BestTime1;
+        document.getElementById("BestTime2").textContent = match.BestTime2;
+        document.getElementById("Weather1").textContent = match.Weather1;
+        document.getElementById("Weather2").textContent = match.Weather2;
+        document.getElementById("Weather3").textContent = match.Weather3;
+        document.getElementById("Weather3").textContent = match.Weather4;
+        document.getElementById("image").style.backgroundImage = `url(${match.image})`;
+
+        
+      
+    });
+});
+</script>
+
 
 
 </body>
